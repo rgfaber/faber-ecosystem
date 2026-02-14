@@ -1,0 +1,193 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" fill="none">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+    <linearGradient id="faberGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981"/>
+      <stop offset="100%" style="stop-color:#059669"/>
+    </linearGradient>
+    <linearGradient id="meshGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0ea5e9"/>
+      <stop offset="100%" style="stop-color:#0284c7"/>
+    </linearGradient>
+    <linearGradient id="reckonGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed"/>
+      <stop offset="100%" style="stop-color:#5b21b6"/>
+    </linearGradient>
+    <linearGradient id="hecateGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e11d48"/>
+      <stop offset="100%" style="stop-color:#be123c"/>
+    </linearGradient>
+
+    <!-- Glow filters -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Drop shadow -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+
+    <!-- Arrow markers -->
+    <marker id="arrow" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="10" markerHeight="7" orient="auto-start-reverse">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8"/>
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="10" markerHeight="7" orient="auto-start-reverse">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#34d399"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="820" fill="url(#bgGrad)"/>
+
+  <!-- Grid pattern -->
+  <g opacity="0.08">
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#fff" stroke-width="0.5"/>
+    </pattern>
+    <rect width="1200" height="820" fill="url(#grid)"/>
+  </g>
+
+  <!-- Title -->
+  <text x="600" y="50" text-anchor="middle" font-family="system-ui, sans-serif" font-size="28" font-weight="bold" fill="#fff">
+    Faber Ecosystem &mdash; AI &amp; Neuroevolution
+  </text>
+  <text x="600" y="78" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" fill="#94a3b8">
+    Evolutionary neural networks for Erlang/OTP &mdash; from topology to population
+  </text>
+
+  <!-- ============================================ -->
+  <!-- FABER ECOSYSTEM (center, main)               -->
+  <!-- ============================================ -->
+
+  <!-- Faber outer border -->
+  <rect x="180" y="110" width="840" height="430" rx="20" fill="#064e3b" opacity="0.2" filter="url(#shadow)"/>
+  <rect x="180" y="110" width="840" height="430" rx="20" fill="none" stroke="#10b981" stroke-width="2" opacity="0.6"/>
+
+  <!-- Faber header -->
+  <text x="600" y="145" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" fill="#34d399">
+    Faber Ecosystem
+  </text>
+  <text x="600" y="167" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#6ee7b7">
+    rgfaber &middot; AI &amp; Neuroevolution for Erlang/OTP
+  </text>
+
+  <!-- faber_neuroevolution (top, larger) -->
+  <g filter="url(#shadow)">
+    <rect x="230" y="190" width="740" height="150" rx="14" fill="#064e3b" opacity="0.5"/>
+    <rect x="230" y="190" width="740" height="150" rx="14" fill="none" stroke="#10b981" stroke-width="1" opacity="0.5"/>
+    <text x="600" y="218" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#6ee7b7">
+      HIGH-LEVEL FRAMEWORK
+    </text>
+
+    <rect x="270" y="235" width="660" height="85" rx="12" fill="url(#faberGrad)"/>
+    <text x="600" y="268" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22" font-weight="bold" fill="#fff">faber_neuroevolution</text>
+    <text x="600" y="293" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#a7f3d0">
+      Populations &middot; Species &middot; Selection &middot; Meta-Controller &middot; Liquid Conglomerate
+    </text>
+    <text x="600" y="310" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#a7f3d0" opacity="0.8">
+      NEAT &middot; HyperNEAT &middot; Island Model &middot; Novelty Search &middot; Distributed Evaluation
+    </text>
+  </g>
+
+  <!-- Dependency arrow -->
+  <line x1="600" y1="340" x2="600" y2="370" stroke="#34d399" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+  <text x="620" y="360" font-family="system-ui, sans-serif" font-size="10" fill="#34d399" opacity="0.8">depends on</text>
+
+  <!-- faber_tweann (bottom, foundational) -->
+  <g filter="url(#shadow)">
+    <rect x="230" y="375" width="740" height="150" rx="14" fill="#064e3b" opacity="0.5"/>
+    <rect x="230" y="375" width="740" height="150" rx="14" fill="none" stroke="#10b981" stroke-width="1" opacity="0.5"/>
+    <text x="600" y="403" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#6ee7b7">
+      NEURAL NETWORK FOUNDATION
+    </text>
+
+    <rect x="270" y="420" width="660" height="85" rx="12" fill="url(#faberGrad)"/>
+    <text x="600" y="453" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22" font-weight="bold" fill="#fff">faber_tweann</text>
+    <text x="600" y="478" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#a7f3d0">
+      TWEANN Neural Networks &middot; LTC Neurons &middot; Topology Evolution &middot; ONNX Export
+    </text>
+    <text x="600" y="495" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#a7f3d0" opacity="0.8">
+      Substrates &middot; Plasticity &middot; Neuromodulation &middot; Custom Activations
+    </text>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- OPTIONAL INTEGRATION (dashed)                -->
+  <!-- ============================================ -->
+
+  <!-- Dashed arrow to Macula -->
+  <path d="M 600 540 C 600 570 600 580 600 590" stroke="#34d399" stroke-width="2" fill="none" stroke-dasharray="6,4" opacity="0.6" marker-end="url(#arrowGreen)"/>
+  <text x="620" y="575" font-family="system-ui, sans-serif" font-size="10" fill="#34d399" opacity="0.7">optional mesh distribution</text>
+
+  <!-- ============================================ -->
+  <!-- RELATED ECOSYSTEMS                           -->
+  <!-- ============================================ -->
+
+  <!-- Macula (blue, reference) -->
+  <g filter="url(#shadow)">
+    <rect x="120" y="610" width="320" height="130" rx="16" fill="#0c4a6e" opacity="0.25"/>
+    <rect x="120" y="610" width="320" height="130" rx="16" fill="none" stroke="#0ea5e9" stroke-width="1.5" opacity="0.5"/>
+    <text x="280" y="642" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#38bdf8">Macula</text>
+    <text x="280" y="660" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#7dd3fc">macula-io &middot; Decentralized Mesh</text>
+    <rect x="150" y="675" width="260" height="45" rx="8" fill="url(#meshGrad)" opacity="0.8"/>
+    <text x="280" y="697" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#fff">macula</text>
+    <text x="280" y="712" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#bae6fd">HTTP/3 Mesh &middot; DHT &middot; PubSub &middot; RPC</text>
+  </g>
+
+  <!-- Reckon (purple, reference) -->
+  <g filter="url(#shadow)">
+    <rect x="480" y="610" width="280" height="130" rx="16" fill="#2e1065" opacity="0.25"/>
+    <rect x="480" y="610" width="280" height="130" rx="16" fill="none" stroke="#7c3aed" stroke-width="1.5" opacity="0.5"/>
+    <text x="620" y="642" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#a78bfa">Reckon</text>
+    <text x="620" y="660" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#c4b5fd">reckon-db-org &middot; Event Sourcing</text>
+    <rect x="510" y="675" width="220" height="45" rx="8" fill="url(#reckonGrad)" opacity="0.8"/>
+    <text x="620" y="697" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#fff">reckon_db + evoq</text>
+    <text x="620" y="712" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#e9d5ff">Event Store &middot; CQRS &middot; Aggregates</text>
+  </g>
+
+  <!-- Hecate (rose, reference) -->
+  <g filter="url(#shadow)">
+    <rect x="800" y="610" width="280" height="130" rx="16" fill="#4c0519" opacity="0.2"/>
+    <rect x="800" y="610" width="280" height="130" rx="16" fill="none" stroke="#e11d48" stroke-width="1.5" opacity="0.5"/>
+    <text x="940" y="642" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#fb7185">Hecate</text>
+    <text x="940" y="660" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#fda4af">hecate-social &middot; Developer Studio</text>
+    <rect x="830" y="675" width="220" height="45" rx="8" fill="url(#hecateGrad)" opacity="0.8"/>
+    <text x="940" y="697" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="#fff">hecate-daemon</text>
+    <text x="940" y="712" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#fecdd3">AI Studio &middot; Ventures &middot; LLM</text>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- LEGEND                                       -->
+  <!-- ============================================ -->
+
+  <g transform="translate(80, 800)">
+    <rect x="0" y="-8" width="12" height="12" rx="2" fill="#10b981"/>
+    <text x="18" y="2" font-family="system-ui, sans-serif" font-size="10" fill="#34d399">Faber (rgfaber)</text>
+
+    <rect x="180" y="-8" width="12" height="12" rx="2" fill="#0ea5e9"/>
+    <text x="198" y="2" font-family="system-ui, sans-serif" font-size="10" fill="#38bdf8">Macula (macula-io)</text>
+
+    <rect x="380" y="-8" width="12" height="12" rx="2" fill="#7c3aed"/>
+    <text x="398" y="2" font-family="system-ui, sans-serif" font-size="10" fill="#a78bfa">Reckon (reckon-db-org)</text>
+
+    <rect x="580" y="-8" width="12" height="12" rx="2" fill="#e11d48"/>
+    <text x="598" y="2" font-family="system-ui, sans-serif" font-size="10" fill="#fb7185">Hecate (hecate-social)</text>
+
+    <line x1="760" y1="-2" x2="800" y2="-2" stroke="#34d399" stroke-width="2" stroke-dasharray="6,4"/>
+    <text x="810" y="2" font-family="system-ui, sans-serif" font-size="10" fill="#94a3b8">optional integration</text>
+  </g>
+
+  <!-- Version -->
+  <text x="1160" y="810" text-anchor="end" font-family="system-ui, sans-serif" font-size="10" fill="#475569">
+    faber_ecosystem v0.1.0
+  </text>
+</svg>
