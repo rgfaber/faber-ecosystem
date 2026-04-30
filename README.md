@@ -31,8 +31,8 @@ The ecosystem enables:
 
 | Package | Description | Links |
 |---------|-------------|-------|
-| **faber_tweann** | TWEANN neural networks with LTC neurons, topology evolution, and ONNX export | [GitHub](https://github.com/rgfaber/faber-tweann) \| [HexDocs](https://hexdocs.pm/faber_tweann) |
-| **faber_neuroevolution** | Population-based evolutionary training with speciation, selection, and meta-controllers | [GitHub](https://github.com/rgfaber/faber-neuroevolution) \| [HexDocs](https://hexdocs.pm/faber_neuroevolution) |
+| **faber_tweann** | TWEANN neural networks with LTC neurons, topology evolution, and ONNX export | [Codeberg](https://codeberg.org/rgfaber/faber-tweann) \| [HexDocs](https://hexdocs.pm/faber_tweann) |
+| **faber_neuroevolution** | Population-based evolutionary training with speciation, selection, and meta-controllers | [Codeberg](https://codeberg.org/rgfaber/faber-neuroevolution) \| [HexDocs](https://hexdocs.pm/faber_neuroevolution) |
 
 ## Core Capabilities
 
@@ -118,19 +118,19 @@ Faber is designed to work alongside these independent ecosystems:
 
 HTTP/3 mesh networking for distributing fitness evaluation across edge nodes. Faber populations can optionally use the Macula mesh for parallel evaluation.
 
-> See [macula-ecosystem](https://github.com/macula-io/macula-ecosystem) for full documentation.
+> See [macula-ecosystem](https://codeberg.org/macula-io/macula-ecosystem) for full documentation.
 
 ### Reckon - Event Sourcing & CQRS ([reckon-db-org](https://github.com/reckon-db-org))
 
 BEAM-native event sourcing stack. Applications using Faber for AI can persist evolution history and training state using Reckon's event store.
 
-> See [reckon-ecosystem](https://github.com/reckon-db-org/reckon-ecosystem) for full documentation.
+> See [reckon-ecosystem](https://codeberg.org/reckon-db-org/reckon-ecosystem) for full documentation.
 
 ### Hecate - AI-Powered Developer Studio ([hecate-social](https://github.com/hecate-social))
 
 Developer studio that orchestrates venture lifecycles. Hecate can use Faber for AI-assisted code generation and adaptive development workflows.
 
-> See [hecate-ecosystem](https://github.com/hecate-social/hecate-ecosystem) for full documentation.
+> See [hecate-ecosystem](https://codeberg.org/hecate-social/hecate-ecosystem) for full documentation.
 
 ## Academic References
 
