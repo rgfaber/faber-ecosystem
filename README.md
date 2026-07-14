@@ -136,6 +136,7 @@ Developer studio that orchestrates venture lifecycles. Hecate can use Faber for 
 
 The Faber ecosystem implements algorithms from foundational neuroevolution research:
 
+- **Neuroevolution in Erlang (foundational)** - Sher, G.I. (2013). *Handbook of Neuroevolution Through Erlang.* Springer, New York. ISBN 978-1-4614-4462-6. — the cornerstone text for TWEANN and neuroevolution on the BEAM, and the direct inspiration for Faber's architecture.
 - **NEAT** - Stanley, K.O. & Miikkulainen, R. (2002). *Evolving Neural Networks through Augmenting Topologies.* Evolutionary Computation, 10(2), 99-127.
 - **HyperNEAT** - Stanley, K.O., D'Ambrosio, D.B. & Gauci, J. (2009). *A Hypercube-Based Encoding for Evolving Large-Scale Neural Networks.* Artificial Life, 15(2), 185-212.
 - **TWEANN** - Stanley, K.O. & Miikkulainen, R. (2004). *Competitive Coevolution through Evolutionary Complexification.* JAIR, 21, 63-100.
