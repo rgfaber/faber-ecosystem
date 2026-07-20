@@ -47,6 +47,13 @@ lucky always-one-way net hit 18/20; the balanced 100-trial version closes that).
 
 ## Finding 3 (discovery) — feedforward + FIFO is a FOURTH memory variant (delay-line)
 
+> **Correction (insight 020):** the "delay-line / TDNN" label below was NOT
+> confirmed by the EXP_022 delay sweep — feedforward solved a 16-step delay best,
+> which a bounded delay line should not. The feedforward memory is real but its
+> mechanism is uncharacterised; do not treat "delay-line" as established. What IS
+> robust: feedforward memory is far slower to evolve (gen 14-23) than recurrent
+> (gen 2-4). See 020.
+
 Yet arm A solved 2 of 3 runs (fitness 96 and 100). A network with standard
 neurons and no recurrent edges reached 100/100 on a memory task. Standard neurons
 carry no internal state and feedforward has no feedback wiring, so the memory

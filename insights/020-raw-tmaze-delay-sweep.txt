@@ -1,0 +1,40 @@
+=== DELAY 2 ===
+  delay=2 feedforward (delay-line): {solved,17,3769,92.0,37830}
+  delay=2 feedforward (delay-line): {solved,15,3217,91.0,56049}
+  => delay=2 feedforward (delay-line): solved=2/2, fitness=[92.0,91.0]
+
+  delay=2 cfc (neuron): {solved,1,220,100.0,229}
+  delay=2 cfc (neuron): {solved,3,672,100.0,467}
+  => delay=2 cfc (neuron): solved=2/2, fitness=[100.0,100.0]
+
+  delay=2 recurrent (wiring): {solved,2,448,100.0,369}
+  delay=2 recurrent (wiring): {solved,3,668,100.0,5419}
+  => delay=2 recurrent (wiring): solved=2/2, fitness=[100.0,100.0]
+
+=== DELAY 8 ===
+  delay=8 feedforward (delay-line): {solved,14,3177,93.0,39179}
+  delay=8 feedforward (delay-line): {max_generations,25,5776,52.0,50967}
+  => delay=8 feedforward (delay-line): solved=1/2, fitness=[93.0,52.0]
+
+  delay=8 cfc (neuron): {max_generations,25,5682,89.0,71358}
+  delay=8 cfc (neuron): {max_generations,25,5745,50.0,62214}
+  => delay=8 cfc (neuron): solved=0/2, fitness=[89.0,50.0]
+
+  delay=8 recurrent (wiring): {solved,2,450,100.0,1000}
+  delay=8 recurrent (wiring): {solved,4,913,100.0,6278}
+  => delay=8 recurrent (wiring): solved=2/2, fitness=[100.0,100.0]
+
+=== DELAY 16 ===
+  delay=16 feedforward (delay-line): {solved,16,3653,100.0,44025}
+  delay=16 feedforward (delay-line): {solved,23,5273,100.0,76140}
+  => delay=16 feedforward (delay-line): solved=2/2, fitness=[100.0,100.0]
+
+  delay=16 cfc (neuron): {max_generations,25,5738,50.0,90873}
+  delay=16 cfc (neuron): {solved,25,5721,93.0,80996}
+  => delay=16 cfc (neuron): solved=1/2, fitness=[50.0,93.0]
+
+  delay=16 recurrent (wiring): {solved,3,689,100.0,1985}
+  delay=16 recurrent (wiring): {max_generations,25,5560,64.0,30214}
+  => delay=16 recurrent (wiring): solved=1/2, fitness=[100.0,64.0]
+
+DONE

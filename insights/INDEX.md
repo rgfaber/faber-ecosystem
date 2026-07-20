@@ -39,6 +39,7 @@ commit, a bug fixed that reveals a class of defect is an insight.
 | [017](017-ltc-wired-memory-is-dead-weight-at-this-budget.md) | LTC/CfC now runs through evolution; adding memory HURT on double-pole at 30 gens — third instance of "unexploitable capability is a cost" (cf 013, 015) | confirmed + signed negative | 2026-07-20 |
 | [018](018-three-way-memory-none-beats-both-wiring-beats-neuron.md) | Three-way memory (none/wiring/neuron) at 60 gens: none beats both, wiring beats neuron, CfC smoothing hurts fast control; recurrent fix (EXP_020) validated at scale | confirmed + signed negative + characterisation | 2026-07-21 |
 | [019](019-memory-pays-when-the-task-needs-it-and-fits-budget.md) | Memory pays decisively on the T-maze (cfc solves in 1 gen); capability value = task-match x budget; feedforward+FIFO is a 4th variant (delay-line/TDNN) | confirmed + discovery | 2026-07-21 |
+| [020](020-delay-sweep-refutes-horizon-story-evolvability-is-the-axis.md) | Delay sweep REFUTES the bounded-horizon story; real axis is evolvability (recurrent memory found gen 2-4 vs feedforward gen 14-23); n=2 too noisy; corrects 019's delay-line label | signed negative + finding | 2026-07-21 |
 
 ## Related
 
