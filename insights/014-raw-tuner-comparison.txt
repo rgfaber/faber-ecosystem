@@ -1,0 +1,17 @@
+
+=== DXNN-proper (dynamic_random + wsize_proportional) (max_gen=50) ===
+  {max_generations,50,15508,1.19962275079932}
+  {max_generations,50,15478,1.1996297304522467}
+  {max_generations,50,15596,1.1983460671126307}
+  DXNN-proper (dynamic_random + wsize_proportional): best_fitness_by_run=[1.19962275079932,
+                                                                          1.1996297304522467,
+                                                                          1.1983460671126307], solved=0/3
+
+=== crude (all + const60) (max_gen=50) ===
+  {solved,11,18266,179.57368968760528}
+  {solved,13,22279,4.343792873512462}
+  {solved,12,20361,58.38456537192276}
+  crude (all + const60): best_fitness_by_run=[179.57368968760528,
+                                              4.343792873512462,
+                                              58.38456537192276], solved=3/3
+DONE
