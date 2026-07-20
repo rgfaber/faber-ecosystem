@@ -41,6 +41,7 @@ commit, a bug fixed that reveals a class of defect is an insight.
 | [019](019-memory-pays-when-the-task-needs-it-and-fits-budget.md) | Memory pays decisively on the T-maze (cfc solves in 1 gen); capability value = task-match x budget; feedforward+FIFO is a 4th variant (delay-line/TDNN) | confirmed + discovery | 2026-07-21 |
 | [020](020-delay-sweep-refutes-horizon-story-evolvability-is-the-axis.md) | Delay sweep REFUTES the bounded-horizon story; real axis is evolvability (recurrent memory found gen 2-4 vs feedforward gen 14-23); n=2 too noisy; corrects 019's delay-line label | signed negative + finding | 2026-07-21 |
 | [021](021-feedforward-tmaze-topology-inconclusive.md) | Topology inspection inconclusive (fitness not persisted to genotype); evolved feedforward T-maze agents are deep near-linear chains, delay-independent, but confounded by bloat | inconclusive + method | 2026-07-21 |
+| [022](022-feedforward-tmaze-solver-is-compact-not-a-delay-line.md) | Fitness-persistence fix isolates the SOLVER: delay-2 feedforward memory solver is COMPACT (3 neurons), not a deep delay line; 021's chains were bloated non-solvers; mechanism narrowed not closed | confirmed + refutes 021 | 2026-07-21 |
 
 ## Prior art
 

@@ -1,0 +1,4 @@
+  tmaze delay=2   (memory): solver_fitness=100.0, neurons=3, longest_path=4
+  tmaze delay=8   (memory): solver_fitness=50.0, neurons=26, longest_path=26
+  xor             (NO memory control): solver_fitness=1.3942905250966156, neurons=1, longest_path=2
+DONE
