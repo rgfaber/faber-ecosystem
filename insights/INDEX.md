@@ -25,6 +25,7 @@ commit, a bug fixed that reveals a class of defect is an insight.
 | [003](003-an-inverted-objective-looks-like-working-evolution.md) | An inverted objective is indistinguishable from working evolution without a control | confirmed | 2026-07-20 |
 | [004](004-domain-sdk-path-is-not-tweann.md) | The domain_sdk path evolves weights only, not topology | confirmed | 2026-07-20 |
 | [005](005-seeding-the-server-process-suffices-for-reproducibility.md) | Seeding one process makes an evolutionary run replayable | confirmed | 2026-07-20 |
+| [006](006-evaluations-to-solve-is-now-measurable.md) | Evaluations-to-solve is measurable; first number is inflated 10x | confirmed | 2026-07-20 |
 
 ## Related
 
