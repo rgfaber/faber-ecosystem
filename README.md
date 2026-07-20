@@ -101,18 +101,26 @@ end
 ### Basic Usage
 
 ```erlang
-%% Create a minimal genome
-Genome = faber_tweann_genotype:construct(
-    faber_tweann_morphology:xor_mimic(),
-    <<"species_001">>
-),
+%% Create a minimal genotype
+genotype:init_db(),
+SpecieId = genotype:generate_id(specie),
+AgentId  = genotype:generate_id(agent),
+Constraint = #constraint{morphology = xor_mimic},
+genotype:construct_Agent(SpecieId, AgentId, Constraint),
 
-%% Compile to phenotype (runnable network)
-Phenotype = faber_tweann_phenotype:from_genotype(Genome),
+%% Mutate topology and weights
+genome_mutator:mutate(AgentId),
 
-%% Activate with inputs
-Outputs = faber_tweann_phenotype:activate(Phenotype, [0.5, 0.8]).
+%% Compile to a network and evaluate
+Network = network_evaluator:from_genotype(AgentId),
+Outputs = network_evaluator:evaluate(Network, [0.5, 0.8]).
 ```
+
+> The previous version of this snippet called
+> `faber_tweann_genotype:construct/2`, `faber_tweann_morphology:xor_mimic/0`
+> and `faber_tweann_phenotype:from_genotype/1` + `activate/2`. **None of those
+> modules exist.** The real modules are `genotype`, `morphology` and
+> `network_evaluator`.
 
 ## Use Cases
 
