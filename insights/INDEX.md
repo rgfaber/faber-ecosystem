@@ -36,6 +36,7 @@ commit, a bug fixed that reveals a class of defect is an insight.
 | [014](014-shallow-tuning-fails-xor.md) | DXNN2's shallow default tuner does NOT solve XOR at a matched budget; the crude tuner's depth was not waste | confirmed | 2026-07-20 |
 | [015](015-tuner-fitness-depends-on-problem-structure.md) | The right tuner depends on problem structure: shallow wins control (pole), deep wins precise-weight (XOR); XOR was out of domain | confirmed | 2026-07-20 |
 | [016](016-recurrence-works-but-single-pole-is-a-weak-memory-test.md) | Recurrent evaluation works (validated); but single-pole-no-velocity is too weak to prove recurrence beats feedforward — real test is double pole | confirmed + inconclusive | 2026-07-20 |
+| [017](017-ltc-wired-memory-is-dead-weight-at-this-budget.md) | LTC/CfC now runs through evolution; adding memory HURT on double-pole at 30 gens — third instance of "unexploitable capability is a cost" (cf 013, 015) | confirmed + signed negative | 2026-07-20 |
 
 ## Related
 

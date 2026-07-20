@@ -35,6 +35,29 @@ for the insight number it is expected to produce, so the corpus stays coherent.
 See insight 015's "Consequences" and the L1/L2/L3 feed design (session
 2026-07-20) for the feed-UX layering.
 
+## Operational variants: the Neurolab-as-a-Service thesis
+
+What this programme is really building is a **map of operational variants** — the
+knobs of the neuroevolution design space and how they interact with problem
+structure. Each axis below is a variant; each signed insight is a cell in the
+"which variant wins where, and at what cost" matrix.
+
+The strategic point (raised 2026-07-20): that map IS the product. A
+Neurolab-as-a-Service would let a user bring a problem and ask "which
+mechanism/substrate/tuner fits?" — and answer it cheaply because it holds
+**priors over the variant space** rather than searching from scratch. Our
+by-hand corpus is the seed of those priors.
+
+A finding is not only "variant X beat variant Y on problem P." It is also the
+*characterisation* of a variant: its robustness, its cost, its failure modes.
+Example (this session): memory-in-the-wiring (recurrent) vs memory-in-the-neuron
+(LTC internal_state). On a process-per-neuron substrate the recurrent variant is
+fragile (synchronous-cycle desync) while the LTC variant is robust and cheap.
+That characterisation is exactly what a NLaaS user needs before choosing a
+memory mechanism — and it means **every working, characterised variant we add
+enriches the offering**. The recurrent deep-fix is therefore product work, not
+just bug work: it promotes a broken variant to a working, menu-able one.
+
 ## The measurement axes
 
 An experiment is a point in this space:
@@ -62,9 +85,10 @@ A problem that does not need a capability cannot measure it.
 | — | XOR | shallow vs deep tuner | [014 raw](../insights/014-raw-tuner-comparison.txt) | [014](../insights/014-shallow-tuning-fails-xor.md) | done |
 | — | pole 1 + velocity | shallow vs deep tuner | [015 raw](../insights/015-raw-pole-tuner-comparison.txt) | [015](../insights/015-tuner-fitness-depends-on-problem-structure.md) | done |
 | [016](experiments/EXP_016_pole_without_velocity.md) | pole 1 no velocity | feedforward vs recurrent (memory) | [016 raw](../insights/016-raw-recurrent-vs-feedforward.txt) | [016](../insights/016-recurrence-works-but-single-pole-is-a-weak-memory-test.md) | done — **fix validated, comparison inconclusive** (task too weakly non-Markov) |
+| [017](../insights/017-ltc-wired-memory-is-dead-weight-at-this-budget.md) | pole 2 no velocity | LTC/CfC vs memoryless feedforward | [017 raw](../insights/017-raw-ltc-vs-memoryless.txt) | [017](../insights/017-ltc-wired-memory-is-dead-weight-at-this-budget.md) | done — **LTC wired in; memory HURT at 30 gens** (capability-cost, 3rd instance) |
+| 020 | (recurrent cycle protocol) | deep-fix same-layer/mutual recurrence sync | — | — | **queued: promotes the wiring-memory variant from broken to menu-able** |
 | 018 | pole 2 + velocity | topology-search premium (does it finally pay?) | — | 018 (pending) | queued |
-| **019** | **pole 2 no velocity** | **the real memory test; LTC home turf** | — | 019 (pending) | **next: decisive memory discriminator** |
-| 017 | pole 2 no velocity | standard recurrent vs LTC/CfC | — | 017 (pending) | queued behind 019 |
+| 019 | pole 2 no velocity | LTC vs memoryless vs recurrent, budget-scaled (100s of gens) | — | 019 (pending) | needs EXP_020 (recurrent) + longer budget |
 
 ## The critical path
 
