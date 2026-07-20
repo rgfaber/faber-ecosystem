@@ -1,29 +1,24 @@
 # Claims Audit
 
-**Generated:** 2026-07-20, resumed run `wf_18a439d7-3f9`
+**Generated:** 2026-07-20, run `wf_18a439d7-3f9` (complete: 162/162 agents, 0 errors)
 
 Every documentation claim across the four faber repos, checked against code.
-Each non-backed verdict was given to an independent verifier whose job was to
-REFUTE it by finding implementing code, biased toward keeping the claim.
+Each non-backed verdict went to an independent verifier whose job was to REFUTE it
+by finding implementing code, biased toward keeping the claim.
 
 | | Count |
 |---|---|
 | assessed | 154 |
-| confirmed_unbacked | 58 |
-| rescued | 77 |
-| unverified | 19 |
+| confirmed_unbacked | 68 |
+| rescued | 86 |
+| unverified | 0 |
 
-## Coverage warning
+**This run is complete.** Two earlier runs died on session limits (42 then 20 agents).
+See [CLAIMS_AUDIT_CRITIQUE.md](CLAIMS_AUDIT_CRITIQUE.md) for the completeness critic,
+which identifies what this audit did NOT cover, chiefly EDoc comments in `src/`
+and build-file metadata. Several of its findings are already fixed.
 
-Still incomplete. 20 of 162 agents died on a session limit, including the
-**completeness critic, which has now failed on both runs**. There is therefore no
-check for surfaces nobody thought to audit: EDoc `@doc` claims in `src/*.erl`,
-`.app.src` descriptions, and hex metadata are largely unexamined.
-
-The 19 unverified claims below were **silently deleted** in the first run: a dead
-verifier removed the claim itself, not just its verification. Fixed in the script.
-
-## Confirmed unbacked (58)
+## Confirmed unbacked (68)
 
 | Repo file | Line | Category | Action | Claim |
 |---|---|---|---|---|
@@ -82,37 +77,21 @@ verifier removed the claim itself, not just its verification. Fixed in the scrip
 | `guides/silos/cultural-silo.md` | 477 | architecture | **correct** | \\| `cultural_innovation.erl` \\| Innovation detection \\| Same \\| |
 | `guides/lineage-tracking.md` | 292 | dependency | **correct** | **Event Store Backend**: Implements `neuroevolution_lineage_events` using erl-esdb-gater |
 | `guides/lineage-tracking.md` | 371 | api | **roadmap** | {ok, Tree} = lineage_tree_projection:get_ancestors(<<"ind-001">>, 5). |
+| `guides/interoperability.md` | 328 | dependency | **correct** | macula_rpc:register_method(<<"brain.infer">>, fun handle_inference/1). |
 | `guides/continual-learning.md` | 275 | api | **roadmap** | Portfolio = portfolio_manager:init([ |
-| `README.md` | 43 | feature | **roadmap** | **Substrate Networks** - Spatial neural patterns with geometric regularity |
+| `README.md` | 43 | feature | **delete** | **Substrate Networks** - Spatial neural patterns with geometric regularity |
 | `README.md` | 51 | feature | **roadmap** | **HyperNEAT** - Indirect encoding via CPPNs for large-scale networks |
+| `README.md` | 92 | api | **correct** | Genome = faber_tweann_genotype:construct(     faber_tweann_morphology:xor_mimic(),     <<"species_001">> ),  % |
+| `README.md` | 61 | architecture | **correct** | <img src="assets/dependency-flow.svg" alt="Faber Dependency Flow" width="100%"> |
+| `README.md` | 141 | feature | **roadmap** | **HyperNEAT** - Stanley, K.O., D'Ambrosio, D.B. & Gauci, J. (2009). *A Hypercube-Based Encoding for Evolving L |
+| `README.md` | 7 | architecture | **correct** | This is an **enterprise-only** package that provides 10-15x performance improvements over pure Erlang fallback |
+| `README.md` | 148 | performance | **delete** | Typical speedups over pure Erlang:  \\| Operation \\| Speedup \\| \\|-----------\\|---------\\| \\| Network ev |
+| `README.md` | 111 | performance | **correct** | ### SIMD Batch Activations - `tanh_batch/1`, `sigmoid_batch/1`, `relu_batch/1`, `softmax_batch/1` - `activatio |
+| `README.md` | 14 | dependency | **keep** | {deps, [     {faber_tweann, "~> 1.0"},     {faber_nn_nifs, {git, "git@codeberg.org:rgfaber/faber-nn-nifs.git", |
+| `README.md` | 187 | architecture | **correct** | - [faber_tweann](https://hex.pm/packages/faber_tweann) - Community edition on hex.pm |
+| `src/faber_nn_nifs.app.src` | 2 | architecture | **correct** | {description, "High-performance Rust NIFs for Faber Neuroevolution (Enterprise)"} |
 
-## Unverified (19) - verifier died, verdict is the auditor's alone
-
-Treat as unconfirmed. Do not act without checking.
-
-| Repo file | Line | Verdict | Claim |
-|---|---|---|---|
-| `guides/interoperability.md` | 328 | unbacked | macula_rpc:register_method(<<"brain.infer">>, fun handle_inference/1). |
-| `guides/liquid-conglomerate.md` | 179 | unbacked | \\| **Temporal** \\| **+++** (2-4x faster) \\| Minimal \\| Eliminates wasted evaluation time \\| |
-| `rebar.config` | 96 | misleading | {macula, {git, "https://github.com/rgfaber/macula.git", {tag, "v0.14.2"}}} |
-| `README.md` | 92 | unbacked | Genome = faber_tweann_genotype:construct(     faber_tweann_morphology:xor_mimic(),     <<"species_001">> ),  % |
-| `README.md` | 61 | misleading | <img src="assets/dependency-flow.svg" alt="Faber Dependency Flow" width="100%"> |
-| `README.md` | 141 | unbacked | **HyperNEAT** - Stanley, K.O., D'Ambrosio, D.B. & Gauci, J. (2009). *A Hypercube-Based Encoding for Evolving L |
-| `README.md` | 14 | partial | It provides a **complete stack** for evolving adaptive AI controllers using TWEANN (Topology and Weight Evolvi |
-| `README.md` | 7 | misleading | This is an **enterprise-only** package that provides 10-15x performance improvements over pure Erlang fallback |
-| `README.md` | 148 | unbacked | Typical speedups over pure Erlang:  \\| Operation \\| Speedup \\| \\|-----------\\|---------\\| \\| Network ev |
-| `README.md` | 111 | misleading | ### SIMD Batch Activations - `tanh_batch/1`, `sigmoid_batch/1`, `relu_batch/1`, `softmax_batch/1` - `activatio |
-| `README.md` | 123 | misleading | - `evaluate_cfc_parallel/4` - Parallel CfC neurons |
-| `README.md` | 14 | misleading | {deps, [     {faber_tweann, "~> 1.0"},     {faber_nn_nifs, {git, "git@codeberg.org:rgfaber/faber-nn-nifs.git", |
-| `README.md` | 20 | misleading | The NIFs are automatically detected and used by `faber_tweann`. No code changes required. |
-| `README.md` | 158 | misleading | The `tweann_nif` module in `faber_tweann` automatically detects this package:  ```erlang %% Priority order: %% |
-| `README.md` | 187 | misleading | - [faber_tweann](https://hex.pm/packages/faber_tweann) - Community edition on hex.pm |
-| `CHANGELOG.md` | 10 | misleading | ### Stable Release  First stable release. All APIs are considered stable. |
-| `CHANGELOG.md` | 24 | misleading | - **SIMD Batch Activations**: `tanh_batch/1`, `sigmoid_batch/1`, `relu_batch/1`, `softmax_batch/1` |
-| `CHANGELOG.md` | 44 | misleading | [1.0.0]: https://github.com/rgfaber/faber-nn-nifs/compare/v0.1.0...v1.0.0 [0.1.0]: https://github.com/rgfaber/ |
-| `src/faber_nn_nifs.app.src` | 2 | misleading | {description, "High-performance Rust NIFs for Faber Neuroevolution (Enterprise)"} |
-
-## Rescued by verification (77)
+## Rescued by verification (86)
 
 Flagged as unbacked, but a verifier found implementing code.
 **These claims are true. Do not remove them.**
@@ -189,10 +168,19 @@ Flagged as unbacked, but a verifier found implementing code.
 | `guides/lineage-tracking.md` | {faber_neuroevolution_esdb, "~> 0.1.0"} | faber-neuroevolution/src/silos/lc_event_emitter.erl (emit/3, emit/4, emit_b |
 | `guides/interoperability.md` | NetworkJson = faber_tweann:to_json(Network), | faber-tweann/src/network_evaluator.erl:775 — network_evaluator:to_json/1 (e |
 | `guides/interoperability.md` | OnnxBinary = faber_tweann:to_onnx(Network), | faber-tweann/src/network_onnx.erl — network_onnx:to_onnx/1 and to_onnx/2 |
+| `guides/liquid-conglomerate.md` | \\| **Temporal** \\| **+++** (2-4x faster) \\| Minimal \\| Eliminates waste | faber-neuroevolution/src/silos/temporal_silo/temporal_silo.erl (record_time |
 | `guides/topology-evolution.md` | \\| `add_neuron/1` \\| Insert neuron into existing connection \\| | topological_mutations:add_neuron/1 (faber-tweann/src/topological_mutations. |
-| `guides/silos/resource-silo.md` | \\| `resource_silo.erl` \\| Main gen_server \\| `src/silos/resource_silo/`  | faber-neuroevolution/src/silos/resource_silo/resource_silo.erl — -module(re |
-| `rebar.config` | {faber_tweann, "~> 1.0"} | faber-neuroevolution/rebar.lock (pkg faber_tweann 1.2.0) + _build/default/l |
-| `README.md` | {faber_tweann, "~> 0.1.0"},     {faber_neuroevolution, "~> 0.1.0"} | faber-ecosystem/README.md:82-88 and 92-99; faber-tweann/src/faber_tweann.ap |
-| `README.md` | {:faber_tweann, "~> 0.1.0"},     {:faber_neuroevolution, "~> 0.1.0"} | /home/rl/work/codeberg.org/rgfaber/faber-ecosystem/README.md:90-97 (mix.exs |
-| `README.md` | [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE) | /home/rl/work/codeberg.org/rgfaber/faber-ecosystem/LICENSE (MIT License, Co |
+| `guides/silos/resource-silo.md` | \\| `resource_silo.erl` \\| Main gen_server \\| `src/silos/resource_silo/`  | faber-neuroevolution/src/silos/resource_silo/resource_silo.erl (-module(res |
+| `rebar.config` | {faber_tweann, "~> 1.0"} | rebar.lock (pkg faber_tweann 1.2.0) + _build/default/lib/faber_tweann/ebin/ |
+| `rebar.config` | {macula, {git, "https://github.com/rgfaber/macula.git", {tag, "v0.14.2"}}} | faber-neuroevolution/src/distribute/macula_mesh.erl (start_peer/4, advertis |
+| `README.md` | {faber_tweann, "~> 0.1.0"},     {faber_neuroevolution, "~> 0.1.0"} | faber-ecosystem/README.md lines 84-86 and 94-96; versions declared in faber |
+| `README.md` | {:faber_tweann, "~> 0.1.0"},     {:faber_neuroevolution, "~> 0.1.0"} | faber-ecosystem/README.md:90-98 (current text) backed by faber-tweann/src/f |
+| `README.md` | [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE) | faber-ecosystem/LICENSE (MIT License, Copyright (c) 2026 R.G. Lefever) |
 | `README.md` | MIT - See [LICENSE](LICENSE) for details. | /home/rl/work/codeberg.org/rgfaber/faber-ecosystem/LICENSE (MIT License, Co |
+| `README.md` | It provides a **complete stack** for evolving adaptive AI controllers using | faber-tweann/src/topological_mutations.erl (add_neuron/1, add_outlink/1, ad |
+| `README.md` | - `evaluate_cfc_parallel/4` - Parallel CfC neurons | faber-nn-nifs/native/src/lib.rs:1506 `evaluate_cfc_parallel` (rustler NIF,  |
+| `README.md` | The NIFs are automatically detected and used by `faber_tweann`. No code cha | faber-tweann/src/tweann_nif.erl — detect_impl_module/0 + require_nif/0 (v2. |
+| `README.md` | The `tweann_nif` module in `faber_tweann` automatically detects this packag | faber-tweann/src/tweann_nif.erl:131 detect_impl_module/0 and :142 require_n |
+| `CHANGELOG.md` | ### Stable Release  First stable release. All APIs are considered stable. | src/faber_nn_nifs.erl (all APIs listed under the 1.0.0 entry, e.g. weight_d |
+| `CHANGELOG.md` | - **SIMD Batch Activations**: `tanh_batch/1`, `sigmoid_batch/1`, `relu_batc | faber-tweann/native/faber_nn_nifs/src/lib.rs:1369-1405 (tanh_batch, sigmoid |
+| `CHANGELOG.md` | [1.0.0]: https://github.com/rgfaber/faber-nn-nifs/compare/v0.1.0...v1.0.0 [ | /home/rl/work/codeberg.org/rgfaber/faber-nn-nifs/.git/config (remote "githu |

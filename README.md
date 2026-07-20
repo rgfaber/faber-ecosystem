@@ -112,7 +112,7 @@ genotype:construct_Agent(SpecieId, AgentId, Constraint),
 genome_mutator:mutate(AgentId),
 
 %% Compile to a network and evaluate
-Network = network_evaluator:from_genotype(AgentId),
+{ok, Network} = network_evaluator:from_genotype(AgentId),
 Outputs = network_evaluator:evaluate(Network, [0.5, 0.8]).
 ```
 
