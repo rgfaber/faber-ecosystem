@@ -4,6 +4,12 @@
 **Experiment:** EXP_024b (fixed EXP_024)
 **Prior art:** `docs/RESEARCH_PRIOR_ART.md` (reservoir/propagation-delay memory).
 
+> **Corrected by insight 023:** the title's "not a delay line" is wrong. Dumping
+> the solver's WIRING (023) shows the 3 neurons form a LINEAR CHAIN (each neuron
+> one input) — which IS a short delay line. "Compact" was misread as "not a
+> chain." The delay-line mechanism is confirmed. The durable point here — the
+> solver is compact, not the 28-deep bloat 021 sampled — still stands.
+
 ## The fix
 
 021 could not isolate the solver because agent fitness was never written to the

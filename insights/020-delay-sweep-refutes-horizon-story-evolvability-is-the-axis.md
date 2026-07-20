@@ -5,6 +5,13 @@
 **Uses:** the tmaze scape and the four-variant framing of 019. Corrects 019's
 "delay-line / TDNN" label.
 
+> **Corrected by insight 023:** this insight's retraction of the delay-line label
+> was premature. It rested on n=2 noise (feedforward solved delay 16 by luck).
+> Isolating the real solver (023) shows its wiring IS a linear chain (a short
+> delay line), vs a convergent DAG for XOR. The delay-line mechanism is confirmed.
+> The durable finding below — evolvability differs (recurrent gen 2-4 vs
+> feedforward 14-23) — still stands.
+
 ## The hypothesis (from 019) and why it is wrong
 
 019 proposed that "feedforward" solves the T-maze via emergent DELAY-LINE memory

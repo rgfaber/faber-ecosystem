@@ -1,0 +1,63 @@
+=== TMAZE delay=2 SOLVER (feedforward, deep tuner) ===
+  fitness=100.0, neurons=3
+  SENSOR {{-1,0.1788719214218778},sensor} (layer -1) params=[2] -> fanout [{{0,
+                                                                             0.885642851114465},
+                                                                            neuron}]
+  NEURON {{0,0.885642851114465},neuron} (layer 0) af=tanh inputs=[{{-1,sensor},
+                                                                   0.171}] -> out [{{0.5,
+                                                                                     0.4921831552305138},
+                                                                                    neuron}]
+  NEURON {{0.5,0.4921831552305138},neuron} (layer 0.5) af=tanh inputs=[{{0,
+                                                                         neuron},
+                                                                        -0.227}] -> out [{{0.75,
+                                                                                           0.0490226797237},
+                                                                                          neuron}]
+  NEURON {{0.75,0.0490226797237},neuron} (layer 0.75) af=tanh inputs=[{{0.5,
+                                                                        neuron},
+                                                                       0.165}] -> out [{{1,
+                                                                                         0.43069248907073876},
+                                                                                        actuator}]
+  ACTUATOR {{1,0.43069248907073876},actuator} (layer 1) <- fanin [{{0.75,
+                                                                    0.0490226797237},
+                                                                   neuron}]
+
+=== XOR SOLVER (feedforward, deep tuner) -- no-memory control ===
+  fitness=6.585479230197141, neurons=3
+  SENSOR {{-1,0.37584194127954473},sensor} (layer -1) params=undefined -> fanout [{{0.5,
+                                                                                    0.32260200314208176},
+                                                                                   neuron},
+                                                                                  {{0,
+                                                                                    0.03178063547335552},
+                                                                                   neuron}]
+  NEURON {{0,0.03178063547335552},neuron} (layer 0) af=tanh inputs=[{{-1,
+                                                                      sensor},
+                                                                     -0.981}] -> out [{{0.75,
+                                                                                        0.026478314293262528},
+                                                                                       neuron},
+                                                                                      {{0.5,
+                                                                                        0.32260200314208176},
+                                                                                       neuron}]
+  NEURON {{0.5,0.32260200314208176},neuron} (layer 0.5) af=tanh inputs=[{{-1,
+                                                                          sensor},
+                                                                         -0.212},
+                                                                        {bias,
+                                                                         -0.054},
+                                                                        {{0,
+                                                                          neuron},
+                                                                         -0.255},
+                                                                        {bias,
+                                                                         -0.054}] -> out [{{0.75,
+                                                                                            0.026478314293262528},
+                                                                                           neuron}]
+  NEURON {{0.75,0.026478314293262528},neuron} (layer 0.75) af=tanh inputs=[{{0,
+                                                                             neuron},
+                                                                            0.024},
+                                                                           {{0.5,
+                                                                             neuron},
+                                                                            0.256}] -> out [{{1,
+                                                                                              0.2532340645962555},
+                                                                                             actuator}]
+  ACTUATOR {{1,0.2532340645962555},actuator} (layer 1) <- fanin [{{0.75,
+                                                                   0.026478314293262528},
+                                                                  neuron}]
+DONE
