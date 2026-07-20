@@ -40,20 +40,33 @@ The ecosystem enables:
 
 - **TWEANN Architecture** - Topology and Weight Evolving Artificial Neural Networks
 - **LTC Neurons** - Liquid Time-Constant neurons for temporal processing
-- **Substrate Networks** - Spatial neural patterns with geometric regularity
 - **Plasticity** - Hebbian learning and neuromodulation
 - **Custom Activations** - Extensible activation function library
 - **ONNX Export** - Export evolved networks for deployment
+- **Native acceleration** - Rust NIFs built from source, with a pure Erlang
+  reference implementation held in agreement by a conformance test
 
 ### faber_neuroevolution - Evolutionary Framework
 
 - **NEAT Algorithm** - NeuroEvolution of Augmenting Topologies with historical markings
-- **HyperNEAT** - Indirect encoding via CPPNs for large-scale networks
 - **Speciation** - Protect innovation through species-based fitness sharing
 - **Island Model** - Parallel populations with periodic migration
 - **Novelty Search** - Behavior-driven exploration instead of pure fitness
-- **Meta-Controller** - Adaptive parameter tuning during evolution
-- **Liquid Conglomerate** - Multi-agent cooperative evolution
+- **MAP-Elites** - Quality-diversity search over a behaviour archive
+
+### Not yet implemented
+
+These were previously listed above as capabilities. They are not implemented.
+See [faber-tweann/ROADMAP.md](https://codeberg.org/rgfaber/faber-tweann/src/branch/master/ROADMAP.md)
+and [faber-neuroevolution/ROADMAP.md](https://codeberg.org/rgfaber/faber-neuroevolution/src/branch/master/ROADMAP.md).
+
+- **Substrate Networks** - `genotype.erl` raises `substrate_not_implemented`
+- **HyperNEAT / CPPNs** - no CPPN or substrate module exists in either package
+- **Meta-Controller learning** - the controller runs a real forward pass, but
+  its weights are frozen at random initialisation and never updated
+- **Liquid Conglomerate** - the L2/L1/L0 chain runs; the 13 silos are
+  implemented but unconnected, and the weight update rule has no credit
+  assignment
 
 ## Dependency Flow
 
@@ -69,8 +82,8 @@ Add Faber packages to your `rebar.config`:
 
 ```erlang
 {deps, [
-    {faber_tweann, "~> 0.1.0"},
-    {faber_neuroevolution, "~> 0.1.0"}
+    {faber_tweann, "~> 2.0"},
+    {faber_neuroevolution, "~> 1.2"}
 ]}.
 ```
 
@@ -79,8 +92,8 @@ Add Faber packages to your `rebar.config`:
 ```elixir
 defp deps do
   [
-    {:faber_tweann, "~> 0.1.0"},
-    {:faber_neuroevolution, "~> 0.1.0"}
+    {:faber_tweann, "~> 2.0"},
+    {:faber_neuroevolution, "~> 1.2"}
   ]
 end
 ```
