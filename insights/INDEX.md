@@ -29,6 +29,7 @@ commit, a bug fixed that reveals a class of defect is an insight.
 | [007](007-deterministic-environments-declare-themselves.md) | Deterministic environments declare themselves; corrected baseline is 550 | confirmed | 2026-07-20 |
 | [008](008-the-scape-and-fitness-channel.md) | Restoring the scape: the fitness channel (Phase 3, part 1) | closed by 009 | 2026-07-20 |
 | [009](009-xor-solved-through-shers-path.md) | Evaluation completes through DXNN2's path; K1 passes structurally | confirmed | 2026-07-20 |
+| [010](010-population-loop-works-multigeneration-blocked.md) | Population loop drives Sher-path evaluation; multi-generation evolution blocked | confirmed | 2026-07-20 |
 
 ## Related
 
