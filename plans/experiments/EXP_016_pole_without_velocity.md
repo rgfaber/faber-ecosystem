@@ -71,12 +71,22 @@ claiming anything about recurrence.
 
 ## Feed
 
-*(appended live once recurrent evaluation is fixed and the run executes)*
+Ran 2026-07-20 after the recurrent-evaluation fix (faber-tweann f16228f).
 
 ```
-(pending)
+feedforward: solved 1/5, fitness [168k, 750k(solve), 199k, 148k, 82k]
+recurrent:   solved 0/5, fitness [timeout, timeout, 322k, 394k, 84k]
 ```
+
+Raw: `../../insights/016-raw-recurrent-vs-feedforward.txt`.
 
 ## Insight
 
-*(pending — insights/016-*.md)*
+[016](../../insights/016-recurrence-works-but-single-pole-is-a-weak-memory-test.md).
+**Fix validated, comparison inconclusive.** Both kill-criterion conditions
+fired: feedforward SOLVED the task (single-pole-no-velocity is only weakly
+non-Markov), and a wall-clock confound (100k-step goal -> expensive evals ->
+timeouts -> orphan-population contention) contaminated the recurrent arm. Lone
+real signal: recurrent balanced longer (fitness 322k/394k > feedforward's best
+non-solve 199k). Decisive memory test moves to EXP_019 (double pole, no
+velocity) with a bounded goal.

@@ -61,19 +61,24 @@ A problem that does not need a capability cannot measure it.
 | — | XOR | DXNN vs domain_sdk (topology cost) | — | [013](../insights/013-topology-evolution-costs-37x-on-a-known-topology-problem.md) | done |
 | — | XOR | shallow vs deep tuner | [014 raw](../insights/014-raw-tuner-comparison.txt) | [014](../insights/014-shallow-tuning-fails-xor.md) | done |
 | — | pole 1 + velocity | shallow vs deep tuner | [015 raw](../insights/015-raw-pole-tuner-comparison.txt) | [015](../insights/015-tuner-fitness-depends-on-problem-structure.md) | done |
-| [016](experiments/EXP_016_pole_without_velocity.md) | pole 1 no velocity | feedforward vs recurrent (memory) | — | 016 (pending) | **blocked: recurrent eval** |
-| 017 | pole 1 no velocity | standard recurrent vs LTC/CfC | — | 017 (pending) | queued behind 016 |
+| [016](experiments/EXP_016_pole_without_velocity.md) | pole 1 no velocity | feedforward vs recurrent (memory) | [016 raw](../insights/016-raw-recurrent-vs-feedforward.txt) | [016](../insights/016-recurrence-works-but-single-pole-is-a-weak-memory-test.md) | done — **fix validated, comparison inconclusive** (task too weakly non-Markov) |
 | 018 | pole 2 + velocity | topology-search premium (does it finally pay?) | — | 018 (pending) | queued |
-| 019 | pole 2 no velocity | the chaos crown; LTC home turf | — | 019 (pending) | queued behind 016/017 |
+| **019** | **pole 2 no velocity** | **the real memory test; LTC home turf** | — | 019 (pending) | **next: decisive memory discriminator** |
+| 017 | pole 2 no velocity | standard recurrent vs LTC/CfC | — | 017 (pending) | queued behind 019 |
 
 ## The critical path
 
-Everything memory-related converges on ONE prerequisite: **recurrent network
-evaluation** (first-cycle seeding of feedback inputs). It is the single unblock
-for EXP-016, 017, and 019. Fix it once, three experiments open. This is the
-active engineering task; see `plans/experiments/EXP_016_pole_without_velocity.md`
-for the experiment that motivates it and `faber-tweann/ROADMAP.md` item 1 for the
-technical gap.
+Recurrent network evaluation (first-cycle seeding) is DONE (insight 016,
+faber-tweann f16228f) and validated. It unblocks the memory experiments.
+
+EXP_016 taught that single-pole-without-velocity is too weakly non-Markov to
+discriminate memory (feedforward solved it). The decisive memory test is
+**EXP_019: double pole, no velocity** — the genuine non-Markov benchmark. Two
+harness prerequisites before running it (both from insight 016, now in the
+template): bound the evaluation cost with a modest goal, and kill timed-out
+populations. `pb_sim` already supports a goal via the actuator's third
+parameter; a bounded-goal morphology variant is the small piece of infra EXP_019
+needs.
 
 ## Templates
 

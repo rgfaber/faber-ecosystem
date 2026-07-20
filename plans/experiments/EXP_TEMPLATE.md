@@ -29,6 +29,18 @@ is a throwaway `test/integration/*_experiment_tests.erl` invoked via --module;
 it is NOT committed to the suite (it would bloat wall-clock). The config here IS
 the permanent record.*
 
+*Two harness rules, learned the hard way in EXP_016 (insight 016):*
+
+- ***Bound evaluation cost.** A large "solve" goal (e.g. balance 100000 steps)
+  makes solving evaluations so expensive that runs time out. Use a modest goal
+  (a few thousand steps) so every evaluation is cheap. A shorter goal still
+  discriminates the capability under test.*
+- ***Kill a timed-out population.** `population_monitor:terminate/2` is a no-op;
+  a run that hits the wall-clock cap leaves its agent phenotypes running in the
+  shared VM, poisoning every later run. The runner MUST kill the population (and
+  ideally its agent tree) on timeout — and better still, bound the cost so
+  timeouts never happen.*
+
 ## Kill criterion
 
 *The pre-registered condition under which we stop and call it. Prevents moving

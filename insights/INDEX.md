@@ -35,6 +35,7 @@ commit, a bug fixed that reveals a class of defect is an insight.
 | [013](013-topology-evolution-costs-37x-on-a-known-topology-problem.md) | On XOR, topology evolution costs ~37x weight-only (as expected); our tuner is also crude | confirmed | 2026-07-20 |
 | [014](014-shallow-tuning-fails-xor.md) | DXNN2's shallow default tuner does NOT solve XOR at a matched budget; the crude tuner's depth was not waste | confirmed | 2026-07-20 |
 | [015](015-tuner-fitness-depends-on-problem-structure.md) | The right tuner depends on problem structure: shallow wins control (pole), deep wins precise-weight (XOR); XOR was out of domain | confirmed | 2026-07-20 |
+| [016](016-recurrence-works-but-single-pole-is-a-weak-memory-test.md) | Recurrent evaluation works (validated); but single-pole-no-velocity is too weak to prove recurrence beats feedforward — real test is double pole | confirmed + inconclusive | 2026-07-20 |
 
 ## Related
 

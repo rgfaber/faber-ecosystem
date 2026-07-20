@@ -1,0 +1,24 @@
+
+=== feedforward (control, expected to fail) (pb_1_without_velocity, pop 20, max_gen 50) ===
+  {max_generations,50,10863,168561.7149887717,77539}
+  {solved,24,5297,750660.9114597669,12058}
+  {max_generations,50,10826,199038.79957287593,87155}
+  {max_generations,50,10989,147760.3561674142,43541}
+  {max_generations,50,10909,81645.3129792269,72485}
+  feedforward (control, expected to fail): solved=1/5, best_fitness=[168561.7149887717,
+                                                                     750660.9114597669,
+                                                                     199038.79957287593,
+                                                                     147760.3561674142,
+                                                                     81645.3129792269]
+
+=== recurrent (expected to solve) (pb_1_without_velocity, pop 20, max_gen 50) ===
+  {timeout,0,0,0.0,280000}
+  {timeout,0,0,0.0,280000}
+  {max_generations,50,10595,322270.0304692846,212248}
+  {max_generations,50,11028,394523.94915567216,204822}
+  {max_generations,50,11185,83569.77172614312,211856}
+  recurrent (expected to solve): solved=0/5, best_fitness=[0.0,0.0,
+                                                           322270.0304692846,
+                                                           394523.94915567216,
+                                                           83569.77172614312]
+DONE
