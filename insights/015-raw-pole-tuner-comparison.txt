@@ -1,0 +1,21 @@
+
+=== default (dynamic_random + wsize_proportional) (pb_1_with_velocity, pop 20, max_gen 30) ===
+  {solved,16,3532,587006.9687998014,11014}
+  {solved,7,1644,694612.9774771212,809}
+  {solved,2,469,541777.6956624362,700}
+  {solved,1,240,749428.1931765495,1149}
+  {solved,3,698,1802407.5440265117,689}
+  default (dynamic_random + wsize_proportional): solved=5/5, evals_to_solve=[240,
+                                                                             469,
+                                                                             698,
+                                                                             1644,
+                                                                             3532]
+
+=== crude (all + const60) (pb_1_with_velocity, pop 20, max_gen 30) ===
+  {solved,1,1200,1109107.531783999,6880}
+  {solved,1,1200,1463552.569602991,16292}
+  {solved,1,1200,5397366.841064222,17821}
+  {solved,1,1200,1372495.3288451384,7360}
+  {solved,1,1200,1769284.8594373863,12394}
+  crude (all + const60): solved=5/5, evals_to_solve=[1200,1200,1200,1200,1200]
+DONE
