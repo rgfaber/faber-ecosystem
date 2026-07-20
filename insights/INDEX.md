@@ -32,6 +32,7 @@ commit, a bug fixed that reveals a class of defect is an insight.
 | [010](010-population-loop-works-multigeneration-blocked.md) | Population loop drives Sher-path evaluation; multi-generation evolution blocked | confirmed | 2026-07-20 |
 | [011](011-lifecycle-fixed-evolution-improves-topology-search-is-the-wall.md) | Lifecycle + tuning fixed; evolution improves; topology search is the next wall | confirmed | 2026-07-20 |
 | [012](012-xor-solved-tuning-attempts-was-the-lever.md) | Evolution SOLVES XOR through DXNN2's path; tuning depth was the lever | confirmed | 2026-07-20 |
+| [013](013-topology-evolution-costs-37x-on-a-known-topology-problem.md) | On XOR, topology evolution costs ~37x weight-only (as expected); our tuner is also crude | confirmed | 2026-07-20 |
 
 ## Related
 
