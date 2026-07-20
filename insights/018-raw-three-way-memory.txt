@@ -1,0 +1,23 @@
+
+=== A: none (memoryless feedforward) (pb_2_without_velocity, pop 20, max_gen 60) ===
+  {max_generations,60,12660,0.2346,210318}
+  {max_generations,60,13401,0.6179958831486542,503}
+  {max_generations,60,13351,17.479485852374268,486}
+  A: none (memoryless feedforward): solved=0/3, best_fitness=[0.2346,
+                                                              0.6179958831486542,
+                                                              17.479485852374268]
+
+=== B: neuron (cfc feedforward) (pb_2_without_velocity, pop 20, max_gen 60) ===
+  {max_generations,60,13366,0.1953,15580}
+  {max_generations,60,13053,0.0946,181291}
+  {max_generations,60,13364,0.1953,5495}
+  B: neuron (cfc feedforward): solved=0/3, best_fitness=[0.1953,0.0946,0.1953]
+
+=== C: wiring (standard recurrent) (pb_2_without_velocity, pop 20, max_gen 60) ===
+  {max_generations,60,13331,0.3827999999999999,71673}
+  {max_generations,60,13436,7.767321140695337,155745}
+  {max_generations,60,13526,0.1596,30547}
+  C: wiring (standard recurrent): solved=0/3, best_fitness=[0.3827999999999999,
+                                                            7.767321140695337,
+                                                            0.1596]
+DONE

@@ -86,9 +86,10 @@ A problem that does not need a capability cannot measure it.
 | — | pole 1 + velocity | shallow vs deep tuner | [015 raw](../insights/015-raw-pole-tuner-comparison.txt) | [015](../insights/015-tuner-fitness-depends-on-problem-structure.md) | done |
 | [016](experiments/EXP_016_pole_without_velocity.md) | pole 1 no velocity | feedforward vs recurrent (memory) | [016 raw](../insights/016-raw-recurrent-vs-feedforward.txt) | [016](../insights/016-recurrence-works-but-single-pole-is-a-weak-memory-test.md) | done — **fix validated, comparison inconclusive** (task too weakly non-Markov) |
 | [017](../insights/017-ltc-wired-memory-is-dead-weight-at-this-budget.md) | pole 2 no velocity | LTC/CfC vs memoryless feedforward | [017 raw](../insights/017-raw-ltc-vs-memoryless.txt) | [017](../insights/017-ltc-wired-memory-is-dead-weight-at-this-budget.md) | done — **LTC wired in; memory HURT at 30 gens** (capability-cost, 3rd instance) |
-| 020 | (recurrent cycle protocol) | deep-fix same-layer/mutual recurrence sync | — | — | **queued: promotes the wiring-memory variant from broken to menu-able** |
+| 020 | recurrent cycle protocol | FIFO-queue accumulator fixes cycle desync | (in commit) | folded into [018](../insights/018-three-way-memory-none-beats-both-wiring-beats-neuron.md) | **done — recurrent variant now works** (471→30 stalls; residual edge case) |
+| [019](../insights/018-three-way-memory-none-beats-both-wiring-beats-neuron.md) | pole 2 no velocity | none vs neuron vs wiring memory, 60 gens | [018 raw](../insights/018-raw-three-way-memory.txt) | [018](../insights/018-three-way-memory-none-beats-both-wiring-beats-neuron.md) | done — **none > wiring > neuron; memory still a tax at 60 gens** |
+| 021 | pole 2 no velocity OR short T-maze | budget-to-solution: does memory EVER pay? (100s of gens / solvable memory task) | — | 021 (pending) | **next: the only honest test of memory's value** |
 | 018 | pole 2 + velocity | topology-search premium (does it finally pay?) | — | 018 (pending) | queued |
-| 019 | pole 2 no velocity | LTC vs memoryless vs recurrent, budget-scaled (100s of gens) | — | 019 (pending) | needs EXP_020 (recurrent) + longer budget |
 
 ## The critical path
 
