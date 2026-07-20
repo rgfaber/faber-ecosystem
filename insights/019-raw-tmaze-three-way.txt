@@ -1,0 +1,25 @@
+
+=== A: none (memoryless feedforward) (tmaze, pop 20, max_gen 50) ===
+  {solved,3,670,100.0,560}
+  {max_generations,50,11563,50.0,91588}
+  {solved,25,5243,96.0,86938}
+  A: none (memoryless feedforward): solved=2/3 (gens [3,25]), best_fitness=[100.0,
+                                                                            50.0,
+                                                                            96.0]
+
+=== B: neuron (cfc feedforward) (tmaze, pop 20, max_gen 50) ===
+  {solved,1,220,100.0,202}
+  {solved,2,445,100.0,402}
+  {solved,1,220,100.0,175}
+  B: neuron (cfc feedforward): solved=3/3 (gens [1,2,1]), best_fitness=[100.0,
+                                                                        100.0,
+                                                                        100.0]
+
+=== C: wiring (standard recurrent) (tmaze, pop 20, max_gen 50) ===
+  {solved,3,690,100.0,455}
+  {solved,2,449,100.0,313}
+  {solved,2,450,100.0,317}
+  C: wiring (standard recurrent): solved=3/3 (gens [3,2,2]), best_fitness=[100.0,
+                                                                           100.0,
+                                                                           100.0]
+DONE
