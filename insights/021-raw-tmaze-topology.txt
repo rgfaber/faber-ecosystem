@@ -1,0 +1,5 @@
+=== DELAY 2 (feedforward) ===
+  delay=2: best_fitness=0, neurons=28, longest_sensor->actuator_path=29
+=== DELAY 8 (feedforward) ===
+  delay=8: best_fitness=0, neurons=27, longest_sensor->actuator_path=28
+DONE

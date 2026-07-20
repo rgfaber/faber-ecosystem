@@ -40,6 +40,11 @@ commit, a bug fixed that reveals a class of defect is an insight.
 | [018](018-three-way-memory-none-beats-both-wiring-beats-neuron.md) | Three-way memory (none/wiring/neuron) at 60 gens: none beats both, wiring beats neuron, CfC smoothing hurts fast control; recurrent fix (EXP_020) validated at scale | confirmed + signed negative + characterisation | 2026-07-21 |
 | [019](019-memory-pays-when-the-task-needs-it-and-fits-budget.md) | Memory pays decisively on the T-maze (cfc solves in 1 gen); capability value = task-match x budget; feedforward+FIFO is a 4th variant (delay-line/TDNN) | confirmed + discovery | 2026-07-21 |
 | [020](020-delay-sweep-refutes-horizon-story-evolvability-is-the-axis.md) | Delay sweep REFUTES the bounded-horizon story; real axis is evolvability (recurrent memory found gen 2-4 vs feedforward gen 14-23); n=2 too noisy; corrects 019's delay-line label | signed negative + finding | 2026-07-21 |
+| [021](021-feedforward-tmaze-topology-inconclusive.md) | Topology inspection inconclusive (fitness not persisted to genotype); evolved feedforward T-maze agents are deep near-linear chains, delay-independent, but confounded by bloat | inconclusive + method | 2026-07-21 |
+
+## Prior art
+
+- [`../docs/RESEARCH_PRIOR_ART.md`](../docs/RESEARCH_PRIOR_ART.md) — every insight 013-020 independently re-derives an established result (NFL, NEAT complexification, memetic local-search balance, DPNV benchmark, LTC/CfC, T-maze memory, reservoir/TDNN). Calibration: reproducible confirmation on the DXNN2/Erlang substrate, NOT discovery.
 
 ## Related
 
