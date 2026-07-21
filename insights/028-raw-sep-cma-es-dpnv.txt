@@ -1,0 +1,28 @@
+# EXP-028 raw feed — sep-CMA-ES on DPNV (n=10 per arm, lambda=100, 400k-eval budget, solve=1000 steps)
+# optimizer swap vs EXP-026 (plain (mu,lambda)-ES): control_redraw 0/10 -> sepcma_weights; treatment 5/10 -> sepcma_tau
+
+## sepcma_weights (weights only, fresh random tau per run)
+EXP028 arm=sepcma_weights nw=61 ntau=12
+EXP028 arm=sepcma_weights run=1 reason=solved evals=105100 fitness=1000.0 wall_ms=113172
+EXP028 arm=sepcma_weights run=2 reason=solved evals=17200 fitness=1000.0 wall_ms=3576
+EXP028 arm=sepcma_weights run=3 reason=max_generations evals=400000 fitness=182.0 wall_ms=123638
+EXP028 arm=sepcma_weights run=4 reason=solved evals=16800 fitness=1000.0 wall_ms=3703
+EXP028 arm=sepcma_weights run=5 reason=solved evals=22600 fitness=1000.0 wall_ms=5784
+EXP028 arm=sepcma_weights run=6 reason=solved evals=128200 fitness=1000.0 wall_ms=82590
+EXP028 arm=sepcma_weights run=7 reason=max_generations evals=400000 fitness=138.0 wall_ms=172097
+EXP028 arm=sepcma_weights run=8 reason=solved evals=33800 fitness=1000.0 wall_ms=11055
+EXP028 arm=sepcma_weights run=9 reason=max_generations evals=400000 fitness=325.0 wall_ms=242984
+EXP028 arm=sepcma_weights run=10 reason=max_generations evals=400000 fitness=568.0 wall_ms=465751
+
+## sepcma_tau (co-evolve tau)
+EXP028 arm=sepcma_tau nw=61 ntau=12
+EXP028 arm=sepcma_tau run=1 reason=solved evals=7600 fitness=997.0 wall_ms=1083
+EXP028 arm=sepcma_tau run=2 reason=solved evals=11000 fitness=1000.0 wall_ms=1540
+EXP028 arm=sepcma_tau run=3 reason=solved evals=13700 fitness=1000.0 wall_ms=2565
+EXP028 arm=sepcma_tau run=4 reason=solved evals=11200 fitness=1000.0 wall_ms=1532
+EXP028 arm=sepcma_tau run=5 reason=solved evals=9800 fitness=1000.0 wall_ms=1353
+EXP028 arm=sepcma_tau run=6 reason=solved evals=12200 fitness=1000.0 wall_ms=2243
+EXP028 arm=sepcma_tau run=7 reason=solved evals=9500 fitness=1000.0 wall_ms=1240
+EXP028 arm=sepcma_tau run=8 reason=solved evals=10500 fitness=1000.0 wall_ms=1415
+EXP028 arm=sepcma_tau run=9 reason=solved evals=11700 fitness=1000.0 wall_ms=1915
+EXP028 arm=sepcma_tau run=10 reason=solved evals=24400 fitness=1000.0 wall_ms=6073

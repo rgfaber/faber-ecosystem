@@ -79,15 +79,18 @@ nor a self-adaptive (mu,lambda)-ES (025) solves double-pole-without-velocity
 explanations, one per axis, and the near-term work is a clean fork that resolves
 which:
 
-| Hypothesis | Axis | Programme | Decisive experiment |
-|------------|------|-----------|---------------------|
-| **Representation** — fixed-random tau cripples the memory timescale | substrate | P3 (via P1 residue) | EXP-026: co-evolve tau with weights |
-| **Optimizer** — GA/ES too weak for the landscape | operators | P2 | EXP-028: CMA-ES / CoSyNE (the literature's DPNV solvers) |
-| **Deception** — the fitness gradient misleads | objective | P4 | novelty / QD run on DPNV |
+| Hypothesis | Axis | Programme | Decisive experiment | Result |
+|------------|------|-----------|---------------------|--------|
+| **Representation** — fixed-random tau cripples the memory timescale | substrate | P3 (via P1 residue) | EXP-026: co-evolve tau with weights | **real, partial** (026: 5/10 vs 0/10) |
+| **Optimizer** — GA/ES too weak for the landscape | operators | P2 | EXP-028: sep-CMA-ES | **real, major** (028: 0->6/10; +tau 10/10) |
+| **Deception** — the fitness gradient misleads | objective | P4 | novelty / QD run on DPNV | **rejected** for DPNV (028 reaches the objective directly) |
 
-Three programmes converging on one wall from three orthogonal directions is the
-strongest structure this research has. Whichever leg breaks the wall first is a
-signed insight; the ones that do not are equally signed negatives.
+**Fork resolved (EXP-028).** DPNV was a compound of representation + optimizer, NOT
+deception. sep-CMA-ES (diagonal, no correlations) + co-evolved tau solves DPNV
+10/10 in a few thousand evaluations. Diagonal covariance suffices, so full CMA-ES
+and its eigendecomposition NIF were not built. Three programmes converged on one
+wall from three orthogonal directions; two legs held, the third was ruled out. The
+ones that did not break it are equally signed results.
 
 ---
 
