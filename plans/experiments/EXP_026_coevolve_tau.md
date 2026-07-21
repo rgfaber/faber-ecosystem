@@ -66,9 +66,14 @@ n=10 per arm, 400k evals, solve = 1000 steps. Raw:
 
 ```
 control_fixed  (one random tau, all runs)   3/10 solved  (3.3k/4.5k/47.4k evals)
-control_redraw (fresh random tau per run)   0/10 solved  (ceiling 72-803)
+control_redraw (fresh random tau [0.1,2.0]) 0/10 solved  (ceiling 72-803)
+control_wide   (fresh random tau [0.1,8.0]) 2/10 solved  (EXP-026c, ceiling 56-184)
 treatment      (co-evolve tau)              5/10 solved  (all 3.0-8.1k evals)
 ```
+
+Stats: treatment vs control_redraw significant (Fisher p~0.03); treatment vs
+control_wide NOT significant (p~0.18); control_wide sits between, indistinguishable
+from either at n=10. EXP-026c partially resolves 026's evolvable-vs-range caveat.
 
 Method note: the first pass ran all 20 runs in one eunit generator and hit the
 3600s timeout (truncated treatment at run 5). Fixed by splitting one generator

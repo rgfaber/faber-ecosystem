@@ -76,6 +76,37 @@ remains a real limiter, exactly the compound 025 diagnosed. This keeps EXP-028
 (CMA-ES / CoSyNE, the literature's DPNV solvers) fully motivated: the target is
 turning 5/10 into reliable.
 
+## EXP-026c — is it evolving tau, or just access to longer timescales? (partially resolved)
+
+026's caveat: control_redraw fixes tau in [0.1, 2.0] AND cannot move it, so the
+5/10-vs-0/10 effect confounds "evolvable" with "wider range". EXP-026c adds a
+**control_wide** arm: weights-only, a fresh random tau per run in the wider
+**[0.1, 8.0]** band (the range the 026 solvers reached), still fixed within a run.
+n=10, same budget. Result: **2/10** solved.
+
+| Arm | tau | solved |
+|---|---|---|
+| control_redraw | fixed random [0.1, 2.0] | 0/10 |
+| control_wide | fixed random [0.1, 8.0] | 2/10 |
+| treatment | co-evolved | 5/10 |
+
+The ladder 0 -> 2 -> 5 says **both mechanisms plausibly contribute**: widening the
+fixed range lifts 0 to 2 (access to longer timescales helps), and evolving reaches
+5. But the honest statistics stop short of separating them at n=10:
+
+- treatment 5/10 vs control_redraw 0/10: **significant, Fisher two-tailed p ~ 0.033**.
+- treatment 5/10 vs control_wide 2/10: **NOT significant** (one-tailed p ~ 0.18).
+- control_wide 2/10 vs control_redraw 0/10: not significant.
+
+So control_wide is statistically indistinguishable from BOTH ends: n=10 cannot
+cleanly attribute the effect to range vs evolvability. The tau logs reinforce the
+mechanism either way: control_wide solvers and stallers both carry long taus (means
+3.5-5.0), so a long timescale is necessary-ish but not sufficient — it must be
+MATCHED to the weights, which evolving does and a fixed draw (even from the good
+band) mostly misses. **Verdict on the caveat: partially resolved.** Access to
+longer timescales gives a modest, non-significant lift; the significant effect
+needs evolvable tau; a clean separation would need larger n (30-50/arm).
+
 ## Prior art
 
 Replication, not discovery. In LTC/CfC the time constant IS the memory timescale
@@ -89,9 +120,9 @@ parameter matters, but the search still has to find it.
 
 - **n=10 per arm; the significant comparison (5/10 vs 0/10) rests on n=10.** Solid
   for a rate, but a wider replication would tighten the tau-range story (n=5 solvers).
-- **Evolvable-tau vs merely wider-range is not yet disentangled.** control_redraw
-  is capped at [0.1,2.0] AND fixed; treatment is evolvable AND can exceed 2.0. A
-  fixed-random-tau control drawn from a WIDER range (e.g. [0.1, 8]) would separate
-  "evolving tau" from "access to longer timescales" (EXP-026c, cheap).
-- **Next:** EXP-028 (CMA-ES / CoSyNE) to attack the remaining optimizer leg; the
-  wider-range fixed control to sharpen the mechanism.
+- **Evolvable-tau vs merely wider-range: partially disentangled (EXP-026c, above).**
+  A wider [0.1,8.0] fixed-tau control solves 2/10 — intermediate, and statistically
+  indistinguishable from both 0/10 and 5/10 at n=10. Both mechanisms plausibly
+  contribute; a clean split needs larger n (30-50/arm), deferred as low-value.
+- **Next:** EXP-028 (CMA-ES / CoSyNE) to attack the remaining optimizer leg — the
+  live path to turning 5/10 into reliable.

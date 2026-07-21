@@ -38,3 +38,16 @@ EXP026 arm=treatment run=7 reason=solved evals=4600 fitness=1000.0 wall_ms=1225 
 EXP026 arm=treatment run=8 reason=solved evals=3000 fitness=1000.0 wall_ms=493 tau_min=0.06 tau_mean=0.89 tau_max=3.92
 EXP026 arm=treatment run=9 reason=max_generations evals=400000 fitness=768.0 wall_ms=1055499 tau_min=0.05 tau_mean=2.50 tau_max=12.75
 EXP026 arm=treatment run=10 reason=max_generations evals=400000 fitness=275.0 wall_ms=358702 tau_min=0.05 tau_mean=2.01 tau_max=7.06
+
+## control_wide (EXP-026c: fixed random tau per run in [0.1, 8.0])
+EXP026C arm=control_wide nw=61 tau_range=[0.1,8.0]
+EXP026C arm=control_wide run=1 reason=max_generations evals=400000 fitness=184.0 wall_ms=265652 tau_min=0.61 tau_mean=3.63 tau_max=6.12
+EXP026C arm=control_wide run=2 reason=max_generations evals=400000 fitness=73.0 wall_ms=114170 tau_min=1.66 tau_mean=3.95 tau_max=6.50
+EXP026C arm=control_wide run=3 reason=max_generations evals=400000 fitness=79.0 wall_ms=130203 tau_min=1.44 tau_mean=4.43 tau_max=7.90
+EXP026C arm=control_wide run=4 reason=max_generations evals=400000 fitness=141.0 wall_ms=230340 tau_min=0.80 tau_mean=4.30 tau_max=7.45
+EXP026C arm=control_wide run=5 reason=solved evals=3900 fitness=1000.0 wall_ms=1157 tau_min=0.13 tau_mean=4.58 tau_max=7.94
+EXP026C arm=control_wide run=6 reason=max_generations evals=400000 fitness=107.0 wall_ms=143507 tau_min=0.58 tau_mean=2.54 tau_max=7.58
+EXP026C arm=control_wide run=7 reason=max_generations evals=400000 fitness=74.0 wall_ms=110291 tau_min=0.48 tau_mean=4.26 tau_max=7.69
+EXP026C arm=control_wide run=8 reason=max_generations evals=400000 fitness=67.0 wall_ms=110632 tau_min=1.08 tau_mean=4.59 tau_max=7.75
+EXP026C arm=control_wide run=9 reason=max_generations evals=400000 fitness=56.0 wall_ms=84845 tau_min=1.17 tau_mean=5.05 tau_max=7.89
+EXP026C arm=control_wide run=10 reason=solved evals=4700 fitness=1000.0 wall_ms=1225 tau_min=0.35 tau_mean=3.46 tau_max=6.63
