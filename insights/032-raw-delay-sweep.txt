@@ -1,0 +1,100 @@
+# EXP-032 raw feed — T-maze delay sweep 4/8/16 (sep-CMA-ES, n=10/arm/delay, solve=90/100)
+
+## cfc (memory-by-storage)
+EXP032 arm=cfc dim=61 delays=[4,8,16]
+EXP032 arm=cfc delay=4 run=1 reason=solved evals=100 fitness=99.0 wall_ms=179
+EXP032 arm=cfc delay=4 run=2 reason=solved evals=100 fitness=100.0 wall_ms=180
+EXP032 arm=cfc delay=4 run=3 reason=solved evals=100 fitness=99.0 wall_ms=181
+EXP032 arm=cfc delay=4 run=4 reason=solved evals=100 fitness=96.0 wall_ms=180
+EXP032 arm=cfc delay=4 run=5 reason=solved evals=100 fitness=100.0 wall_ms=179
+EXP032 arm=cfc delay=4 run=6 reason=solved evals=200 fitness=100.0 wall_ms=339
+EXP032 arm=cfc delay=4 run=7 reason=solved evals=100 fitness=100.0 wall_ms=163
+EXP032 arm=cfc delay=4 run=8 reason=solved evals=400 fitness=99.0 wall_ms=650
+EXP032 arm=cfc delay=4 run=9 reason=solved evals=200 fitness=99.0 wall_ms=327
+EXP032 arm=cfc delay=4 run=10 reason=solved evals=300 fitness=96.0 wall_ms=486
+EXP032 arm=cfc delay=8 run=1 reason=solved evals=200 fitness=100.0 wall_ms=536
+EXP032 arm=cfc delay=8 run=2 reason=solved evals=100 fitness=95.0 wall_ms=267
+EXP032 arm=cfc delay=8 run=3 reason=solved evals=100 fitness=99.0 wall_ms=270
+EXP032 arm=cfc delay=8 run=4 reason=solved evals=300 fitness=100.0 wall_ms=807
+EXP032 arm=cfc delay=8 run=5 reason=solved evals=900 fitness=100.0 wall_ms=2410
+EXP032 arm=cfc delay=8 run=6 reason=solved evals=1600 fitness=100.0 wall_ms=4299
+EXP032 arm=cfc delay=8 run=7 reason=solved evals=400 fitness=100.0 wall_ms=1074
+EXP032 arm=cfc delay=8 run=8 reason=solved evals=100 fitness=100.0 wall_ms=268
+EXP032 arm=cfc delay=8 run=9 reason=solved evals=100 fitness=99.0 wall_ms=267
+EXP032 arm=cfc delay=8 run=10 reason=solved evals=100 fitness=99.0 wall_ms=268
+EXP032 arm=cfc delay=16 run=1 reason=solved evals=100 fitness=100.0 wall_ms=480
+EXP032 arm=cfc delay=16 run=2 reason=solved evals=100 fitness=96.0 wall_ms=486
+EXP032 arm=cfc delay=16 run=3 reason=solved evals=100 fitness=100.0 wall_ms=481
+EXP032 arm=cfc delay=16 run=4 reason=solved evals=800 fitness=100.0 wall_ms=3851
+EXP032 arm=cfc delay=16 run=5 reason=solved evals=500 fitness=100.0 wall_ms=2405
+EXP032 arm=cfc delay=16 run=6 reason=solved evals=900 fitness=94.0 wall_ms=4522
+EXP032 arm=cfc delay=16 run=7 reason=solved evals=500 fitness=100.0 wall_ms=2389
+EXP032 arm=cfc delay=16 run=8 reason=solved evals=700 fitness=93.0 wall_ms=3385
+EXP032 arm=cfc delay=16 run=9 reason=solved evals=700 fitness=99.0 wall_ms=3375
+EXP032 arm=cfc delay=16 run=10 reason=solved evals=200 fitness=100.0 wall_ms=960
+
+## plastic (memory-by-learning)
+EXP032 arm=plastic dim=54 delays=[4,8,16]
+EXP032 arm=plastic delay=4 run=1 reason=solved evals=100 fitness=100.0 wall_ms=332
+EXP032 arm=plastic delay=4 run=2 reason=solved evals=100 fitness=100.0 wall_ms=319
+EXP032 arm=plastic delay=4 run=3 reason=solved evals=100 fitness=100.0 wall_ms=323
+EXP032 arm=plastic delay=4 run=4 reason=solved evals=100 fitness=100.0 wall_ms=317
+EXP032 arm=plastic delay=4 run=5 reason=solved evals=100 fitness=100.0 wall_ms=315
+EXP032 arm=plastic delay=4 run=6 reason=solved evals=100 fitness=100.0 wall_ms=316
+EXP032 arm=plastic delay=4 run=7 reason=solved evals=100 fitness=100.0 wall_ms=316
+EXP032 arm=plastic delay=4 run=8 reason=solved evals=100 fitness=100.0 wall_ms=315
+EXP032 arm=plastic delay=4 run=9 reason=solved evals=300 fitness=100.0 wall_ms=942
+EXP032 arm=plastic delay=4 run=10 reason=solved evals=100 fitness=100.0 wall_ms=315
+EXP032 arm=plastic delay=8 run=1 reason=solved evals=100 fitness=100.0 wall_ms=514
+EXP032 arm=plastic delay=8 run=2 reason=solved evals=100 fitness=100.0 wall_ms=518
+EXP032 arm=plastic delay=8 run=3 reason=solved evals=100 fitness=100.0 wall_ms=515
+EXP032 arm=plastic delay=8 run=4 reason=solved evals=100 fitness=100.0 wall_ms=518
+EXP032 arm=plastic delay=8 run=5 reason=solved evals=100 fitness=100.0 wall_ms=517
+EXP032 arm=plastic delay=8 run=6 reason=solved evals=100 fitness=100.0 wall_ms=513
+EXP032 arm=plastic delay=8 run=7 reason=solved evals=100 fitness=100.0 wall_ms=514
+EXP032 arm=plastic delay=8 run=8 reason=solved evals=100 fitness=100.0 wall_ms=515
+EXP032 arm=plastic delay=8 run=9 reason=solved evals=100 fitness=100.0 wall_ms=515
+EXP032 arm=plastic delay=8 run=10 reason=solved evals=100 fitness=100.0 wall_ms=520
+EXP032 arm=plastic delay=16 run=1 reason=solved evals=100 fitness=100.0 wall_ms=917
+EXP032 arm=plastic delay=16 run=2 reason=solved evals=200 fitness=100.0 wall_ms=1836
+EXP032 arm=plastic delay=16 run=3 reason=solved evals=200 fitness=100.0 wall_ms=1845
+EXP032 arm=plastic delay=16 run=4 reason=solved evals=100 fitness=100.0 wall_ms=917
+EXP032 arm=plastic delay=16 run=5 reason=solved evals=300 fitness=100.0 wall_ms=2755
+EXP032 arm=plastic delay=16 run=6 reason=solved evals=200 fitness=100.0 wall_ms=1847
+EXP032 arm=plastic delay=16 run=7 reason=solved evals=100 fitness=100.0 wall_ms=914
+EXP032 arm=plastic delay=16 run=8 reason=solved evals=100 fitness=100.0 wall_ms=919
+EXP032 arm=plastic delay=16 run=9 reason=solved evals=200 fitness=100.0 wall_ms=1835
+EXP032 arm=plastic delay=16 run=10 reason=solved evals=100 fitness=100.0 wall_ms=921
+
+## memoryless (control)
+EXP032 arm=memoryless dim=49 delays=[4,8,16]
+EXP032 arm=memoryless delay=4 run=1 reason=max_generations evals=30000 fitness=50.0 wall_ms=29758
+EXP032 arm=memoryless delay=4 run=2 reason=max_generations evals=30000 fitness=50.0 wall_ms=29035
+EXP032 arm=memoryless delay=4 run=3 reason=max_generations evals=30000 fitness=50.0 wall_ms=29561
+EXP032 arm=memoryless delay=4 run=4 reason=max_generations evals=30000 fitness=50.0 wall_ms=28987
+EXP032 arm=memoryless delay=4 run=5 reason=max_generations evals=30000 fitness=50.0 wall_ms=29558
+EXP032 arm=memoryless delay=4 run=6 reason=max_generations evals=30000 fitness=50.0 wall_ms=29228
+EXP032 arm=memoryless delay=4 run=7 reason=max_generations evals=30000 fitness=50.0 wall_ms=29758
+EXP032 arm=memoryless delay=4 run=8 reason=max_generations evals=30000 fitness=50.0 wall_ms=29144
+EXP032 arm=memoryless delay=4 run=9 reason=max_generations evals=30000 fitness=50.0 wall_ms=29480
+EXP032 arm=memoryless delay=4 run=10 reason=max_generations evals=30000 fitness=50.0 wall_ms=28489
+EXP032 arm=memoryless delay=8 run=1 reason=max_generations evals=30000 fitness=50.0 wall_ms=47118
+EXP032 arm=memoryless delay=8 run=2 reason=max_generations evals=30000 fitness=50.0 wall_ms=47891
+EXP032 arm=memoryless delay=8 run=3 reason=max_generations evals=30000 fitness=50.0 wall_ms=48479
+EXP032 arm=memoryless delay=8 run=4 reason=max_generations evals=30000 fitness=50.0 wall_ms=48496
+EXP032 arm=memoryless delay=8 run=5 reason=max_generations evals=30000 fitness=50.0 wall_ms=48686
+EXP032 arm=memoryless delay=8 run=6 reason=max_generations evals=30000 fitness=50.0 wall_ms=48453
+EXP032 arm=memoryless delay=8 run=7 reason=max_generations evals=30000 fitness=50.0 wall_ms=48462
+EXP032 arm=memoryless delay=8 run=8 reason=max_generations evals=30000 fitness=50.0 wall_ms=48795
+EXP032 arm=memoryless delay=8 run=9 reason=max_generations evals=30000 fitness=50.0 wall_ms=48899
+EXP032 arm=memoryless delay=8 run=10 reason=max_generations evals=30000 fitness=50.0 wall_ms=48620
+EXP032 arm=memoryless delay=16 run=1 reason=max_generations evals=30000 fitness=50.0 wall_ms=85728
+EXP032 arm=memoryless delay=16 run=2 reason=max_generations evals=30000 fitness=50.0 wall_ms=85479
+EXP032 arm=memoryless delay=16 run=3 reason=max_generations evals=30000 fitness=50.0 wall_ms=84812
+EXP032 arm=memoryless delay=16 run=4 reason=max_generations evals=30000 fitness=50.0 wall_ms=85322
+EXP032 arm=memoryless delay=16 run=5 reason=max_generations evals=30000 fitness=50.0 wall_ms=85618
+EXP032 arm=memoryless delay=16 run=6 reason=max_generations evals=30000 fitness=50.0 wall_ms=85844
+EXP032 arm=memoryless delay=16 run=7 reason=max_generations evals=30000 fitness=50.0 wall_ms=84747
+EXP032 arm=memoryless delay=16 run=8 reason=max_generations evals=30000 fitness=50.0 wall_ms=85450
+EXP032 arm=memoryless delay=16 run=9 reason=max_generations evals=30000 fitness=50.0 wall_ms=85223
+EXP032 arm=memoryless delay=16 run=10 reason=max_generations evals=30000 fitness=50.0 wall_ms=85639
