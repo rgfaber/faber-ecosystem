@@ -1,0 +1,21 @@
+# EXP-029b raw feed — generalisation DPNV (sep-CMA-ES, 9 initial-condition grid, 200k evals, n=5)
+# grid: p1_angle {-0.05,0,0.05} x p1_vel {V,0,V}; solve = avg 1000 steps across the 9 conditions
+
+## widened velocity V=+-1.0 (both fail; memory no advantage)
+### memoryless_gen (feedforward)
+EXP029B arm=memoryless_gen n_conditions=9 dim=61
+EXP029B arm=memoryless_gen run=1 reason=max_generations evals=200000 fitness=146.1 wall_ms=342461
+EXP029B arm=memoryless_gen run=2 reason=max_generations evals=200000 fitness=350.9 wall_ms=1634559
+EXP029B arm=memoryless_gen run=3 reason=max_generations evals=200000 fitness=349.7 wall_ms=1494400
+EXP029B arm=memoryless_gen run=4 reason=max_generations evals=200000 fitness=350.0 wall_ms=1335342
+EXP029B arm=memoryless_gen run=5 reason=max_generations evals=200000 fitness=158.9 wall_ms=259722
+### cfc_gen (CfC + co-evolved tau)
+EXP029B arm=cfc_gen n_conditions=9 dim=73
+EXP029B arm=cfc_gen run=1 reason=max_generations evals=200000 fitness=353.7 wall_ms=2610052
+EXP029B arm=cfc_gen run=2 reason=max_generations evals=200000 fitness=355.6 wall_ms=2412782
+EXP029B arm=cfc_gen run=3 reason=max_generations evals=200000 fitness=347.3 wall_ms=2404717
+EXP029B arm=cfc_gen run=4 reason=max_generations evals=200000 fitness=349.0 wall_ms=2343851
+EXP029B arm=cfc_gen run=5 reason=max_generations evals=200000 fitness=351.1 wall_ms=2402526
+
+## note: at modest V=+-0.2 (earlier run, halted) memoryless generalised (run1-2 solved 1000);
+## the range is bimodal (easy: both solve; hard: both fail), no clean memory-pays regime found.
