@@ -48,8 +48,18 @@ commit, a bug fixed that reveals a class of defect is an insight.
 
 ## Programmes
 
-- **Programme 1 — Capabilities** (insights 013-024): which network capability (tuner depth, substrate, memory mechanism, topology evolution) helps which problem, and why. Arc: capability value = task-match x budget x optimizer. Closed at the optimizer wall (024). Plan: [`plans/PLAN_EXPERIMENT_PROGRAMME.md`](../plans/PLAN_EXPERIMENT_PROGRAMME.md).
-- **Programme 2 — Search Strategies** (insights 025+): which search algorithm (GA / (mu,lambda)-ES / CMA-ES / CoSyNE / natural-ES), for which landscape; does a stronger optimizer overturn Programme 1's conclusions. Plan: [`plans/PLAN_SEARCH_STRATEGIES.md`](../plans/PLAN_SEARCH_STRATEGIES.md).
+Full map and per-programme charters: [`plans/PLAN_PROGRAMMES_ROOT.md`](../plans/PLAN_PROGRAMMES_ROOT.md).
+One engine (P1-P7, the seven design axes), two couplings (P8 language, P9 body).
+
+- **P1 — Capabilities** (insights 013-024, CLOSED): which network capability (tuner depth, substrate, memory mechanism, topology evolution) helps which problem. Arc: capability value = task-match x budget x optimizer; closed at the optimizer wall (024). [`CHARTER_P1_CAPABILITIES.md`](../plans/CHARTER_P1_CAPABILITIES.md) / [`PLAN_EXPERIMENT_PROGRAMME.md`](../plans/PLAN_EXPERIMENT_PROGRAMME.md).
+- **P2 — Search Strategies** (insights 025+, ACTIVE): which search algorithm (GA / (mu,lambda)-ES / CMA-ES / CoSyNE / natural-ES), for which landscape; does a stronger optimizer overturn P1. [`CHARTER_P2_SEARCH_STRATEGIES.md`](../plans/CHARTER_P2_SEARCH_STRATEGIES.md) / [`PLAN_SEARCH_STRATEGIES.md`](../plans/PLAN_SEARCH_STRATEGIES.md).
+- **P3 — Meta-learning** (NEXT): learn to learn; evolved plasticity; the representation leg of the DPNV fork (EXP-026). [`CHARTER_P3_META_LEARNING.md`](../plans/CHARTER_P3_META_LEARNING.md).
+- **P4 — Objectives** (OPEN): QD / novelty; the deception leg of the DPNV fork. [`CHARTER_P4_OBJECTIVES.md`](../plans/CHARTER_P4_OBJECTIVES.md).
+- **P5 — Scale / Substrate** (OPEN): island / distributed / federated evolution across the mesh. [`CHARTER_P5_SCALE_SUBSTRATE.md`](../plans/CHARTER_P5_SCALE_SUBSTRATE.md).
+- **P6 — Encoding / Development** (OPEN): direct vs indirect / generative encoding. [`CHARTER_P6_ENCODING_DEVELOPMENT.md`](../plans/CHARTER_P6_ENCODING_DEVELOPMENT.md).
+- **P7 — Coevolution / Self-play** (OPEN, horizon): interaction, arms races, open-endedness. [`CHARTER_P7_COEVOLUTION.md`](../plans/CHARTER_P7_COEVOLUTION.md).
+- **P8 — LLM-augmented Evolution** (HORIZON, coupling): LLM operators; the Spartan bridge. [`CHARTER_P8_LLM_AUGMENTED.md`](../plans/CHARTER_P8_LLM_AUGMENTED.md).
+- **P9 — DARS / Physical AI** (HORIZON, coupling): distributed autonomous robotic systems; embodied evolution. [`CHARTER_P9_DARS.md`](../plans/CHARTER_P9_DARS.md).
 
 ## Prior art
 
