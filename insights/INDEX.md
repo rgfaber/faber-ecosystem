@@ -44,6 +44,7 @@ commit, a bug fixed that reveals a class of defect is an insight.
 | [022](022-feedforward-tmaze-solver-is-compact-not-a-delay-line.md) | Fitness-persistence fix isolates the SOLVER: delay-2 feedforward memory solver is COMPACT (3 neurons); (title corrected by 023: it IS a short delay line) | confirmed + refutes 021 | 2026-07-21 |
 | [023](023-delay-line-confirmed-memory-is-a-chain-computation-is-a-dag.md) | Delay-line CONFIRMED by wiring: memory solver is a LINEAR CHAIN, XOR solver is a convergent DAG; resolves the 019->020->022 flip-flop | confirmed | 2026-07-21 |
 | [024](024-ga-hits-optimizer-wall-on-dpnv.md) | The truncation-GA hits an OPTIMIZER wall on DPNV: no solve in 165k evals, lottery-like variance, no memory benefit; capability value = task-match x budget x OPTIMIZER. Programme 1 closes | signed negative + inflection | 2026-07-21 |
+| [025](025-mu-lambda-es-cracks-markov-not-dpnv.md) | [P2] (mu,lambda)-ES solves Markov pole process-free (~70x faster wall-clock) but NOT DPNV even at 400k evals; wall is optimizer AND representation (fixed-tau CfC) | confirmed + signed negative | 2026-07-21 |
 
 ## Programmes
 

@@ -56,10 +56,12 @@ so evaluations is the honest axis.
 
 | EXP | Question | Status |
 |---|---|---|
-| 025 | Does (mu,lambda)-ES solve DPNV where the GA stalled (024)? | next |
-| 026 | ES vs GA, matched evaluations, across a problem set (XOR, pole variants, DPNV) | queued |
-| 027 | **Bridge back:** re-run the memory comparison (018/019/024) under ES — does memory pay once the optimizer can reach solves? | queued (the payoff) |
-| 028 | (mu,lambda) vs (mu+lambda) vs CMA-ES on DPNV — which ES? | queued |
+| 025 | Does (mu,lambda)-ES solve DPNV where the GA stalled (024)? | **done** — [025](../insights/025-mu-lambda-es-cracks-markov-not-dpnv.md): solves Markov pole process-free (~70x faster) but NOT DPNV at 400k evals; wall is optimizer AND representation (fixed-tau CfC) |
+| 026 | **Co-evolve tau** with weights — does DPNV solve once the memory timescale is evolvable? (the decisive representation test) | **next** |
+| 027 | ES vs GA, matched evaluations, across a problem set (XOR, pole variants, DPNV) | queued |
+| 028 | Implement CMA-ES + CoSyNE (the literature's DPNV solvers); which ES? | queued |
+| 029 | **Bridge back:** re-run the memory comparison (018/019/024) under a working optimizer — does memory pay once solves are reachable? | queued (the payoff) |
+| — | **NIF:** batched-population evaluator (one Rust call per generation) | infra, high leverage |
 
 ## The bridge to Programme 1
 

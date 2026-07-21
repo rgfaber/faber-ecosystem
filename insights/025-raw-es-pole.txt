@@ -1,0 +1,11 @@
+=== Phase 1: pole-1-with-velocity, feedforward, (mu,lambda)-ES (bridge validation) ===
+  ff single+velocity: dim=37 reason=solved gen=5 evals=500 fitness=1001.0 ms=145
+
+=== Phase 2: double-pole-NO-velocity, CfC memory, (mu,lambda)-ES (the GA wall, insight 024) ===
+  cfc dpnv (mu15 l100 g300): dim=31 reason=max_generations gen=300 evals=30000 fitness=110.0 ms=8512
+
+=== Phase 3: DPNV, bigger CfC + far more budget (fair shot) ===
+  cfc dpnv big (seed 1, mu25 l200 g2000): dim=61 reason=max_generations gen=2000 evals=400000 fitness=179.0 ms=255527
+  cfc dpnv big (seed 2, mu25 l200 g2000): dim=61 reason=max_generations gen=2000 evals=400000 fitness=436.0 ms=666430
+  cfc dpnv big (seed 3, mu25 l200 g2000): dim=61 reason=max_generations gen=2000 evals=400000 fitness=224.0 ms=358743
+DONE
