@@ -1,0 +1,55 @@
+# EXP-033b raw feed — noisy T-maze (delay 8, sigma 0.1/0.3/0.5, sep-CMA-ES, n=8, solve=90/100)
+
+## cfc
+EXP033B arm=cfc dim=61 delay=8 sigmas=[0.1,0.3,0.5]
+EXP033B arm=cfc sigma=0.10 run=1 reason=solved evals=2000 fitness=94.0 wall_ms=6417
+EXP033B arm=cfc sigma=0.10 run=2 reason=solved evals=700 fitness=98.0 wall_ms=2142
+EXP033B arm=cfc sigma=0.10 run=3 reason=solved evals=500 fitness=97.0 wall_ms=1660
+EXP033B arm=cfc sigma=0.10 run=4 reason=solved evals=400 fitness=90.0 wall_ms=1440
+EXP033B arm=cfc sigma=0.10 run=5 reason=solved evals=200 fitness=91.0 wall_ms=728
+EXP033B arm=cfc sigma=0.10 run=6 reason=solved evals=1300 fitness=93.0 wall_ms=4188
+EXP033B arm=cfc sigma=0.10 run=7 reason=solved evals=300 fitness=95.0 wall_ms=905
+EXP033B arm=cfc sigma=0.10 run=8 reason=solved evals=300 fitness=98.0 wall_ms=902
+EXP033B arm=cfc sigma=0.30 run=1 reason=solved evals=12800 fitness=90.0 wall_ms=38223
+EXP033B arm=cfc sigma=0.30 run=2 reason=solved evals=16500 fitness=90.0 wall_ms=48050
+EXP033B arm=cfc sigma=0.30 run=3 reason=solved evals=7100 fitness=92.0 wall_ms=20709
+EXP033B arm=cfc sigma=0.30 run=4 reason=solved evals=8800 fitness=91.0 wall_ms=26251
+EXP033B arm=cfc sigma=0.30 run=5 reason=solved evals=8600 fitness=94.0 wall_ms=25763
+EXP033B arm=cfc sigma=0.30 run=6 reason=solved evals=9900 fitness=90.0 wall_ms=29293
+EXP033B arm=cfc sigma=0.30 run=7 reason=solved evals=9400 fitness=90.0 wall_ms=28239
+EXP033B arm=cfc sigma=0.30 run=8 reason=solved evals=9300 fitness=92.0 wall_ms=27727
+EXP033B arm=cfc sigma=0.50 run=1 reason=max_generations evals=30000 fitness=82.0 wall_ms=85304
+EXP033B arm=cfc sigma=0.50 run=2 reason=max_generations evals=30000 fitness=79.0 wall_ms=86426
+EXP033B arm=cfc sigma=0.50 run=3 reason=max_generations evals=30000 fitness=80.0 wall_ms=86083
+EXP033B arm=cfc sigma=0.50 run=4 reason=max_generations evals=30000 fitness=81.0 wall_ms=86972
+EXP033B arm=cfc sigma=0.50 run=5 reason=max_generations evals=30000 fitness=82.0 wall_ms=84894
+EXP033B arm=cfc sigma=0.50 run=6 reason=max_generations evals=30000 fitness=79.0 wall_ms=85333
+EXP033B arm=cfc sigma=0.50 run=7 reason=max_generations evals=30000 fitness=81.0 wall_ms=85997
+EXP033B arm=cfc sigma=0.50 run=8 reason=max_generations evals=30000 fitness=80.0 wall_ms=86829
+
+## plastic
+EXP033B arm=plastic dim=54 delay=8 sigmas=[0.1,0.3,0.5]
+EXP033B arm=plastic sigma=0.10 run=1 reason=solved evals=1000 fitness=93.0 wall_ms=5576
+EXP033B arm=plastic sigma=0.10 run=2 reason=solved evals=100 fitness=100.0 wall_ms=562
+EXP033B arm=plastic sigma=0.10 run=3 reason=solved evals=200 fitness=100.0 wall_ms=1184
+EXP033B arm=plastic sigma=0.10 run=4 reason=solved evals=100 fitness=95.0 wall_ms=561
+EXP033B arm=plastic sigma=0.10 run=5 reason=solved evals=1200 fitness=98.0 wall_ms=6456
+EXP033B arm=plastic sigma=0.10 run=6 reason=solved evals=400 fitness=93.0 wall_ms=2106
+EXP033B arm=plastic sigma=0.10 run=7 reason=solved evals=300 fitness=98.0 wall_ms=1563
+EXP033B arm=plastic sigma=0.10 run=8 reason=solved evals=400 fitness=100.0 wall_ms=2084
+EXP033B arm=plastic sigma=0.30 run=1 reason=solved evals=500 fitness=91.0 wall_ms=2626
+EXP033B arm=plastic sigma=0.30 run=2 reason=solved evals=900 fitness=93.0 wall_ms=4725
+EXP033B arm=plastic sigma=0.30 run=3 reason=solved evals=700 fitness=92.0 wall_ms=3681
+EXP033B arm=plastic sigma=0.30 run=4 reason=solved evals=2100 fitness=93.0 wall_ms=11066
+EXP033B arm=plastic sigma=0.30 run=5 reason=solved evals=2400 fitness=93.0 wall_ms=12618
+EXP033B arm=plastic sigma=0.30 run=6 reason=solved evals=2900 fitness=93.0 wall_ms=15399
+EXP033B arm=plastic sigma=0.30 run=7 reason=solved evals=2400 fitness=91.0 wall_ms=13151
+EXP033B arm=plastic sigma=0.30 run=8 reason=solved evals=1500 fitness=95.0 wall_ms=8311
+EXP033B arm=plastic sigma=0.50 run=1 reason=solved evals=8400 fitness=91.0 wall_ms=45918
+EXP033B arm=plastic sigma=0.50 run=2 reason=solved evals=4000 fitness=91.0 wall_ms=21512
+EXP033B arm=plastic sigma=0.50 run=3 reason=solved evals=10400 fitness=94.0 wall_ms=55904
+EXP033B arm=plastic sigma=0.50 run=4 reason=solved evals=6400 fitness=90.0 wall_ms=33882
+EXP033B arm=plastic sigma=0.50 run=5 reason=solved evals=2600 fitness=91.0 wall_ms=14242
+EXP033B arm=plastic sigma=0.50 run=6 reason=solved evals=2400 fitness=93.0 wall_ms=12590
+EXP033B arm=plastic sigma=0.50 run=7 reason=solved evals=600 fitness=94.0 wall_ms=3139
+EXP033B arm=plastic sigma=0.50 run=8 reason=solved evals=12700 fitness=90.0 wall_ms=69198
