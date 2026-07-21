@@ -1,7 +1,10 @@
 # Programme 3 — Meta-learning (Meta-adaptation)
 
-**Status: NEXT.** Chartered, with a concrete near-term first experiment; starts as
-the active front when P2 closes. Corpus: to be assigned (026+).
+**Status: OPENING.** First experiment specced and its infrastructure built:
+[`EXP_031_evolved_plasticity_tmaze.md`](experiments/EXP_031_evolved_plasticity_tmaze.md).
+The plastic-neuron path (`network_evaluator:evaluate_with_plasticity/3`, ABCD-Hebbian,
+faber-tweann 9ea366e) is committed and validated; the T-maze memory-latching is
+visualised (Artifact). Corpus: to be assigned (031+).
 
 ## The axis
 
