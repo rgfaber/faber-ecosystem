@@ -1,0 +1,40 @@
+# EXP-031 raw feed — evolved plasticity on the T-maze (sep-CMA-ES, n=10/arm, solve=90/100)
+
+## cfc (memory-by-storage)
+EXP031 arm=cfc nw=49 dim=61
+EXP031 arm=cfc run=1 reason=solved evals=100 fitness=100.0 wall_ms=125
+EXP031 arm=cfc run=2 reason=solved evals=100 fitness=100.0 wall_ms=126
+EXP031 arm=cfc run=3 reason=solved evals=100 fitness=100.0 wall_ms=124
+EXP031 arm=cfc run=4 reason=solved evals=400 fitness=98.0 wall_ms=502
+EXP031 arm=cfc run=5 reason=solved evals=100 fitness=100.0 wall_ms=126
+EXP031 arm=cfc run=6 reason=solved evals=100 fitness=99.0 wall_ms=126
+EXP031 arm=cfc run=7 reason=solved evals=100 fitness=98.0 wall_ms=126
+EXP031 arm=cfc run=8 reason=solved evals=100 fitness=96.0 wall_ms=126
+EXP031 arm=cfc run=9 reason=solved evals=100 fitness=100.0 wall_ms=127
+EXP031 arm=cfc run=10 reason=solved evals=100 fitness=100.0 wall_ms=125
+
+## plastic (memory-by-learning)
+EXP031 arm=plastic nw=49 dim=54
+EXP031 arm=plastic run=1 reason=solved evals=100 fitness=100.0 wall_ms=233
+EXP031 arm=plastic run=2 reason=solved evals=200 fitness=100.0 wall_ms=452
+EXP031 arm=plastic run=3 reason=solved evals=200 fitness=100.0 wall_ms=419
+EXP031 arm=plastic run=4 reason=solved evals=100 fitness=100.0 wall_ms=212
+EXP031 arm=plastic run=5 reason=solved evals=100 fitness=100.0 wall_ms=213
+EXP031 arm=plastic run=6 reason=solved evals=100 fitness=100.0 wall_ms=218
+EXP031 arm=plastic run=7 reason=solved evals=100 fitness=100.0 wall_ms=212
+EXP031 arm=plastic run=8 reason=solved evals=100 fitness=100.0 wall_ms=212
+EXP031 arm=plastic run=9 reason=solved evals=100 fitness=100.0 wall_ms=211
+EXP031 arm=plastic run=10 reason=solved evals=100 fitness=100.0 wall_ms=215
+
+## memoryless (control, caps at 50)
+EXP031 arm=memoryless nw=49 dim=49
+EXP031 arm=memoryless run=1 reason=max_generations evals=50000 fitness=50.0 wall_ms=33417
+EXP031 arm=memoryless run=2 reason=max_generations evals=50000 fitness=50.0 wall_ms=33815
+EXP031 arm=memoryless run=3 reason=max_generations evals=50000 fitness=50.0 wall_ms=34154
+EXP031 arm=memoryless run=4 reason=max_generations evals=50000 fitness=50.0 wall_ms=32437
+EXP031 arm=memoryless run=5 reason=max_generations evals=50000 fitness=50.0 wall_ms=32974
+EXP031 arm=memoryless run=6 reason=max_generations evals=50000 fitness=50.0 wall_ms=33542
+EXP031 arm=memoryless run=7 reason=max_generations evals=50000 fitness=50.0 wall_ms=33119
+EXP031 arm=memoryless run=8 reason=max_generations evals=50000 fitness=50.0 wall_ms=33959
+EXP031 arm=memoryless run=9 reason=max_generations evals=50000 fitness=50.0 wall_ms=33548
+EXP031 arm=memoryless run=10 reason=max_generations evals=50000 fitness=50.0 wall_ms=33293

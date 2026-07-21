@@ -67,10 +67,19 @@ Demonstrated from `plastic_demo_tests` output (`plastic-demo.json`).
 
 ## Feed
 
+n=10 per arm, T-maze delay 2, 100 trials, solve 90. Raw:
+`insights/031-raw-plasticity-tmaze.txt`; solved trace `031-solved-latch-trace.json`.
+
 ```
-(paste run results here as they land)
+cfc         (memory-by-storage)   10/10 solved  (~1 gen, fitness 96-100)
+plastic     (memory-by-learning)  10/10 solved  (~1-2 gen, fitness 100)
+memoryless  (control)              0/10 solved  (exactly 50.0, all runs)
 ```
 
 ## Insight
 
-*Link to `insights/031-*.md` once run.*
+**Plasticity solves the T-maze 10/10, matching CfC; memoryless 0/10.** Memory-by-
+learning is as effective and fast as memory-by-storage at delay 2; the evolved rule
+does the work (zero rule = memoryless); evolution found its own non-latch dynamic.
+Full write-up:
+[`insights/031-evolved-plasticity-solves-tmaze-matching-cfc.md`](../../insights/031-evolved-plasticity-solves-tmaze-matching-cfc.md).
