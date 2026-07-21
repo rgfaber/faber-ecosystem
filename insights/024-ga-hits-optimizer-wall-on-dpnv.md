@@ -87,7 +87,11 @@ search?".
 
 ## Caveat / honesty
 
-This is n=10 on A and B (decisive: 20 runs, 0 solves) with C still completing
-(2 runs shown, same lottery pattern). C's remaining runs will not change the
-finding — no arm reaches goal_reached, and the between-arm differences are
-swamped by within-arm variance. The raw file will hold the full n=10x3.
+This is n=10 on A and B (decisive: 20 runs, 0 solves). Arm C (recurrent) was cut
+at 2/10: its runs are pathologically slow at 500 generations because of the
+recurrent RESIDUAL STALLS noted in 018/020 (the two-phase reset reduced but did
+not eliminate them) — a run can grind for many minutes on 10s input-timeouts.
+That slowness is itself a data point (recurrent is expensive/unreliable at scale
+here), and C's two runs (0.23, 665) show the same lottery pattern. No arm reaches
+goal_reached; the between-arm differences are swamped by within-arm variance. The
+finding does not depend on C's missing runs.
