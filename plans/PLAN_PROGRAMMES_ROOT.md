@@ -81,16 +81,17 @@ which:
 
 | Hypothesis | Axis | Programme | Decisive experiment | Result |
 |------------|------|-----------|---------------------|--------|
-| **Representation** — fixed-random tau cripples the memory timescale | substrate | P3 (via P1 residue) | EXP-026: co-evolve tau with weights | **real, partial** (026: 5/10 vs 0/10) |
-| **Optimizer** — GA/ES too weak for the landscape | operators | P2 | EXP-028: sep-CMA-ES | **real, major** (028: 0->6/10; +tau 10/10) |
+| **Representation** — fixed-random tau cripples the memory timescale | substrate | P3 (via P1 residue) | EXP-026: co-evolve tau with weights | **weak** (026: real under plain ES 5/10 vs 0/10; but 029: memoryless net solves DPNV 7/10 under sep-CMA, n.s. vs CfC 10/10) |
+| **Optimizer** — GA/ES too weak for the landscape | operators | P2 | EXP-028: sep-CMA-ES | **THE lever** (028: 0->6-7/10 regardless of memory; +tau 10/10) |
 | **Deception** — the fitness gradient misleads | objective | P4 | novelty / QD run on DPNV | **rejected** for DPNV (028 reaches the objective directly) |
 
-**Fork resolved (EXP-028).** DPNV was a compound of representation + optimizer, NOT
-deception. sep-CMA-ES (diagonal, no correlations) + co-evolved tau solves DPNV
-10/10 in a few thousand evaluations. Diagonal covariance suffices, so full CMA-ES
-and its eigendecomposition NIF were not built. Three programmes converged on one
-wall from three orthogonal directions; two legs held, the third was ruled out. The
-ones that did not break it are equally signed results.
+**Fork resolved (EXP-028/029).** The dominant leg was the **OPTIMIZER**: sep-CMA-ES
+(diagonal; no correlations, no eig NIF) lifts DPNV from 0/10 to 7-10/10 whether or
+not the net has memory. EXP-029 then showed a MEMORYLESS feedforward net solves
+DPNV-1000 7/10 (n.s. vs CfC 10/10), so the representation/memory leg is weak here:
+DPNV-1000 is too weak a memory test (reactively solvable), and deception was ruled
+out. Memory pays where the task genuinely needs it (T-maze, insight 019), not on
+DPNV-1000. The clean memory test on poles needs a harder non-Markov variant (029b).
 
 ---
 

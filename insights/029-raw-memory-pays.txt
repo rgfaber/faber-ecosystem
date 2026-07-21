@@ -1,0 +1,40 @@
+# EXP-029 raw feed — does memory pay once solves reachable? (sep-CMA-ES, n=10/arm, 400k evals, solve=1000 steps)
+
+## memoryless_markov (feedforward, double pole WITH velocity, variant 6) — positive control
+EXP029 arm=memoryless_markov dim=97
+EXP029 arm=memoryless_markov run=1 reason=solved evals=10800 fitness=1000.0 wall_ms=4860
+EXP029 arm=memoryless_markov run=2 reason=solved evals=3500 fitness=1000.0 wall_ms=716
+EXP029 arm=memoryless_markov run=3 reason=solved evals=3900 fitness=1000.0 wall_ms=1056
+EXP029 arm=memoryless_markov run=4 reason=solved evals=6500 fitness=1000.0 wall_ms=1920
+EXP029 arm=memoryless_markov run=5 reason=solved evals=5900 fitness=1000.0 wall_ms=1902
+EXP029 arm=memoryless_markov run=6 reason=solved evals=7000 fitness=1000.0 wall_ms=2204
+EXP029 arm=memoryless_markov run=7 reason=solved evals=5200 fitness=1000.0 wall_ms=1528
+EXP029 arm=memoryless_markov run=8 reason=solved evals=7200 fitness=1000.0 wall_ms=2417
+EXP029 arm=memoryless_markov run=9 reason=solved evals=5500 fitness=997.0 wall_ms=1879
+EXP029 arm=memoryless_markov run=10 reason=solved evals=5600 fitness=1000.0 wall_ms=1335
+
+## memoryless_dpnv (feedforward, double pole NO velocity, variant 3)
+EXP029 arm=memoryless_dpnv dim=61
+EXP029 arm=memoryless_dpnv run=1 reason=solved evals=13500 fitness=1000.0 wall_ms=2604
+EXP029 arm=memoryless_dpnv run=2 reason=solved evals=2000 fitness=1000.0 wall_ms=108
+EXP029 arm=memoryless_dpnv run=3 reason=solved evals=15800 fitness=1000.0 wall_ms=2914
+EXP029 arm=memoryless_dpnv run=4 reason=max_generations evals=400000 fitness=764.0 wall_ms=153661
+EXP029 arm=memoryless_dpnv run=5 reason=solved evals=13000 fitness=1000.0 wall_ms=2209
+EXP029 arm=memoryless_dpnv run=6 reason=max_generations evals=400000 fitness=651.0 wall_ms=138002
+EXP029 arm=memoryless_dpnv run=7 reason=solved evals=16900 fitness=1000.0 wall_ms=3380
+EXP029 arm=memoryless_dpnv run=8 reason=solved evals=15400 fitness=1000.0 wall_ms=3312
+EXP029 arm=memoryless_dpnv run=9 reason=solved evals=3000 fitness=1000.0 wall_ms=259
+EXP029 arm=memoryless_dpnv run=10 reason=max_generations evals=400000 fitness=405.0 wall_ms=178603
+
+## cfc_dpnv (CfC + co-evolved tau, NO velocity, variant 3) — replicates 028
+EXP029 arm=cfc_dpnv dim=73
+EXP029 arm=cfc_dpnv run=1 reason=solved evals=7400 fitness=1000.0 wall_ms=999
+EXP029 arm=cfc_dpnv run=2 reason=solved evals=7900 fitness=1000.0 wall_ms=1143
+EXP029 arm=cfc_dpnv run=3 reason=solved evals=15900 fitness=1000.0 wall_ms=3017
+EXP029 arm=cfc_dpnv run=4 reason=solved evals=11000 fitness=1000.0 wall_ms=1870
+EXP029 arm=cfc_dpnv run=5 reason=solved evals=6700 fitness=1000.0 wall_ms=807
+EXP029 arm=cfc_dpnv run=6 reason=solved evals=11000 fitness=1000.0 wall_ms=1843
+EXP029 arm=cfc_dpnv run=7 reason=solved evals=15800 fitness=1000.0 wall_ms=4058
+EXP029 arm=cfc_dpnv run=8 reason=solved evals=13000 fitness=1000.0 wall_ms=2218
+EXP029 arm=cfc_dpnv run=9 reason=solved evals=6700 fitness=1000.0 wall_ms=911
+EXP029 arm=cfc_dpnv run=10 reason=solved evals=20000 fitness=1000.0 wall_ms=4754

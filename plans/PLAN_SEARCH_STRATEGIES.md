@@ -61,7 +61,8 @@ so evaluations is the honest axis.
 | 026 | **Co-evolve tau** with weights — does DPNV solve once the memory timescale is evolvable? (the decisive representation test) | **done** — [026](../insights/026-coevolving-tau-solves-dpnv-5of10-vs-0-representation-is-real-but-partial.md): 5/10 vs 0/10 honest baseline (Fisher p~0.03). Representation REAL + significant, but PARTIAL (not 10/10); optimizer leg stays live. n=1 smoke did not survive n=10 |
 | 027 | ES vs GA, matched evaluations, across a problem set (XOR, pole variants, DPNV) | queued |
 | 028 | sep-CMA-ES (diagonal) — does covariance-awareness crack DPNV? | **done** — [028](../insights/028-sep-cma-es-cracks-dpnv-diagonal-suffices.md): YES. 6/10 weights-only (vs 0/10), 10/10 with tau. Diagonal suffices; no full CMA/eig NIF. Fork = optimizer+representation, not deception |
-| 029 | **Bridge back:** re-run the memory comparison (018/019/024) under sep-CMA-ES — does memory pay once solves are reachable? | **next** (the payoff; DPNV now reliably solvable) |
+| 029 | **Bridge back:** re-run the memory comparison under sep-CMA-ES — does memory pay once solves are reachable? | **done** — [029](../insights/029-memory-does-not-pay-on-dpnv-optimizer-was-the-lever.md): NO on DPNV-1000. Memoryless feedforward solves it 7/10 (vs CfC 10/10, n.s.); DPNV-1000 too weak a memory test; OPTIMIZER was the lever. Memory pays on T-maze (019), not here |
+| 029b | Genuinely non-Markov pole (generalisation fitness / 100k-step horizon) where reactive MUST fail — the fair memory test on poles | queued |
 | — | **NIF:** batched-population evaluator (one Rust call per generation) | infra, high leverage |
 
 ## The bridge to Programme 1
