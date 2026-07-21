@@ -57,7 +57,7 @@ so evaluations is the honest axis.
 | EXP | Question | Status |
 |---|---|---|
 | 025 | Does (mu,lambda)-ES solve DPNV where the GA stalled (024)? | **done** — [025](../insights/025-mu-lambda-es-cracks-markov-not-dpnv.md): solves Markov pole process-free (~70x faster) but NOT DPNV at 400k evals; wall is optimizer AND representation (fixed-tau CfC) |
-| 026 | **Co-evolve tau** with weights — does DPNV solve once the memory timescale is evolvable? (the decisive representation test) | **next** |
+| 026 | **Co-evolve tau** with weights — does DPNV solve once the memory timescale is evolvable? (the decisive representation test) | **done** — [026](../insights/026-coevolving-tau-solves-dpnv-5of10-vs-0-representation-is-real-but-partial.md): 5/10 vs 0/10 honest baseline (Fisher p~0.03). Representation REAL + significant, but PARTIAL (not 10/10); optimizer leg stays live. n=1 smoke did not survive n=10 |
 | 027 | ES vs GA, matched evaluations, across a problem set (XOR, pole variants, DPNV) | queued |
 | 028 | Implement CMA-ES + CoSyNE (the literature's DPNV solvers); which ES? | queued |
 | 029 | **Bridge back:** re-run the memory comparison (018/019/024) under a working optimizer — does memory pay once solves are reachable? | queued (the payoff) |

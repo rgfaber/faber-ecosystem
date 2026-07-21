@@ -1,0 +1,40 @@
+# EXP-026 raw feed — co-evolve CfC tau on DPNV (n=10 per arm, 400k evals, solve=1000 steps)
+# arms: control_fixed (one random tau, all runs) | control_redraw (fresh random tau/run) | treatment (co-evolve tau)
+
+## control_fixed (from the initial n=10 run; control arm)
+EXP026 arm=control run=1 reason=max_generations gens=4000 evals=400000 fitness=268.0 wall_ms=361213
+EXP026 arm=control run=2 reason=solved gens=474 evals=47400 fitness=1000.0 wall_ms=76145
+EXP026 arm=control run=3 reason=max_generations gens=4000 evals=400000 fitness=120.0 wall_ms=176755
+EXP026 arm=control run=4 reason=max_generations gens=4000 evals=400000 fitness=185.0 wall_ms=288973
+EXP026 arm=control run=5 reason=max_generations gens=4000 evals=400000 fitness=288.0 wall_ms=456629
+EXP026 arm=control run=6 reason=solved gens=45 evals=4500 fitness=995.0 wall_ms=2849
+EXP026 arm=control run=7 reason=solved gens=33 evals=3300 fitness=1000.0 wall_ms=770
+EXP026 arm=control run=8 reason=max_generations gens=4000 evals=400000 fitness=123.0 wall_ms=183658
+EXP026 arm=control run=9 reason=max_generations gens=4000 evals=400000 fitness=149.0 wall_ms=230352
+EXP026 arm=control run=10 reason=max_generations gens=4000 evals=400000 fitness=195.0 wall_ms=312515
+
+## control_redraw
+EXP026 arm=control_redraw nw=61 ntau=12
+EXP026 arm=control_redraw run=1 reason=max_generations evals=400000 fitness=94.0 wall_ms=125979
+EXP026 arm=control_redraw run=2 reason=max_generations evals=400000 fitness=72.0 wall_ms=112318
+EXP026 arm=control_redraw run=3 reason=max_generations evals=400000 fitness=119.0 wall_ms=175840
+EXP026 arm=control_redraw run=4 reason=max_generations evals=400000 fitness=89.0 wall_ms=143076
+EXP026 arm=control_redraw run=5 reason=max_generations evals=400000 fitness=230.0 wall_ms=339481
+EXP026 arm=control_redraw run=6 reason=max_generations evals=400000 fitness=131.0 wall_ms=200917
+EXP026 arm=control_redraw run=7 reason=max_generations evals=400000 fitness=122.0 wall_ms=172880
+EXP026 arm=control_redraw run=8 reason=max_generations evals=400000 fitness=505.0 wall_ms=680234
+EXP026 arm=control_redraw run=9 reason=max_generations evals=400000 fitness=132.0 wall_ms=210081
+EXP026 arm=control_redraw run=10 reason=max_generations evals=400000 fitness=803.0 wall_ms=1071660
+
+## treatment
+EXP026 arm=treatment nw=61 ntau=12
+EXP026 arm=treatment run=1 reason=max_generations evals=400000 fitness=176.0 wall_ms=234749 tau_min=0.17 tau_mean=0.95 tau_max=3.51
+EXP026 arm=treatment run=2 reason=max_generations evals=400000 fitness=124.0 wall_ms=199601 tau_min=0.05 tau_mean=1.78 tau_max=5.33
+EXP026 arm=treatment run=3 reason=solved evals=5100 fitness=1000.0 wall_ms=2420 tau_min=0.05 tau_mean=1.43 tau_max=5.38
+EXP026 arm=treatment run=4 reason=solved evals=8100 fitness=1000.0 wall_ms=3846 tau_min=0.05 tau_mean=1.37 tau_max=8.47
+EXP026 arm=treatment run=5 reason=solved evals=4900 fitness=1000.0 wall_ms=1023 tau_min=0.06 tau_mean=1.93 tau_max=5.83
+EXP026 arm=treatment run=6 reason=max_generations evals=400000 fitness=409.0 wall_ms=615342 tau_min=0.05 tau_mean=0.44 tau_max=1.51
+EXP026 arm=treatment run=7 reason=solved evals=4600 fitness=1000.0 wall_ms=1225 tau_min=0.05 tau_mean=0.71 tau_max=4.17
+EXP026 arm=treatment run=8 reason=solved evals=3000 fitness=1000.0 wall_ms=493 tau_min=0.06 tau_mean=0.89 tau_max=3.92
+EXP026 arm=treatment run=9 reason=max_generations evals=400000 fitness=768.0 wall_ms=1055499 tau_min=0.05 tau_mean=2.50 tau_max=12.75
+EXP026 arm=treatment run=10 reason=max_generations evals=400000 fitness=275.0 wall_ms=358702 tau_min=0.05 tau_mean=2.01 tau_max=7.06
