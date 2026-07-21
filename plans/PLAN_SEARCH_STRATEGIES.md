@@ -63,7 +63,7 @@ so evaluations is the honest axis.
 | 028 | sep-CMA-ES (diagonal) — does covariance-awareness crack DPNV? | **done** — [028](../insights/028-sep-cma-es-cracks-dpnv-diagonal-suffices.md): YES. 6/10 weights-only (vs 0/10), 10/10 with tau. Diagonal suffices; no full CMA/eig NIF. Fork = optimizer+representation, not deception |
 | 029 | **Bridge back:** re-run the memory comparison under sep-CMA-ES — does memory pay once solves are reachable? | **done** — [029](../insights/029-memory-does-not-pay-on-dpnv-optimizer-was-the-lever.md): NO on DPNV-1000. Memoryless feedforward solves it 7/10 (vs CfC 10/10, n.s.); DPNV-1000 too weak a memory test; OPTIMIZER was the lever. Memory pays on T-maze (019), not here |
 | 029b | Genuinely non-Markov pole (generalisation fitness / 100k-step horizon) where reactive MUST fail — the fair memory test on poles | queued |
-| — | **NIF:** batched-population evaluator (one Rust call per generation) | infra, high leverage |
+| — | **NIF:** batched-population evaluator (one Rust call per generation) | **done** — `compile_cfc_pop`/`cfc_pop_step` (faber-tweann 23f9dc2); profiled (forward pass = 60-73% of eval), validated numerically equivalent, 4.5x forward-pass speedup. eig NIF for full CMA-ES stays unbuilt (028: diagonal suffices) |
 
 ## The bridge to Programme 1
 
