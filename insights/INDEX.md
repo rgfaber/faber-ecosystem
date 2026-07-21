@@ -43,6 +43,12 @@ commit, a bug fixed that reveals a class of defect is an insight.
 | [021](021-feedforward-tmaze-topology-inconclusive.md) | Topology inspection inconclusive (fitness not persisted to genotype); evolved feedforward T-maze agents are deep near-linear chains, delay-independent, but confounded by bloat | inconclusive + method | 2026-07-21 |
 | [022](022-feedforward-tmaze-solver-is-compact-not-a-delay-line.md) | Fitness-persistence fix isolates the SOLVER: delay-2 feedforward memory solver is COMPACT (3 neurons); (title corrected by 023: it IS a short delay line) | confirmed + refutes 021 | 2026-07-21 |
 | [023](023-delay-line-confirmed-memory-is-a-chain-computation-is-a-dag.md) | Delay-line CONFIRMED by wiring: memory solver is a LINEAR CHAIN, XOR solver is a convergent DAG; resolves the 019->020->022 flip-flop | confirmed | 2026-07-21 |
+| [024](024-ga-hits-optimizer-wall-on-dpnv.md) | The truncation-GA hits an OPTIMIZER wall on DPNV: no solve in 165k evals, lottery-like variance, no memory benefit; capability value = task-match x budget x OPTIMIZER. Programme 1 closes | signed negative + inflection | 2026-07-21 |
+
+## Programmes
+
+- **Programme 1 — Capabilities** (insights 013-024): which network capability (tuner depth, substrate, memory mechanism, topology evolution) helps which problem, and why. Arc: capability value = task-match x budget x optimizer. Closed at the optimizer wall (024). Plan: [`plans/PLAN_EXPERIMENT_PROGRAMME.md`](../plans/PLAN_EXPERIMENT_PROGRAMME.md).
+- **Programme 2 — Search Strategies** (insights 025+): which search algorithm (GA / (mu,lambda)-ES / CMA-ES / CoSyNE / natural-ES), for which landscape; does a stronger optimizer overturn Programme 1's conclusions. Plan: [`plans/PLAN_SEARCH_STRATEGIES.md`](../plans/PLAN_SEARCH_STRATEGIES.md).
 
 ## Prior art
 

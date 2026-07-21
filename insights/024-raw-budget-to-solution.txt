@@ -1,0 +1,48 @@
+
+=== A: feedforward (delay-line-capable) (pb_2_without_velocity, pop 30, max_gen 500) ===
+  {max_generations,500,160454,11.258712328956458,6088}
+  {max_generations,500,163937,0.31599999999999995,16720}
+  {max_generations,500,165364,5.423176364165268,4353}
+  {max_generations,500,169741,0.7850335159750225,64498}
+  {max_generations,500,165227,0.48509999999999986,4894}
+  {max_generations,500,165218,0.183,6298}
+  {max_generations,500,175316,6.285370895435227,312763}
+  {max_generations,500,168759,545.7680751239441,54922}
+  {max_generations,500,165202,53.00791113969764,6337}
+  {max_generations,500,165292,0.3915999999999999,4361}
+  => A: feedforward (delay-line-capable): solved=0/10 (gens []), best_fitness=[11.258712328956458,
+                                                                               0.31599999999999995,
+                                                                               5.423176364165268,
+                                                                               0.7850335159750225,
+                                                                               0.48509999999999986,
+                                                                               0.183,
+                                                                               6.285370895435227,
+                                                                               545.7680751239441,
+                                                                               53.00791113969764,
+                                                                               0.3915999999999999]
+
+=== B: cfc (neuron memory) (pb_2_without_velocity, pop 30, max_gen 500) ===
+  {max_generations,500,165298,0.1485,5272}
+  {max_generations,500,164819,0.2346,10728}
+  {max_generations,500,165236,0.177,8005}
+  {max_generations,500,165425,0.4370999999999999,4956}
+  {max_generations,500,165323,0.4004999999999999,4833}
+  {max_generations,500,165224,0.2346,7098}
+  {max_generations,500,160508,164.57644159430595,13497}
+  {max_generations,500,173074,0.4277999999999999,296631}
+  {max_generations,500,165352,0.2211,5315}
+  {max_generations,500,175867,0.2211,306712}
+  => B: cfc (neuron memory): solved=0/10 (gens []), best_fitness=[0.1485,
+                                                                  0.2346,
+                                                                  0.177,
+                                                                  0.4370999999999999,
+                                                                  0.4004999999999999,
+                                                                  0.2346,
+                                                                  164.57644159430595,
+                                                                  0.4277999999999999,
+                                                                  0.2211,
+                                                                  0.2211]
+
+=== C: recurrent (wiring memory) (pb_2_without_velocity, pop 30, max_gen 500) ===
+  {max_generations,500,165190,0.2278,4826}
+  {max_generations,500,165689,664.7268406584392,118294}
