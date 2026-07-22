@@ -1,0 +1,370 @@
+EXP041 arm=cfc_reset sigma=0.30 maxgen=300 n=8 (evolvability trace)
+EXP041 arm=cfc_reset run=1 reason=max_generations fitness=85.0 checkpoints=[{10,
+                                                                             63.5},
+                                                                            {25,
+                                                                             75.0},
+                                                                            {50,
+                                                                             76.5},
+                                                                            {100,
+                                                                             78.0},
+                                                                            {150,
+                                                                             78.0},
+                                                                            {200,
+                                                                             78.0},
+                                                                            {300,
+                                                                             85.0}]
+EXP041 arm=cfc_reset run=2 reason=max_generations fitness=75.5 checkpoints=[{10,
+                                                                             62.5},
+                                                                            {25,
+                                                                             71.5},
+                                                                            {50,
+                                                                             74.0},
+                                                                            {100,
+                                                                             75.0},
+                                                                            {150,
+                                                                             75.5},
+                                                                            {200,
+                                                                             75.5},
+                                                                            {300,
+                                                                             75.5}]
+EXP041 arm=cfc_reset run=3 reason=solved fitness=90.0 checkpoints=[{10,59.5},
+                                                                   {25,70.5},
+                                                                   {50,73.5},
+                                                                   {100,76.5},
+                                                                   {150,82.0},
+                                                                   {200,88.0},
+                                                                   {300,90.0}]
+EXP041 arm=cfc_reset run=4 reason=max_generations fitness=76.0 checkpoints=[{10,
+                                                                             64.0},
+                                                                            {25,
+                                                                             74.0},
+                                                                            {50,
+                                                                             75.5},
+                                                                            {100,
+                                                                             75.5},
+                                                                            {150,
+                                                                             76.0},
+                                                                            {200,
+                                                                             76.0},
+                                                                            {300,
+                                                                             76.0}]
+EXP041 arm=cfc_reset run=5 reason=max_generations fitness=86.5 checkpoints=[{10,
+                                                                             59.0},
+                                                                            {25,
+                                                                             70.0},
+                                                                            {50,
+                                                                             78.5},
+                                                                            {100,
+                                                                             78.5},
+                                                                            {150,
+                                                                             84.0},
+                                                                            {200,
+                                                                             85.5},
+                                                                            {300,
+                                                                             86.5}]
+EXP041 arm=cfc_reset run=6 reason=max_generations fitness=77.0 checkpoints=[{10,
+                                                                             60.5},
+                                                                            {25,
+                                                                             75.0},
+                                                                            {50,
+                                                                             75.0},
+                                                                            {100,
+                                                                             75.5},
+                                                                            {150,
+                                                                             76.0},
+                                                                            {200,
+                                                                             77.0},
+                                                                            {300,
+                                                                             77.0}]
+EXP041 arm=cfc_reset run=7 reason=max_generations fitness=86.0 checkpoints=[{10,
+                                                                             65.0},
+                                                                            {25,
+                                                                             72.5},
+                                                                            {50,
+                                                                             75.5},
+                                                                            {100,
+                                                                             75.5},
+                                                                            {150,
+                                                                             78.0},
+                                                                            {200,
+                                                                             80.0},
+                                                                            {300,
+                                                                             86.0}]
+EXP041 arm=cfc_reset run=8 reason=max_generations fitness=76.5 checkpoints=[{10,
+                                                                             62.0},
+                                                                            {25,
+                                                                             72.0},
+                                                                            {50,
+                                                                             76.5},
+                                                                            {100,
+                                                                             76.5},
+                                                                            {150,
+                                                                             76.5},
+                                                                            {200,
+                                                                             76.5},
+                                                                            {300,
+                                                                             76.5}]
+EXP041 arm=cfc_reset MEANCURVE gen=10 fit=62.00
+EXP041 arm=cfc_reset MEANCURVE gen=20 fit=70.50
+EXP041 arm=cfc_reset MEANCURVE gen=30 fit=73.94
+EXP041 arm=cfc_reset MEANCURVE gen=40 fit=74.94
+EXP041 arm=cfc_reset MEANCURVE gen=50 fit=75.63
+EXP041 arm=cfc_reset MEANCURVE gen=60 fit=75.94
+EXP041 arm=cfc_reset MEANCURVE gen=70 fit=76.25
+EXP041 arm=cfc_reset MEANCURVE gen=80 fit=76.31
+EXP041 arm=cfc_reset MEANCURVE gen=90 fit=76.31
+EXP041 arm=cfc_reset MEANCURVE gen=100 fit=76.38
+EXP041 arm=cfc_reset MEANCURVE gen=110 fit=76.88
+EXP041 arm=cfc_reset MEANCURVE gen=120 fit=77.75
+EXP041 arm=cfc_reset MEANCURVE gen=130 fit=77.94
+EXP041 arm=cfc_reset MEANCURVE gen=140 fit=78.13
+EXP041 arm=cfc_reset MEANCURVE gen=150 fit=78.25
+EXP041 arm=cfc_reset MEANCURVE gen=160 fit=78.69
+EXP041 arm=cfc_reset MEANCURVE gen=170 fit=78.81
+EXP041 arm=cfc_reset MEANCURVE gen=180 fit=79.19
+EXP041 arm=cfc_reset MEANCURVE gen=190 fit=79.31
+EXP041 arm=cfc_reset MEANCURVE gen=200 fit=79.56
+EXP041 arm=cfc_reset MEANCURVE gen=210 fit=79.81
+EXP041 arm=cfc_reset MEANCURVE gen=220 fit=80.00
+EXP041 arm=cfc_reset MEANCURVE gen=230 fit=80.19
+EXP041 arm=cfc_reset MEANCURVE gen=240 fit=80.50
+EXP041 arm=cfc_reset MEANCURVE gen=250 fit=81.06
+EXP041 arm=cfc_reset MEANCURVE gen=260 fit=81.06
+EXP041 arm=cfc_reset MEANCURVE gen=270 fit=81.44
+EXP041 arm=cfc_reset MEANCURVE gen=280 fit=81.44
+EXP041 arm=cfc_reset MEANCURVE gen=290 fit=81.56
+EXP041 arm=cfc_reset MEANCURVE gen=300 fit=81.56
+EXP041 arm=cfc_reset SUMMARY early(1->50)=18.63 late(150->300)=3.31 final=81.56
+EXP041 arm=abcd sigma=0.30 maxgen=300 n=8 (evolvability trace)
+EXP041 arm=abcd run=1 reason=solved fitness=91.0 checkpoints=[{10,63.5},
+                                                              {25,69.0},
+                                                              {50,75.0},
+                                                              {100,77.5},
+                                                              {150,82.5},
+                                                              {200,86.0},
+                                                              {300,91.0}]
+EXP041 arm=abcd run=2 reason=max_generations fitness=87.5 checkpoints=[{10,
+                                                                        69.0},
+                                                                       {25,
+                                                                        74.0},
+                                                                       {50,
+                                                                        76.5},
+                                                                       {100,
+                                                                        77.0},
+                                                                       {150,
+                                                                        82.5},
+                                                                       {200,
+                                                                        86.0},
+                                                                       {300,
+                                                                        87.5}]
+EXP041 arm=abcd run=3 reason=max_generations fitness=88.5 checkpoints=[{10,
+                                                                        60.0},
+                                                                       {25,
+                                                                        68.5},
+                                                                       {50,
+                                                                        76.5},
+                                                                       {100,
+                                                                        77.5},
+                                                                       {150,
+                                                                        81.5},
+                                                                       {200,
+                                                                        86.5},
+                                                                       {300,
+                                                                        88.5}]
+EXP041 arm=abcd run=4 reason=max_generations fitness=78.5 checkpoints=[{10,
+                                                                        64.0},
+                                                                       {25,
+                                                                        71.0},
+                                                                       {50,
+                                                                        76.0},
+                                                                       {100,
+                                                                        77.0},
+                                                                       {150,
+                                                                        77.5},
+                                                                       {200,
+                                                                        77.5},
+                                                                       {300,
+                                                                        78.5}]
+EXP041 arm=abcd run=5 reason=max_generations fitness=84.0 checkpoints=[{10,
+                                                                        73.5},
+                                                                       {25,
+                                                                        74.0},
+                                                                       {50,
+                                                                        78.0},
+                                                                       {100,
+                                                                        79.0},
+                                                                       {150,
+                                                                        81.5},
+                                                                       {200,
+                                                                        82.5},
+                                                                       {300,
+                                                                        84.0}]
+EXP041 arm=abcd run=6 reason=max_generations fitness=77.0 checkpoints=[{10,
+                                                                        61.0},
+                                                                       {25,
+                                                                        74.0},
+                                                                       {50,
+                                                                        77.0},
+                                                                       {100,
+                                                                        77.0},
+                                                                       {150,
+                                                                        77.0},
+                                                                       {200,
+                                                                        77.0},
+                                                                       {300,
+                                                                        77.0}]
+EXP041 arm=abcd run=7 reason=max_generations fitness=89.0 checkpoints=[{10,
+                                                                        61.5},
+                                                                       {25,
+                                                                        67.0},
+                                                                       {50,
+                                                                        74.0},
+                                                                       {100,
+                                                                        77.5},
+                                                                       {150,
+                                                                        83.5},
+                                                                       {200,
+                                                                        87.5},
+                                                                       {300,
+                                                                        89.0}]
+EXP041 arm=abcd run=8 reason=max_generations fitness=88.0 checkpoints=[{10,
+                                                                        62.5},
+                                                                       {25,
+                                                                        62.5},
+                                                                       {50,
+                                                                        72.5},
+                                                                       {100,
+                                                                        81.0},
+                                                                       {150,
+                                                                        83.0},
+                                                                       {200,
+                                                                        86.0},
+                                                                       {300,
+                                                                        88.0}]
+EXP041 arm=abcd MEANCURVE gen=10 fit=64.38
+EXP041 arm=abcd MEANCURVE gen=20 fit=67.44
+EXP041 arm=abcd MEANCURVE gen=30 fit=71.63
+EXP041 arm=abcd MEANCURVE gen=40 fit=74.94
+EXP041 arm=abcd MEANCURVE gen=50 fit=75.69
+EXP041 arm=abcd MEANCURVE gen=60 fit=76.00
+EXP041 arm=abcd MEANCURVE gen=70 fit=76.50
+EXP041 arm=abcd MEANCURVE gen=80 fit=77.06
+EXP041 arm=abcd MEANCURVE gen=90 fit=77.13
+EXP041 arm=abcd MEANCURVE gen=100 fit=77.94
+EXP041 arm=abcd MEANCURVE gen=110 fit=78.63
+EXP041 arm=abcd MEANCURVE gen=120 fit=78.69
+EXP041 arm=abcd MEANCURVE gen=130 fit=80.31
+EXP041 arm=abcd MEANCURVE gen=140 fit=80.81
+EXP041 arm=abcd MEANCURVE gen=150 fit=81.13
+EXP041 arm=abcd MEANCURVE gen=160 fit=81.94
+EXP041 arm=abcd MEANCURVE gen=170 fit=82.44
+EXP041 arm=abcd MEANCURVE gen=180 fit=82.88
+EXP041 arm=abcd MEANCURVE gen=190 fit=83.50
+EXP041 arm=abcd MEANCURVE gen=200 fit=83.63
+EXP041 arm=abcd MEANCURVE gen=210 fit=83.75
+EXP041 arm=abcd MEANCURVE gen=220 fit=83.81
+EXP041 arm=abcd MEANCURVE gen=230 fit=84.06
+EXP041 arm=abcd MEANCURVE gen=240 fit=84.19
+EXP041 arm=abcd MEANCURVE gen=250 fit=84.38
+EXP041 arm=abcd MEANCURVE gen=260 fit=84.88
+EXP041 arm=abcd MEANCURVE gen=270 fit=85.25
+EXP041 arm=abcd MEANCURVE gen=280 fit=85.38
+EXP041 arm=abcd MEANCURVE gen=290 fit=85.44
+EXP041 arm=abcd MEANCURVE gen=300 fit=85.44
+EXP041 arm=abcd SUMMARY early(1->50)=18.13 late(150->300)=4.31 final=85.44
+EXP041 arm=pc sigma=0.30 maxgen=300 n=8 (evolvability trace)
+EXP041 arm=pc run=1 reason=solved fitness=90.5 checkpoints=[{10,65.0},
+                                                            {25,68.5},
+                                                            {50,75.0},
+                                                            {100,81.5},
+                                                            {150,86.5},
+                                                            {200,90.5},
+                                                            {300,90.5}]
+EXP041 arm=pc run=2 reason=solved fitness=90.0 checkpoints=[{10,62.5},
+                                                            {25,66.0},
+                                                            {50,79.0},
+                                                            {100,85.5},
+                                                            {150,90.0},
+                                                            {200,90.0},
+                                                            {300,90.0}]
+EXP041 arm=pc run=3 reason=solved fitness=90.5 checkpoints=[{10,63.5},
+                                                            {25,72.5},
+                                                            {50,77.5},
+                                                            {100,78.0},
+                                                            {150,80.0},
+                                                            {200,90.5},
+                                                            {300,90.5}]
+EXP041 arm=pc run=4 reason=max_generations fitness=87.5 checkpoints=[{10,64.0},
+                                                                     {25,71.0},
+                                                                     {50,77.0},
+                                                                     {100,
+                                                                      80.5},
+                                                                     {150,
+                                                                      85.5},
+                                                                     {200,
+                                                                      87.0},
+                                                                     {300,
+                                                                      87.5}]
+EXP041 arm=pc run=5 reason=solved fitness=90.0 checkpoints=[{10,63.5},
+                                                            {25,68.5},
+                                                            {50,79.5},
+                                                            {100,85.5},
+                                                            {150,90.0},
+                                                            {200,90.0},
+                                                            {300,90.0}]
+EXP041 arm=pc run=6 reason=solved fitness=91.0 checkpoints=[{10,60.0},
+                                                            {25,65.0},
+                                                            {50,73.5},
+                                                            {100,82.0},
+                                                            {150,87.5},
+                                                            {200,91.0},
+                                                            {300,91.0}]
+EXP041 arm=pc run=7 reason=solved fitness=90.0 checkpoints=[{10,65.5},
+                                                            {25,65.5},
+                                                            {50,75.5},
+                                                            {100,83.0},
+                                                            {150,88.5},
+                                                            {200,90.0},
+                                                            {300,90.0}]
+EXP041 arm=pc run=8 reason=max_generations fitness=87.5 checkpoints=[{10,71.5},
+                                                                     {25,75.0},
+                                                                     {50,78.5},
+                                                                     {100,
+                                                                      78.5},
+                                                                     {150,
+                                                                      82.5},
+                                                                     {200,
+                                                                      85.5},
+                                                                     {300,
+                                                                      87.5}]
+EXP041 arm=pc MEANCURVE gen=10 fit=64.44
+EXP041 arm=pc MEANCURVE gen=20 fit=66.25
+EXP041 arm=pc MEANCURVE gen=30 fit=71.94
+EXP041 arm=pc MEANCURVE gen=40 fit=74.63
+EXP041 arm=pc MEANCURVE gen=50 fit=76.94
+EXP041 arm=pc MEANCURVE gen=60 fit=77.81
+EXP041 arm=pc MEANCURVE gen=70 fit=78.69
+EXP041 arm=pc MEANCURVE gen=80 fit=79.44
+EXP041 arm=pc MEANCURVE gen=90 fit=80.25
+EXP041 arm=pc MEANCURVE gen=100 fit=81.81
+EXP041 arm=pc MEANCURVE gen=110 fit=82.81
+EXP041 arm=pc MEANCURVE gen=120 fit=83.69
+EXP041 arm=pc MEANCURVE gen=130 fit=84.88
+EXP041 arm=pc MEANCURVE gen=140 fit=85.81
+EXP041 arm=pc MEANCURVE gen=150 fit=86.31
+EXP041 arm=pc MEANCURVE gen=160 fit=87.19
+EXP041 arm=pc MEANCURVE gen=170 fit=88.00
+EXP041 arm=pc MEANCURVE gen=180 fit=88.25
+EXP041 arm=pc MEANCURVE gen=190 fit=88.94
+EXP041 arm=pc MEANCURVE gen=200 fit=89.31
+EXP041 arm=pc MEANCURVE gen=210 fit=89.56
+EXP041 arm=pc MEANCURVE gen=220 fit=89.56
+EXP041 arm=pc MEANCURVE gen=230 fit=89.56
+EXP041 arm=pc MEANCURVE gen=240 fit=89.56
+EXP041 arm=pc MEANCURVE gen=250 fit=89.56
+EXP041 arm=pc MEANCURVE gen=260 fit=89.63
+EXP041 arm=pc MEANCURVE gen=270 fit=89.63
+EXP041 arm=pc MEANCURVE gen=280 fit=89.63
+EXP041 arm=pc MEANCURVE gen=290 fit=89.63
+EXP041 arm=pc MEANCURVE gen=300 fit=89.63
+EXP041 arm=pc SUMMARY early(1->50)=17.63 late(150->300)=3.31 final=89.63

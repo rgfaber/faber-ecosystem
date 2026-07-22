@@ -129,13 +129,24 @@ STATIC representational probe cannot explain the noise result. Reframe: per-conn
 advantage is most likely EVOLVABILITY of the noise-robust region (echoes 020), not a
 static property.
 
-## Candidate next (EXP-041) — instrument the SEARCH, not the solution
+## 041 outcome — evolvability CONFIRMED (DONE, 2026-07-22)
 
-- **Evolvability probe:** under sigma=0.3, track each arm's best-fitness trajectory and
-  the DECISION-margin distribution of the population over generations. Does
-  per-connection reach large sign-margins that global ABCD's search never populates?
-  Metric: generations-to-first-robust-margin, or population fraction above a margin
-  threshold. This tests the evolvability claim directly.
+The learning-curve trace (new sep_cma_es trace option) confirmed 040's reframe: under
+sigma=0.3 all three arms converge to a SHARED ~76 (1.5-bit) basin by gen 50 (cfc even
+leads early), then only per-connection climbs out (76.9 -> 89.3 over gen 50-200);
+global ABCD reaches ~85, cfc stalls ~82. The advantage is the EVOLVABILITY of the
+noise-robust two-bit region, not a static property. Method self-correction: the first
+summary window (gen 150->300) was too late and hid the effect; the divergence is
+gen 50-200.
+
+## Candidate next (EXP-042) — dimensions or representation?
+
+- **Per-LAYER rule as a middle point:** does global ABCD fail because of too few
+  DIMENSIONS or too little REPRESENTATIONAL freedom? Give abcd a per-layer rule
+  (2x5 params). If it lands between abcd and pc, expressiveness scales smoothly; if it
+  stays with abcd, the escape needs full per-connection freedom.
+- **Confirmatory optimiser arm:** repeat 041 with plain (mu,lambda)-ES to check the
+  basin-escape profile is not sep-CMA-ES-specific.
 - **Then the capstone:** learning ACROSS a task distribution (reward-modulated
   three-factor rules); per-connection is the established workhorse to carry into it.
 
