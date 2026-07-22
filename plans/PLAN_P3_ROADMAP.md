@@ -102,6 +102,31 @@ A clean negative (global ABCD copes fine, or even pc cannot) is equally valuable
 Infra built: per-connection plasticity (network_evaluator, + unit tests),
 multi_cue_tmaze_sim scape. `none` confirmed at exactly 50 (memoryless ceiling).
 
+## 038-039 outcome (DONE, 2026-07-22)
+
+- **038** — capacity ALONE does not separate the mechanisms: on the two-bit
+  multi-cue T-maze, storage (cfc_reset) and per-connection plastic both solve 7/8;
+  the pc>abcd edge was n.s. A signed correction: the naive-CfC 2/8 was a
+  reset-protocol confound (cross-trial interference), not a capacity limit.
+- **039** — capacity + NOISE separates decisively: at sigma=0.3 per-connection
+  solves 8/10, global ABCD 1/10, storage 0/10 (Fisher p~0.0007). The decisive axis
+  under the hardest stress is per-SYNAPSE expressiveness, not storage-vs-learning
+  (global plasticity is as broken as storage). Confirms 036 at its strongest.
+
+**P3 thesis (031-039):** the gaps between memory mechanisms open only as stressors
+COMBINE, and the top of the hierarchy is the most EXPRESSIVE local rule
+(per-connection ABCD), not "learning" in general. Storage < global-plastic <
+per-connection-plastic, visible under noise and decisive under capacity+noise.
+
+## Candidate next (EXP-040)
+
+- **Mechanism probe (035-style):** WHY does global ABCD fail where per-connection
+  holds? Instrument the imprint: does the single global rule force the two bits to
+  interfere (one imprint direction), while per-connection dedicates disjoint synapse
+  groups? Cheap, no evolution, closes the honesty gap on 039's finding 2.
+- **Then the capstone:** learning ACROSS a task distribution (reward-modulated
+  three-factor rules); per-connection is the established workhorse to carry into it.
+
 ## The deep question (beyond this phase)
 
 All of 031-037 is memory WITHIN an episode (hold a cue). The ultimate P3 test is
