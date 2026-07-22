@@ -160,6 +160,61 @@ specifically; if even that nulls, the lifetime-learning equivalence is conclusiv
 structures, test on unseen), a neuromodulatory SUB-NETWORK that computes M rather than
 using raw reward, and confirmation of any headline under a second optimiser.
 
+## Engineering value and limitations
+
+These experiments are mechanism SCIENCE, but they produced real engineering, and the
+findings are actionable. Three things are worth separating: what was built, what the
+findings tell a builder, and what is still missing.
+
+### Artifacts already in faber-tweann
+
+The questions forced the construction of a tested, reusable neuroevolution toolkit that
+did not exist before the arc. Each is permanent, elvis-clean, unit-tested, and pushed:
+
+| Component | Module | What it is |
+|---|---|---|
+| Separable CMA-ES | `sep_cma_es` | Process-free, O(N), drop-in fitness interface, optional evolvability trace. A real search backend. |
+| Plasticity engine | `evaluate_with_plasticity/3` | Three rule families (global ABCD, Oja, per-connection) behind one call. |
+| Three-factor rule | `evaluate_with_neuromod/4` | Reward-gated plasticity, the core primitive for any meta-RL / lifetime-adaptation use. |
+| State introspection | `get_internal_state/1` | Made the 035 mechanism measurable; useful for debugging any recurrent net. |
+| Benchmark suite | `tmaze_sim`, `multi_cue_tmaze_sim`, `reversal_bandit_sim`, `prob_reversal_bandit_sim` | A capability-regression harness for memory and learning mechanisms. |
+
+Before this arc faber-tweann was a DXNN2-derived TWEANN library; it now also carries a
+modern optimiser, a plasticity/neuromodulation engine, and a benchmark suite. This is
+the "one engine" that P1/P2 and the P8/P9 couplings are meant to consume.
+
+### Design inputs the findings produce
+
+Several results are directly actionable build heuristics:
+
+- **Default to the simplest mechanism.** Expressiveness was a cost seven times
+  (013/015/036/041/042/043) and decisive exactly once (039). Use storage or a global
+  rule by default; reach for per-connection only under COMBINED stress
+  (capacity + noise). Do not pay for knobs you cannot exploit.
+- **For robust memory in noisy/edge settings, prefer imprint over state (035).** A
+  decaying recurrent state loses its signal to noise where a re-imprinted weight does
+  not.
+- **Match the memory carrier's reset to the task's trial structure (038).** A
+  leaky-state self-clear that works for one held item silently corrupts multi-item tasks.
+- **A separate clean reward channel may be worth architecting (EXP-045, in progress).**
+  If confirmed: for reward-driven adaptation under noisy observation, feed reward through
+  a dedicated neuromodulatory gate, not as a sensory input, because the gate can be kept
+  clean where the sensor cannot.
+
+And the conceptual lens for mechanism SELECTION: separation is a property of the
+stressor, not the mechanism (attacks-substrate vs attacks-task).
+
+### What is missing (the honest gap)
+
+These are mechanism studies on toy benchmarks (tiny nets, T-mazes and bandits, n=8).
+They tell you which mechanism has which PROPERTY, cheaply and rigorously. They do NOT
+yet establish behaviour at scale, on a real task, or under production constraints. The
+artifacts need hardening/scaling; the findings are INPUTS to engineering, not finished
+engineering. The bridge, and the highest-value step after P3, is to drive ONE real
+faber-neuroevolution task end to end with a validated mechanism (per-connection
+neuromodulated plasticity + sep-CMA-ES), turning "we understand the mechanism" into "we
+shipped a capability".
+
 ## Method notes (why the results are trustworthy)
 
 - **Signed insights, reported as replication.** Each experiment is a numbered, dated
