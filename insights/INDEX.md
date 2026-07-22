@@ -67,6 +67,8 @@ commit, a bug fixed that reveals a class of defect is an insight.
 ## Programmes
 
 Full map and per-programme charters: [`plans/PLAN_PROGRAMMES_ROOT.md`](../plans/PLAN_PROGRAMMES_ROOT.md).
+
+**P3 synthesis (031-044, memory + lifetime learning):** [`plans/SYNTHESIS_P3.md`](../plans/SYNTHESIS_P3.md).
 One engine (P1-P7, the seven design axes), two couplings (P8 language, P9 body).
 
 - **P1 — Capabilities** (insights 013-024, CLOSED): which network capability (tuner depth, substrate, memory mechanism, topology evolution) helps which problem. Arc: capability value = task-match x budget x optimizer; closed at the optimizer wall (024). [`CHARTER_P1_CAPABILITIES.md`](../plans/CHARTER_P1_CAPABILITIES.md) / [`PLAN_EXPERIMENT_PROGRAMME.md`](../plans/PLAN_EXPERIMENT_PROGRAMME.md).

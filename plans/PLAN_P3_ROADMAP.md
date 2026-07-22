@@ -2,6 +2,8 @@
 
 Where P3 stands and the next phase. Charter: [`CHARTER_P3_META_LEARNING.md`](CHARTER_P3_META_LEARNING.md).
 
+**Programme-level account of the whole 031-044 arc:** [`SYNTHESIS_P3.md`](SYNTHESIS_P3.md).
+
 ## The thesis so far (insights 031-034)
 
 Evolved plasticity (memory-by-LEARNING: a local rule writes the cue into the
