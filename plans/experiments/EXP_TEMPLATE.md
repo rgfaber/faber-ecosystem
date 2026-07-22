@@ -25,9 +25,19 @@ opens.*
 ## Config
 
 *Exact constraint + population_monitor options, enough to reproduce. The runner
-is a throwaway `test/integration/*_experiment_tests.erl` invoked via --module;
-it is NOT committed to the suite (it would bloat wall-clock). The config here IS
-the permanent record.*
+lives at `test/integration/*_experiment_tests.erl` and is invoked via --module.
+It is NOT kept in the committed test suite, because running it on every
+`rebar3 eunit` would bloat wall-clock.*
+
+***But it is NOT thrown away.** When the run finishes, ARCHIVE the runner into the
+corpus beside its raw feed as `insights/NNN-runner-<slug>.erl`, then remove it
+from `test/integration/`. The suite stays fast and the record stays complete.*
+
+*Rationale: the raw feed is produced BY the runner. A runner with a bug yields a
+feed that is wrong and internally consistent, and no amount of analysis on the
+feed alone can recover the error. Two claims (038, 040) were retracted for
+confounds of exactly that kind. Without the archived runner, no one, including
+us, can ever check whether the code did what the insight says it did.*
 
 *Two harness rules, learned the hard way in EXP_016 (insight 016):*
 

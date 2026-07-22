@@ -15,6 +15,24 @@ commit, a bug fixed that reveals a class of defect is an insight.
   insight says so in its own text.
 - **Monotonic numbering.** Never renumber, never delete. Supersede by writing a
   new insight that references the old.
+- **The runner is part of the record.** From insight 047, the experiment runner is
+  archived beside its raw feed and its pinned engine version. A raw feed is produced
+  BY a runner: if the runner is wrong the feed is wrong and internally consistent, and
+  no analysis of the feed alone can find it. Both retractions below (038, 040) were
+  confounds of that kind.
+
+## Provenance of the record
+
+| Insights | Raw feed | Runner | Engine version | Auditable at code level |
+|---|---|---|---|---|
+| 001-046 | yes | no (never committed; sole survivor is EXP-023's, at `faber-tweann/test/integration/exp023_tests.erl`) | not recorded | no |
+| 047+ | yes | yes, archived | pinned | yes |
+
+Stated openly rather than left implicit. The pre-047 results are not thereby wrong,
+and two of them were already corrected by their own data. They simply cannot be
+re-checked against the code that produced them. Of these, only 041 and 046 are being
+re-run under the new standard (as EXP-049 and EXP-048), because they are the
+load-bearing claims with known soft spots.
 
 ## Insights
 

@@ -241,8 +241,14 @@ shipped a capability".
   reading (corrected in 038 by a reset control) and the "per-connection reduces
   interference" hypothesis (refuted in 040). The programme changes its mind on evidence.
 - **Reproducible substrate.** Mechanisms, rules, scapes, and the traced optimiser are
-  permanent, tested, elvis-clean modules in faber-tweann; experiment runners are
-  throwaway, and the signed insight plus its persisted raw are the record.
+  permanent, tested, elvis-clean modules in faber-tweann. Experiment runners are kept out
+  of the committed test suite (wall-clock), but as of 2026-07-22 they are ARCHIVED into
+  the corpus beside their raw feed as `insights/NNN-runner-*.erl`. The record is the
+  signed insight, its persisted raw, and the runner that produced it.
+- **Known gap in the record (2026-07-22).** Runners for insights 031-046 predate that
+  decision and were never committed anywhere, so they are not recoverable. Those insights
+  rest on their raw feeds alone and cannot be audited at the code level. Archiving starts
+  at 047.
 
 ## Pointers
 
