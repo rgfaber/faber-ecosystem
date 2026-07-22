@@ -118,12 +118,24 @@ COMBINE, and the top of the hierarchy is the most EXPRESSIVE local rule
 (per-connection ABCD), not "learning" in general. Storage < global-plastic <
 per-connection-plastic, visible under noise and decisive under capacity+noise.
 
-## Candidate next (EXP-040)
+## 040 outcome — interference hypothesis REFUTED (DONE, 2026-07-22)
 
-- **Mechanism probe (035-style):** WHY does global ABCD fail where per-connection
-  holds? Instrument the imprint: does the single global rule force the two bits to
-  interfere (one imprint direction), while per-connection dedicates disjoint synapse
-  groups? Cheap, no evolution, closes the honesty gap on 039's finding 2.
+The 035-style cross-talk probe REFUTED the interference story: per-connection solvers
+have the HIGHEST readout cross-talk (0.82), global ABCD the LOWEST (0.26) — inverted.
+Cross-talk (magnitude leak) does not track robustness because decisions are SIGN-based
+and survive large leak. The probe was also on the wrong population (sigma=0 solvers):
+CfC's noiseless solvers saturate at +/-1 margins yet are least robust (039). So a
+STATIC representational probe cannot explain the noise result. Reframe: per-connection's
+advantage is most likely EVOLVABILITY of the noise-robust region (echoes 020), not a
+static property.
+
+## Candidate next (EXP-041) — instrument the SEARCH, not the solution
+
+- **Evolvability probe:** under sigma=0.3, track each arm's best-fitness trajectory and
+  the DECISION-margin distribution of the population over generations. Does
+  per-connection reach large sign-margins that global ABCD's search never populates?
+  Metric: generations-to-first-robust-margin, or population fraction above a margin
+  threshold. This tests the evolvability claim directly.
 - **Then the capstone:** learning ACROSS a task distribution (reward-modulated
   three-factor rules); per-connection is the established workhorse to carry into it.
 
