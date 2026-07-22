@@ -1,0 +1,37 @@
+== EXP-047 lifetime mechanism probe (Phase 2 rerun, split fixed) ==
+champions loaded from exp047_champions.eterm (Phase 1 evolution unchanged)
+dims: fixed=51 cfc=61 nm_global=56 nm_pc=212
+EXP047 arm=fixed SUMMARY mean_fitness=77.06 sd=4.93 best=78.7 (persisted)
+EXP047 arm=cfc SUMMARY mean_fitness=92.22 sd=0.67 best=93.3 (persisted)
+EXP047 arm=nm_global SUMMARY mean_fitness=88.26 sd=1.22 best=89.8 (persisted)
+EXP047 arm=nm_pc SUMMARY mean_fitness=91.13 sd=0.33 best=91.7 (persisted)
+
+-- Phase 2: decode current-good-arm from internal state --
+  state_auc  = decode from the substrate's own internal state
+  sensor_auc = decode from [last_reward,last_action] -- ENDOGENOUS (last_action is
+               the arm's own output), reported as diagnostic, NOT a decision bar
+  time_ctrl  = decode from trial index; must be ~0.5 or the split is time-confounded
+
+EXP047 arm=fixed state_auc=0.500(sd0.000) | sensor_auc=0.798 (endogenous) | time_ctrl=0.500
+EXP047 arm=cfc state_auc=0.965(sd0.013) | sensor_auc=0.908 (endogenous) | time_ctrl=0.500
+EXP047 arm=nm_global state_auc=0.908(sd0.041) | sensor_auc=0.855 (endogenous) | time_ctrl=0.500
+EXP047 arm=nm_pc state_auc=0.956(sd0.021) | sensor_auc=0.885 (endogenous) | time_ctrl=0.500
+
+-- Verdict (pre-registered; split fixed, sensor criterion dropped) --
+fixed sentinel state_auc=0.500 (must be ~0.5; >0.6 => INVALID)
+time-control auc=0.500 (must be ~0.5; >0.6 => split still time-confounded, INVALID)
+adaptive state_aucs=[0.965,0.908,0.956] spread=0.057
+per-step disagreement=0.101 (need >0.15 for SURVIVES)
+RESULT=FALSIFIED: substrates track EQUALLY and per-step estimates AGREE (disagreement<0.15) -- nothing for integration to average away; 045's low-pass story explains nothing.
+
+-- Phase 3: shifted-reversal control (clock vs tracking) --
+  evolved at reversal=30; replayed at 20/30/40. FLAT across R => tracks the
+  reversal; PEAKED at 30 => internal clock. fixed arm = reactive-only reference.
+
+EXP047 shift arm=fixed fit@R20=77.9 fit@R30=77.3 fit@R40=77.7 clock_drop=-0.50
+EXP047 shift arm=cfc fit@R20=85.4 fit@R30=86.4 fit@R40=86.1 clock_drop=0.64
+EXP047 shift arm=nm_global fit@R20=82.2 fit@R30=82.1 fit@R40=83.5 clock_drop=-0.70
+EXP047 shift arm=nm_pc fit@R20=84.8 fit@R30=85.5 fit@R40=86.5 clock_drop=-0.12
+
+fixed(reactive-only) clock_drop=-0.50; adaptive clock_drops=[0.64,-0.7,-0.12]
+SHIFT=TRACKS: adaptive fitness is no more schedule-sensitive than the reactive-only fixed arm; the substrates adapt to the reversal wherever it lands, not via a clock.

@@ -150,6 +150,21 @@ Two through-lines run the whole programme.
    the abstract, but "does the stressor reach an exposed substrate." Instantaneous
    holding exposes it; integrated estimation filters it away.
 
+   > **Update (047, 2026-07-23) — the low-pass CLAUSE is refuted, the convergence FACT
+   > stands.** A direct mechanistic probe decoded the current good arm from each lifetime
+   > substrate's own internal state. They do NOT carry equal-but-different per-step signals
+   > that integration averages away: they decode the good arm EQUALLY and near-ceiling
+   > (cfc 0.965, nm_pc 0.956, nm_global 0.908 AUC; spread 0.057), their per-step estimates
+   > AGREE (disagreement 0.101), and a shifted-reversal control rules out an internal clock
+   > (flat fitness at reversal 20/30/40). So the lifetime mechanisms converge NOT because a
+   > low-pass filter hides their differences, but because each independently learns genuine
+   > evidence-based good-arm tracking that is equally accurate: there are no per-step
+   > differences to filter. Read "integrated estimation filters the substrate away" as
+   > "integrated estimation is solved equally well by every substrate", not as an averaging
+   > mechanism. The instantaneous-hold-vs-integrated-estimate framing survives; the specific
+   > low-pass causal story does not. (Run 1 of the probe fired a FALSE opposite result from a
+   > split confounded with arm-polarity; caught at the CLAIM gate before signing.)
+
 2. **Expressiveness is a cost when unexploited and decisive when needed.** Per-connection
    plasticity (240 rule parameters) is slower to evolve and no better on every easy or
    task-attacking regime (013/015/017 memory capability; 036 Oja; 042/043 lifetime), and
