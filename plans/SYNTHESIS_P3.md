@@ -1,4 +1,4 @@
-# Programme 3 (Meta-learning) — Synthesis of EXP-031 to EXP-044
+# Programme 3 (Meta-learning) — Synthesis of EXP-031 to EXP-045
 
 A programme-level account of what the meta-learning track established, why, and where
 it stops being true. Charter: [`CHARTER_P3_META_LEARNING.md`](CHARTER_P3_META_LEARNING.md).
@@ -19,14 +19,17 @@ inverts between the two regimes, and the reason why is the programme's main resu
   decaying state cannot, and the advantage is largest for the most EXPRESSIVE rule
   (per-connection), whose value is an EVOLVABILITY property (it makes the robust region
   reachable), not a static one.
-- **Learning (discover a reward mapping across an episode, 042-044):** the mechanisms
+- **Learning (discover a reward mapping across an episode, 042-045):** the mechanisms
   CONVERGE. Reward-gated plasticity learns and re-learns near-optimally, but so does a
-  recurrent state given the reward as input, and expressiveness buys nothing.
+  recurrent state given the reward as input, and expressiveness buys nothing. Three
+  independent stressors fail to separate them, because the task integrates reward over
+  many trials and integration filters out the per-step noise that would expose a
+  mechanism's substrate.
 
-The unifying principle: **mechanism choice matters when the stressor attacks a
-mechanism-specific substrate (the stored signal), and does not matter when it attacks
-the task (which every mechanism faces equally).** Memory stressors are the former;
-lifetime-learning stressors, so far, the latter.
+The unifying principle: **mechanism choice matters when the stressor reaches an exposed
+substrate, and not otherwise.** Memory HOLDS a signal instantaneously, exposing the
+substrate; lifetime learning ESTIMATES by integration, which filters the substrate away.
+That is why memory separates the mechanisms and lifetime learning does not.
 
 ## The instrument
 
@@ -95,7 +98,7 @@ stress is per-synapse expressiveness, and its advantage is an evolvability prope
 The mechanism is measured (leaky state vs stable imprint), one plausible story was
 falsified (interference), and one metric-choice self-correction was recorded.
 
-## Regime 2 — Lifetime learning (042-044)
+## Regime 2 — Lifetime learning (042-045)
 
 Everything above is memory: HOLDING information you were given. The capstone tests
 LEARNING: discovering, from reward alone, a mapping you were never shown, and
@@ -115,27 +118,37 @@ plasticity), deferred since 036.
   reward-gated plasticity. Expressiveness is a cost again.
 - **044 (a stressor, still null).** Reversal FREQUENCY (1 to 7 reversals per life) is a
   real difficulty axis but degrades all three mechanisms together (~4 points), with only
-  a weak, non-significant hint that per-connection is the most robust. Two independent
-  lifetime stressors now fail to reproduce the memory arc's decisive separations.
+  a weak, non-significant hint that per-connection is the most robust.
+- **045 (the substrate stressor, still null, and the reason found).** Feedback-sensor
+  NOISE, the direct 034 analogue, was predicted to break storage (whose only reward
+  channel is the sensor) while sparing clean-modulator plasticity. It did NOT: across
+  sigma 0 to 1.0 all three arms hold at ~91-92, and clean-M vs noisy-M plasticity are
+  indistinguishable. The reason is INTEGRATION: the task accumulates reward over ~30
+  trials, and integration averages out per-step noise (~sigma/sqrt(N)) on every channel,
+  so no substrate is exposed. The architectural hypothesis (a clean neuromodulatory
+  channel buys robustness) is disconfirmed.
 
 **Regime 2 verdict:** reward-gated plasticity is a working, near-optimal lifetime-
 learning mechanism, but the storage-vs-learning-vs-expressiveness distinctions that
-dominated memory VANISH here. Where reward is available to all mechanisms and the
-stressor attacks the task rather than a substrate, they converge.
+dominated memory VANISH here, across three independent stressors. Where the task is
+solved by integrating reward over trials, integration filters the per-step noise that
+would expose a mechanism's substrate, so the mechanisms converge.
 
 ## The synthesis
 
 Two through-lines run the whole programme.
 
-1. **Separation is a property of the stressor, not the mechanism.** A memory stressor
-   (noise, delay) attacks the STORED SIGNAL directly: it corrupts a decaying CfC trace
-   but not a re-imprinted weight (035), so the mechanisms diverge, and the more
-   expressive rule diverges furthest (039). A lifetime stressor (reward noise,
-   frequency) attacks the TASK: every mechanism must simply integrate or re-adapt more,
-   and all can, so they converge (043, 044). The right question is never "which
-   mechanism is better" in the abstract, but "does the stressor exploit a
-   mechanism-specific fragility." For memory it does; for lifetime learning, so far, it
-   does not.
+1. **Separation is a property of the stressor, not the mechanism, and the mechanism is
+   instantaneous-hold vs integrated-estimate.** Memory HOLDS a signal instantaneously
+   across a corridor: there is no averaging, so the substrate's noise-response is exposed
+   directly. A decaying CfC trace loses a noisy cue where a re-imprinted weight does not
+   (035), so the mechanisms diverge, and the more expressive rule diverges furthest
+   (039). Lifetime learning ESTIMATES a reward mapping by integrating over many trials:
+   integration is a low-pass filter that averages out per-step noise on any channel
+   (observation or modulator, 045), so the substrate is hidden and the mechanisms
+   converge (043, 044, 045). The right question is never "which mechanism is better" in
+   the abstract, but "does the stressor reach an exposed substrate." Instantaneous
+   holding exposes it; integrated estimation filters it away.
 
 2. **Expressiveness is a cost when unexploited and decisive when needed.** Per-connection
    plasticity (240 rule parameters) is slower to evolve and no better on every easy or
@@ -150,15 +163,16 @@ Established (with signed evidence): the leaky-state vs stable-imprint mechanism 
 that expressiveness, not elegance, buys robustness (036); the decisive per-connection
 separation under capacity+noise and its evolvability basis (039, 041); that the
 interference explanation is false (040); that reward-gated plasticity learns and
-re-learns (042); and that the memory thesis does not transfer to easy or task-stressed
-lifetime learning (043, 044).
+re-learns (042); that the memory thesis does not transfer to lifetime learning across
+THREE independent stressors (043 reward-SNR, 044 frequency, 045 feedback noise); and the
+reason (045): integration over trials filters per-step noise on any channel, so the
+lifetime substrate is hidden. The lifetime-learning equivalence is now conclusive.
 
-Open: the one untested lifetime stressor is the direct 034 analogue, Gaussian NOISE on
-the reward/action FEEDBACK sensor, which would corrupt a recurrent state's evidence
-specifically; if even that nulls, the lifetime-learning equivalence is conclusive
-(EXP-045). Beyond that: task-distribution GENERALISATION (train on some reversal
-structures, test on unseen), a neuromodulatory SUB-NETWORK that computes M rather than
-using raw reward, and confirmation of any headline under a second optimiser.
+Open: task-distribution GENERALISATION (train on some reversal structures, test on
+unseen), whether a stressor that DEFEATS integration (trial-correlated noise, or a very
+short window) can re-expose the substrate, confirmation of any headline under a second
+optimiser, and above all the SCALE/REAL-TASK bridge (see below). The lifetime-stressor
+line is closed.
 
 ## Engineering value and limitations
 
@@ -196,13 +210,16 @@ Several results are directly actionable build heuristics:
   not.
 - **Match the memory carrier's reset to the task's trial structure (038).** A
   leaky-state self-clear that works for one held item silently corrupts multi-item tasks.
-- **A separate clean reward channel may be worth architecting (EXP-045, in progress).**
-  If confirmed: for reward-driven adaptation under noisy observation, feed reward through
-  a dedicated neuromodulatory gate, not as a sensory input, because the gate can be kept
-  clean where the sensor cannot.
+- **Do NOT over-engineer the reward path for lifetime learning (EXP-045).** The earlier
+  tentative recommendation, to architect a separate clean neuromodulatory channel for
+  noisy-reward adaptation, was DISCONFIRMED: clean-M and noisy-M plasticity performed
+  identically under feedback noise, because integration over trials already filters
+  per-step noise on any channel. Rely on integration; reserve mechanism care for
+  INSTANTANEOUS memory under noise, where the substrate is actually exposed.
 
 And the conceptual lens for mechanism SELECTION: separation is a property of the
-stressor, not the mechanism (attacks-substrate vs attacks-task).
+stressor, not the mechanism (attacks-substrate vs attacks-task), and its mechanism is
+instantaneous-HOLD (substrate exposed) vs integrated-ESTIMATE (substrate filtered).
 
 ### What is missing (the honest gap)
 

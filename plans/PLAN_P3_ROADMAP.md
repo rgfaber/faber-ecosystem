@@ -191,6 +191,20 @@ memory-arc separations. Interpretation: memory stressors attack the STORED signa
 One untested 034-analogue remains: feedback-sensor noise (EXP-045). Programme ripe for
 synthesis (SYNTHESIS_P3).
 
+## EXP-045 DONE — feedback noise nulls too; the reason is INTEGRATION (lifetime line CLOSED)
+
+The direct 034 analogue (sensor noise on the reward/action feedback) also fails to
+separate: across sigma 0-1.0 all three arms (cfc, clean-M pc, noisy-M pc) hold ~91-92;
+clean-M vs noisy-M indistinguishable, prediction refuted. Reason: the task integrates
+reward over ~30 trials, and integration averages out per-step noise (~sigma/sqrt(N)) on
+every channel, so no substrate is exposed. Sharpens the synthesis: memory HOLDS
+instantaneously (substrate exposed) vs lifetime learning ESTIMATES by integration
+(substrate filtered). Clean-neuromodulatory-channel engineering hypothesis DISCONFIRMED.
+Lifetime null now conclusive across THREE stressors. The lifetime-stressor line is CLOSED.
+
+Next: task-distribution generalisation, or the SCALE/REAL-TASK bridge (drive a real
+faber-neuroevolution task with a validated mechanism), or broaden to P4-P9.
+
 ## EXP-044 (superseded above) — the STRESSED lifetime task (find the separator, if any)
 
 Mirror the memory arc: add the analogue of 039's noise to the lifetime task and look
