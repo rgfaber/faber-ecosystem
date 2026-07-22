@@ -170,6 +170,26 @@ arm = the task distribution. Question: does the memory-arc thesis TRANSFER -- le
 > storage on robustness, per-connection decisive when hard, via evolvability?
 Standing side-check (from old 042): confirm any headline with plain (mu,lambda)-ES.
 
+## Capstone II DONE (043, 2026-07-22) — thesis does NOT transfer (a null)
+
+Probabilistic reversal with reward fed as input (new `prob_reversal_bandit_sim`): all
+four mechanisms (cfc storage, global, per-layer, per-connection plasticity) TIE at
+~92-93, 8/8. "Learning > storage" was a memory-under-stress phenomenon, not universal:
+given reward-as-input a recurrent state learns as well as reward-gated plasticity.
+Expressiveness a cost again (pc ~2x evals); per-layer sits with global (old-042 moot
+here). Like 038, an easy task ties -- discrimination needs stress.
+
+## EXP-044 — the STRESSED lifetime task (find the separator, if any)
+
+Mirror the memory arc: add the analogue of 039's noise to the lifetime task and look
+for the regime where a mechanism separates. Candidates: sensor noise on the
+reward/action feedback (corrupts the RL^2 state's evidence), MORE arms (harder
+credit assignment), or REPEATED reversals (faster re-adaptation demand). Prediction
+(from the memory arc): under enough feedback noise, storage (whose state integrates a
+now-corrupted signal) should degrade before reward-gated plasticity -- the lifetime
+echo of 034. If nothing separates, the honest conclusion is that mechanism choice is a
+memory-under-stress matter, not a lifetime-learning one.
+
 ## The deep question (beyond this phase)
 
 All of 031-037 is memory WITHIN an episode (hold a cue). The ultimate P3 test is

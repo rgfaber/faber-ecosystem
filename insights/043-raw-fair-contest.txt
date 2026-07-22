@@ -1,0 +1,40 @@
+EXP043 arm=cfc dim=61 life=60 phi=0.80 instances=12 (prob reversal, fair contest)
+EXP043 arm=cfc run=1 reason=solved fitness=92.1 evals=1400
+EXP043 arm=cfc run=2 reason=solved fitness=92.6 evals=500
+EXP043 arm=cfc run=3 reason=solved fitness=92.1 evals=700
+EXP043 arm=cfc run=4 reason=solved fitness=92.1 evals=1300
+EXP043 arm=cfc run=5 reason=solved fitness=92.4 evals=1300
+EXP043 arm=cfc run=6 reason=solved fitness=93.3 evals=1700
+EXP043 arm=cfc run=7 reason=solved fitness=92.4 evals=700
+EXP043 arm=cfc run=8 reason=solved fitness=92.1 evals=1200
+EXP043 arm=cfc SUMMARY mean_fitness=92.39 best=93.29
+EXP043 arm=nm_global dim=56 life=60 phi=0.80 instances=12 (prob reversal, fair contest)
+EXP043 arm=nm_global run=1 reason=solved fitness=92.1 evals=500
+EXP043 arm=nm_global run=2 reason=solved fitness=97.0 evals=1900
+EXP043 arm=nm_global run=3 reason=solved fitness=92.1 evals=2500
+EXP043 arm=nm_global run=4 reason=solved fitness=92.6 evals=1700
+EXP043 arm=nm_global run=5 reason=solved fitness=92.1 evals=1300
+EXP043 arm=nm_global run=6 reason=solved fitness=92.8 evals=1400
+EXP043 arm=nm_global run=7 reason=solved fitness=92.4 evals=1200
+EXP043 arm=nm_global run=8 reason=solved fitness=92.4 evals=1700
+EXP043 arm=nm_global SUMMARY mean_fitness=92.94 best=96.99
+EXP043 arm=nm_per_layer dim=60 life=60 phi=0.80 instances=12 (prob reversal, fair contest)
+EXP043 arm=nm_per_layer run=1 reason=solved fitness=93.1 evals=1400
+EXP043 arm=nm_per_layer run=2 reason=solved fitness=92.8 evals=1300
+EXP043 arm=nm_per_layer run=3 reason=solved fitness=92.8 evals=1300
+EXP043 arm=nm_per_layer run=4 reason=solved fitness=93.1 evals=1400
+EXP043 arm=nm_per_layer run=5 reason=solved fitness=92.4 evals=1700
+EXP043 arm=nm_per_layer run=6 reason=solved fitness=93.8 evals=1200
+EXP043 arm=nm_per_layer run=7 reason=solved fitness=92.4 evals=1600
+EXP043 arm=nm_per_layer run=8 reason=solved fitness=92.6 evals=1300
+EXP043 arm=nm_per_layer SUMMARY mean_fitness=92.85 best=93.75
+EXP043 arm=nm_pc dim=212 life=60 phi=0.80 instances=12 (prob reversal, fair contest)
+EXP043 arm=nm_pc run=1 reason=solved fitness=92.8 evals=3400
+EXP043 arm=nm_pc run=2 reason=solved fitness=94.2 evals=2600
+EXP043 arm=nm_pc run=3 reason=solved fitness=92.1 evals=2600
+EXP043 arm=nm_pc run=4 reason=solved fitness=93.1 evals=2700
+EXP043 arm=nm_pc run=5 reason=solved fitness=93.1 evals=2800
+EXP043 arm=nm_pc run=6 reason=solved fitness=92.1 evals=200
+EXP043 arm=nm_pc run=7 reason=solved fitness=95.8 evals=2900
+EXP043 arm=nm_pc run=8 reason=solved fitness=92.1 evals=2300
+EXP043 arm=nm_pc SUMMARY mean_fitness=93.17 best=95.83
