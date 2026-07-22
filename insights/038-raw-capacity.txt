@@ -1,0 +1,41 @@
+EXP038 arm=none dim=73 delay=4 n=4
+EXP038 arm=none run=1 reason=max_generations evals=2400 fitness=50.0 wall_ms=4001
+EXP038 arm=none run=2 reason=max_generations evals=2400 fitness=50.0 wall_ms=3968
+EXP038 arm=none run=3 reason=max_generations evals=2400 fitness=50.0 wall_ms=4013
+EXP038 arm=none run=4 reason=max_generations evals=2400 fitness=50.0 wall_ms=3984
+EXP038 arm=cfc dim=85 delay=4 n=8
+EXP038 arm=cfc run=1 reason=solved evals=9700 fitness=92.0 wall_ms=25405
+EXP038 arm=cfc run=2 reason=solved evals=4800 fitness=93.5 wall_ms=12754
+EXP038 arm=cfc run=3 reason=max_generations evals=30000 fitness=87.5 wall_ms=78840
+EXP038 arm=cfc run=4 reason=max_generations evals=30000 fitness=87.5 wall_ms=78131
+EXP038 arm=cfc run=5 reason=max_generations evals=30000 fitness=89.0 wall_ms=78201
+EXP038 arm=cfc run=6 reason=max_generations evals=30000 fitness=87.5 wall_ms=77310
+EXP038 arm=cfc run=7 reason=max_generations evals=30000 fitness=87.5 wall_ms=78157
+EXP038 arm=cfc run=8 reason=max_generations evals=30000 fitness=87.5 wall_ms=78730
+EXP038 arm=cfc_reset dim=85 delay=4 n=8
+EXP038 arm=cfc_reset run=1 reason=solved evals=12600 fitness=100.0 wall_ms=33289
+EXP038 arm=cfc_reset run=2 reason=solved evals=7000 fitness=100.0 wall_ms=18400
+EXP038 arm=cfc_reset run=3 reason=solved evals=4800 fitness=100.0 wall_ms=12640
+EXP038 arm=cfc_reset run=4 reason=max_generations evals=30000 fitness=87.5 wall_ms=78442
+EXP038 arm=cfc_reset run=5 reason=solved evals=7300 fitness=100.0 wall_ms=19083
+EXP038 arm=cfc_reset run=6 reason=solved evals=5300 fitness=100.0 wall_ms=13964
+EXP038 arm=cfc_reset run=7 reason=solved evals=11500 fitness=100.0 wall_ms=30070
+EXP038 arm=cfc_reset run=8 reason=solved evals=4000 fitness=100.0 wall_ms=10620
+EXP038 arm=abcd dim=78 delay=4 n=8
+EXP038 arm=abcd run=1 reason=solved evals=3400 fitness=100.0 wall_ms=20537
+EXP038 arm=abcd run=2 reason=max_generations evals=30000 fitness=87.5 wall_ms=186600
+EXP038 arm=abcd run=3 reason=solved evals=6200 fitness=100.0 wall_ms=37760
+EXP038 arm=abcd run=4 reason=solved evals=2700 fitness=100.0 wall_ms=16840
+EXP038 arm=abcd run=5 reason=max_generations evals=30000 fitness=87.5 wall_ms=185339
+EXP038 arm=abcd run=6 reason=max_generations evals=30000 fitness=87.5 wall_ms=186481
+EXP038 arm=abcd run=7 reason=solved evals=3600 fitness=100.0 wall_ms=21787
+EXP038 arm=abcd run=8 reason=solved evals=3500 fitness=100.0 wall_ms=21541
+EXP038 arm=pc dim=314 delay=4 n=8
+EXP038 arm=pc run=1 reason=solved evals=2400 fitness=100.0 wall_ms=15087
+EXP038 arm=pc run=2 reason=solved evals=3500 fitness=100.0 wall_ms=21771
+EXP038 arm=pc run=3 reason=solved evals=3400 fitness=100.0 wall_ms=20810
+EXP038 arm=pc run=4 reason=max_generations evals=50000 fitness=87.5 wall_ms=316454
+EXP038 arm=pc run=5 reason=solved evals=2400 fitness=100.0 wall_ms=15224
+EXP038 arm=pc run=6 reason=solved evals=4700 fitness=100.0 wall_ms=29934
+EXP038 arm=pc run=7 reason=solved evals=5800 fitness=100.0 wall_ms=36316
+EXP038 arm=pc run=8 reason=solved evals=4300 fitness=100.0 wall_ms=26976

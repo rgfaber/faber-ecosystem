@@ -76,6 +76,32 @@ memory.
 **Infra:** combined reuses 033a/033b; the harder task needs a new scape module
 (`seq_tmaze_sim` or similar), the biggest new piece.
 
+## Phase status (035-037 DONE, 2026-07-22)
+
+- **035** DONE — mechanism measured: CfC state is leaky (~25x decay to a ~4% margin
+  even noiseless), plastic imprint stable (~100%). 033/034 mechanism now measured.
+- **036** DONE — ran Oja (not per-layer/reward-mod): Oja is SIMPLER (1-param), and
+  LESS robust than ABCD (breaks 2/8 at sigma=0.5 where ABCD holds 8/8). Correction:
+  expressiveness (param count), not the self-normalising property, buys robustness;
+  the genuine "richer rule" win needs MORE params than ABCD.
+- **037** DONE — combined delay x noise: stressors COMPOUND for CfC (0/8 at
+  sigma=0.5 both delays, fitness falls with delay); plastic solves the whole grid
+  8/8. Thesis (learning > storage for robust memory) holds on horizon, noise, both.
+
+## Open chapter — EXP-038: does expressiveness buy CAPACITY? (active)
+
+036 said the real richer-rule test needs MORE params than ABCD; the roadmap's
+"harder task" is a capacity task. EXP-038 unites them: a new **multi-cue T-maze**
+(`multi_cue_tmaze_sim`, two held bits — recall cue A at junction 1, cue B at
+junction 2) against four arms — none (ceiling), cfc (multi-dim state), abcd
+(global 5-param), **pc** (per-connection ABCD, each synapse its own {A,B,C,D},
+new `evaluate_with_plasticity` rule `{pc, CoeffLayers, Eta}`). Hypothesis: one
+global rule cannot specialise synapses to two independent bits, so global ABCD
+ceilings where CfC's state and the expressive per-connection rule break through.
+A clean negative (global ABCD copes fine, or even pc cannot) is equally valuable.
+Infra built: per-connection plasticity (network_evaluator, + unit tests),
+multi_cue_tmaze_sim scape. `none` confirmed at exactly 50 (memoryless ceiling).
+
 ## The deep question (beyond this phase)
 
 All of 031-037 is memory WITHIN an episode (hold a cue). The ultimate P3 test is
