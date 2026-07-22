@@ -179,7 +179,17 @@ given reward-as-input a recurrent state learns as well as reward-gated plasticit
 Expressiveness a cost again (pc ~2x evals); per-layer sits with global (old-042 moot
 here). Like 038, an easy task ties -- discrimination needs stress.
 
-## EXP-044 — the STRESSED lifetime task (find the separator, if any)
+## EXP-044 DONE — reversal frequency does NOT separate (null holds)
+
+Reversal-frequency sweep (1/3/7 per life): all three mechanisms degrade together
+(~4 pts, to ~86-88); only a weak, n.s. hint that pc is most robust and global least.
+Two lifetime stressors now (043 reward-SNR, 044 frequency) fail to reproduce the
+memory-arc separations. Interpretation: memory stressors attack the STORED signal
+(mechanism-specific fragility), lifetime stressors attack the TASK (mechanism-neutral).
+One untested 034-analogue remains: feedback-sensor noise (EXP-045). Programme ripe for
+synthesis (SYNTHESIS_P3).
+
+## EXP-044 (superseded above) — the STRESSED lifetime task (find the separator, if any)
 
 Mirror the memory arc: add the analogue of 039's noise to the lifetime task and look
 for the regime where a mechanism separates. Candidates: sensor noise on the

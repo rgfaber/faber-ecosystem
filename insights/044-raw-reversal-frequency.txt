@@ -1,0 +1,84 @@
+EXP044 arm=cfc dim=61 life=60 phi=0.80 periods=[30,15,8] (reversal-frequency sweep)
+EXP044 arm=cfc period=30 run=1 reason=solved fitness=90.3 evals=900
+EXP044 arm=cfc period=30 run=2 reason=solved fitness=92.6 evals=1100
+EXP044 arm=cfc period=30 run=3 reason=solved fitness=92.1 evals=300
+EXP044 arm=cfc period=30 run=4 reason=solved fitness=90.7 evals=100
+EXP044 arm=cfc period=30 run=5 reason=solved fitness=90.3 evals=700
+EXP044 arm=cfc period=30 run=6 reason=solved fitness=92.1 evals=500
+EXP044 arm=cfc period=30 run=7 reason=solved fitness=90.7 evals=1000
+EXP044 arm=cfc period=30 run=8 reason=solved fitness=93.5 evals=800
+EXP044 arm=cfc period=30 SUMMARY mean_fitness=91.55 best=93.52
+EXP044 arm=cfc period=15 run=1 reason=solved fitness=90.7 evals=1200
+EXP044 arm=cfc period=15 run=2 reason=solved fitness=90.3 evals=2200
+EXP044 arm=cfc period=15 run=3 reason=solved fitness=90.7 evals=3000
+EXP044 arm=cfc period=15 run=4 reason=solved fitness=90.7 evals=700
+EXP044 arm=cfc period=15 run=5 reason=solved fitness=90.7 evals=1700
+EXP044 arm=cfc period=15 run=6 reason=solved fitness=91.2 evals=1000
+EXP044 arm=cfc period=15 run=7 reason=solved fitness=90.7 evals=800
+EXP044 arm=cfc period=15 run=8 reason=solved fitness=90.3 evals=1200
+EXP044 arm=cfc period=15 SUMMARY mean_fitness=90.68 best=91.20
+EXP044 arm=cfc period=8 run=1 reason=max_generations fitness=87.0 evals=25000
+EXP044 arm=cfc period=8 run=2 reason=max_generations fitness=89.8 evals=25000
+EXP044 arm=cfc period=8 run=3 reason=max_generations fitness=89.4 evals=25000
+EXP044 arm=cfc period=8 run=4 reason=max_generations fitness=86.6 evals=25000
+EXP044 arm=cfc period=8 run=5 reason=max_generations fitness=86.6 evals=25000
+EXP044 arm=cfc period=8 run=6 reason=max_generations fitness=86.6 evals=25000
+EXP044 arm=cfc period=8 run=7 reason=max_generations fitness=86.6 evals=25000
+EXP044 arm=cfc period=8 run=8 reason=max_generations fitness=86.6 evals=25000
+EXP044 arm=cfc period=8 SUMMARY mean_fitness=87.38 best=89.81
+EXP044 arm=nm_global dim=56 life=60 phi=0.80 periods=[30,15,8] (reversal-frequency sweep)
+EXP044 arm=nm_global period=30 run=1 reason=max_generations fitness=81.0 evals=25000
+EXP044 arm=nm_global period=30 run=2 reason=solved fitness=93.5 evals=700
+EXP044 arm=nm_global period=30 run=3 reason=solved fitness=93.1 evals=1500
+EXP044 arm=nm_global period=30 run=4 reason=solved fitness=90.3 evals=2100
+EXP044 arm=nm_global period=30 run=5 reason=solved fitness=92.1 evals=1800
+EXP044 arm=nm_global period=30 run=6 reason=solved fitness=91.2 evals=2900
+EXP044 arm=nm_global period=30 run=7 reason=solved fitness=91.2 evals=2300
+EXP044 arm=nm_global period=30 run=8 reason=solved fitness=90.7 evals=7300
+EXP044 arm=nm_global period=30 SUMMARY mean_fitness=90.39 best=93.52
+EXP044 arm=nm_global period=15 run=1 reason=solved fitness=92.6 evals=6700
+EXP044 arm=nm_global period=15 run=2 reason=solved fitness=90.7 evals=4200
+EXP044 arm=nm_global period=15 run=3 reason=solved fitness=91.2 evals=300
+EXP044 arm=nm_global period=15 run=4 reason=solved fitness=90.7 evals=11700
+EXP044 arm=nm_global period=15 run=5 reason=solved fitness=90.3 evals=6900
+EXP044 arm=nm_global period=15 run=6 reason=solved fitness=91.2 evals=4600
+EXP044 arm=nm_global period=15 run=7 reason=solved fitness=90.7 evals=8100
+EXP044 arm=nm_global period=15 run=8 reason=solved fitness=90.3 evals=15900
+EXP044 arm=nm_global period=15 SUMMARY mean_fitness=90.97 best=92.59
+EXP044 arm=nm_global period=8 run=1 reason=solved fitness=90.3 evals=23700
+EXP044 arm=nm_global period=8 run=2 reason=max_generations fitness=83.3 evals=25000
+EXP044 arm=nm_global period=8 run=3 reason=max_generations fitness=87.0 evals=25000
+EXP044 arm=nm_global period=8 run=4 reason=max_generations fitness=86.1 evals=25000
+EXP044 arm=nm_global period=8 run=5 reason=max_generations fitness=77.8 evals=25000
+EXP044 arm=nm_global period=8 run=6 reason=max_generations fitness=89.4 evals=25000
+EXP044 arm=nm_global period=8 run=7 reason=max_generations fitness=85.6 evals=25000
+EXP044 arm=nm_global period=8 run=8 reason=solved fitness=90.3 evals=22500
+EXP044 arm=nm_global period=8 SUMMARY mean_fitness=86.23 best=90.28
+EXP044 arm=nm_pc dim=212 life=60 phi=0.80 periods=[30,15,8] (reversal-frequency sweep)
+EXP044 arm=nm_pc period=30 run=1 reason=solved fitness=92.1 evals=1700
+EXP044 arm=nm_pc period=30 run=2 reason=solved fitness=93.1 evals=2000
+EXP044 arm=nm_pc period=30 run=3 reason=solved fitness=90.3 evals=1300
+EXP044 arm=nm_pc period=30 run=4 reason=solved fitness=92.1 evals=1600
+EXP044 arm=nm_pc period=30 run=5 reason=solved fitness=90.3 evals=2000
+EXP044 arm=nm_pc period=30 run=6 reason=solved fitness=91.2 evals=2400
+EXP044 arm=nm_pc period=30 run=7 reason=solved fitness=92.1 evals=2400
+EXP044 arm=nm_pc period=30 run=8 reason=solved fitness=92.6 evals=1700
+EXP044 arm=nm_pc period=30 SUMMARY mean_fitness=91.72 best=93.06
+EXP044 arm=nm_pc period=15 run=1 reason=solved fitness=90.7 evals=10400
+EXP044 arm=nm_pc period=15 run=2 reason=solved fitness=90.3 evals=4800
+EXP044 arm=nm_pc period=15 run=3 reason=solved fitness=90.3 evals=13700
+EXP044 arm=nm_pc period=15 run=4 reason=solved fitness=90.3 evals=7400
+EXP044 arm=nm_pc period=15 run=5 reason=solved fitness=90.7 evals=18000
+EXP044 arm=nm_pc period=15 run=6 reason=solved fitness=91.2 evals=8300
+EXP044 arm=nm_pc period=15 run=7 reason=solved fitness=90.7 evals=8300
+EXP044 arm=nm_pc period=15 run=8 reason=solved fitness=90.3 evals=5400
+EXP044 arm=nm_pc period=15 SUMMARY mean_fitness=90.57 best=91.20
+EXP044 arm=nm_pc period=8 run=1 reason=max_generations fitness=89.8 evals=30000
+EXP044 arm=nm_pc period=8 run=2 reason=max_generations fitness=88.0 evals=30000
+EXP044 arm=nm_pc period=8 run=3 reason=max_generations fitness=86.6 evals=30000
+EXP044 arm=nm_pc period=8 run=4 reason=solved fitness=90.7 evals=25200
+EXP044 arm=nm_pc period=8 run=5 reason=max_generations fitness=87.5 evals=30000
+EXP044 arm=nm_pc period=8 run=6 reason=max_generations fitness=87.5 evals=30000
+EXP044 arm=nm_pc period=8 run=7 reason=max_generations fitness=86.1 evals=30000
+EXP044 arm=nm_pc period=8 run=8 reason=max_generations fitness=89.8 evals=30000
+EXP044 arm=nm_pc period=8 SUMMARY mean_fitness=88.25 best=90.74
