@@ -150,6 +150,26 @@ gen 50-200.
 - **Then the capstone:** learning ACROSS a task distribution (reward-modulated
   three-factor rules); per-connection is the established workhorse to carry into it.
 
+## Capstone I DONE (042, 2026-07-22) — existence CONFIRMED
+
+The deferred third factor shipped (`evaluate_with_neuromod/4`) + a lifetime-learning
+scape (`reversal_bandit_sim`). Reward-gated plasticity LEARNS and RE-LEARNS a hidden,
+swapping arm: both global and per-connection solve 8/8 at ~90-91 vs fixed 50. Traces
+show explore->lock->[reversal]->re-lock. Lifetime learning is tractable, not a wall.
+On this EASY 1-bit task global is cheaper than per-connection (expressiveness unneeded
+= cost, as everywhere).
+
+## Capstone II (EXP-043) — the fair three-way contest
+
+Probabilistic reversal (good arm pays ~0.8, bad ~0.2) so one trial is noisy and the
+agent must INTEGRATE over trials -- this excludes reactive win-stay-lose-shift and
+lets STORAGE compete (a recurrent state given reward+last-action as INPUT, RL^2-style).
+Arms: cfc (storage), nm_global, **nm_per_layer** (absorbs the old EXP-042
+dimensions-vs-representation question), nm_pc. Randomised reversal points + initial
+arm = the task distribution. Question: does the memory-arc thesis TRANSFER -- learning
+> storage on robustness, per-connection decisive when hard, via evolvability?
+Standing side-check (from old 042): confirm any headline with plain (mu,lambda)-ES.
+
 ## The deep question (beyond this phase)
 
 All of 031-037 is memory WITHIN an episode (hold a cue). The ultimate P3 test is

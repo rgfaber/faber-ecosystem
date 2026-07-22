@@ -1,0 +1,30 @@
+EXP042 arm=none dim=25 life=40 instances=8 (reversal bandit, existence)
+EXP042 arm=none run=1 reason=max_generations fitness=50.0 evals=30000
+EXP042 arm=none run=2 reason=max_generations fitness=50.0 evals=30000
+EXP042 arm=none run=3 reason=max_generations fitness=50.0 evals=30000
+EXP042 arm=none run=4 reason=max_generations fitness=50.0 evals=30000
+EXP042 arm=none run=5 reason=max_generations fitness=50.0 evals=30000
+EXP042 arm=none run=6 reason=max_generations fitness=50.0 evals=30000
+EXP042 arm=none run=7 reason=max_generations fitness=50.0 evals=30000
+EXP042 arm=none run=8 reason=max_generations fitness=50.0 evals=30000
+EXP042 arm=none BEST fitness=50.0 trace(good=0,reversal=20)=--------------------++++++++++++++++++++
+EXP042 arm=nm_global dim=30 life=40 instances=8 (reversal bandit, existence)
+EXP042 arm=nm_global run=1 reason=solved fitness=90.0 evals=800
+EXP042 arm=nm_global run=2 reason=solved fitness=91.3 evals=1000
+EXP042 arm=nm_global run=3 reason=solved fitness=91.3 evals=1000
+EXP042 arm=nm_global run=4 reason=solved fitness=90.0 evals=1000
+EXP042 arm=nm_global run=5 reason=solved fitness=90.0 evals=1500
+EXP042 arm=nm_global run=6 reason=solved fitness=90.3 evals=1000
+EXP042 arm=nm_global run=7 reason=solved fitness=90.0 evals=1100
+EXP042 arm=nm_global run=8 reason=solved fitness=90.0 evals=1000
+EXP042 arm=nm_global BEST fitness=91.3 trace(good=0,reversal=20)=-+++++++++++++++++++---+++++++++++++++++
+EXP042 arm=nm_pc dim=90 life=40 instances=8 (reversal bandit, existence)
+EXP042 arm=nm_pc run=1 reason=solved fitness=91.3 evals=1600
+EXP042 arm=nm_pc run=2 reason=solved fitness=90.6 evals=2700
+EXP042 arm=nm_pc run=3 reason=solved fitness=91.3 evals=3000
+EXP042 arm=nm_pc run=4 reason=solved fitness=90.0 evals=2000
+EXP042 arm=nm_pc run=5 reason=solved fitness=90.0 evals=1900
+EXP042 arm=nm_pc run=6 reason=solved fitness=90.3 evals=2200
+EXP042 arm=nm_pc run=7 reason=solved fitness=91.3 evals=2400
+EXP042 arm=nm_pc run=8 reason=solved fitness=90.6 evals=2100
+EXP042 arm=nm_pc BEST fitness=91.3 trace(good=0,reversal=20)=++++++++++++++++++++-+++++++++++++++++++
