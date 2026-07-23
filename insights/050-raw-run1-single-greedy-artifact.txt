@@ -1,0 +1,25 @@
+== EXP-050 MAP-Elites illumination of the pole-balancer (P4 opener) ==
+config: E=40000 prerun=3000 grid=25x25 cap=500 sigma=0.10 min_surv=100
+BD1=mean signed scaled pole angle [-1,1]; BD2=mean scaled cart position [-1,1]
+
+-- Pre-run (3000 random genomes) --
+survival: median=22.0 max=501.0 frac>=min_surv=0.037 frac_at_cap=0.000
+random balancers: n=111 distinct cells R_random=37; BD1 range=[-0.37,0.33] BD2 range=[-0.28,0.45]
+
+-- MAP-Elites: 100 random init + 40000 mutation evals --
+
+-- Archive --
+filled cells=129/625 (0.206); balancer cells (>=100)=104; R_random=37; coverage_rel=2.81
+QD-score(sum survival over all cells)=33610; max_quality=501.0
+balancer BD1 range=[-0.36,0.38] BD2 range=[-0.61,0.60]
+
+-- Operator-fair baseline ((1+15) Gaussian sigma=0.10 hill-climb) --
+EXP050 fair_baseline best_survival=21.0
+
+-- sep-CMA-ES ceiling (strong optimizer, context only) --
+EXP050 cma_ceiling best_survival=501.0
+
+-- Verdict --
+descriptor validity: |Spearman(BD1,quality)|=0.142 |Spearman(BD2,quality)|=0.043 (both must be <0.3)
+free-lunch: archive_max=501.0 fair_baseline=21.0 (ratio=23.857); cma_ceiling=501.0
+RESULT=ILLUMINATES (coverage_rel>=0.50). QD BEATS OBJECTIVE: archive peak >1.1x the operator-fair search -- diversity (stepping stones) reaches balancers a same-operator objective search stalls before.

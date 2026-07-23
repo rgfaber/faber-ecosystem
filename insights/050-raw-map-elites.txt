@@ -1,0 +1,32 @@
+== EXP-050 MAP-Elites illumination of the pole-balancer (P4 opener) ==
+config: E=40000 prerun=3000 grid=25x25 cap=500 sigma=0.10 min_surv=100
+BD1=mean signed scaled pole angle [-1,1]; BD2=mean scaled cart position [-1,1]
+
+-- Pre-run (3000 random genomes) --
+survival: median=22.0 max=501.0 frac>=min_surv=0.037 frac_at_cap=0.000
+random balancers: n=111 distinct cells R_random=37; BD1 range=[-0.37,0.33] BD2 range=[-0.28,0.45]
+
+-- MAP-Elites: 100 random init + 40000 mutation evals --
+
+-- Archive --
+filled cells=129; balancer cells (>=100)=104 (fair coverage vs random-search-at-budget is in the verdict; grid is mostly unreachable, so filled/625 is not a coverage measure)
+QD-score(sum survival over all cells)=33610; max_quality=501.0
+balancer BD1 range=[-0.36,0.38] BD2 range=[-0.61,0.60]
+
+-- Operator-fair baseline ((1+15) Gaussian sigma=0.10 hill-climb) --
+EXP050 fair_baseline best_survival=21.0
+
+-- Multi-restart (40 x (1+15) hill-climb, 1000 evals each) --
+EXP050 multi_restart best_survival=501.0
+
+-- Pure random search (40000 evals; fair coverage/peak comparator) --
+EXP050 random_search balancer_cells=74 max_survival=501.0
+
+-- sep-CMA-ES ceiling (strong optimizer, context only) --
+EXP050 cma_ceiling best_survival=501.0
+
+-- Verdict --
+descriptor validity (over ALL 129 cells): |Sp(BD1,q)|=0.076 |Sp(BD2,q)|=0.007 (<0.3)
+coverage @ equal budget: MAP-Elites balancer_cells=104 vs random_search=74
+peak survival: mapelites=501.0 random=501.0 multi_restart=501.0 fair_greedy=21.0 cma=501.0
+RESULT=ILLUMINATES: MAP-Elites fills more balancer cells than random search at equal budget (104 vs 74). NO PEAK ADVANTAGE: random and/or multi-restart reach the same peak -> task too easy for a QD-vs-objective claim (the earlier 'QD beats objective' was a single-greedy-baseline artifact).
