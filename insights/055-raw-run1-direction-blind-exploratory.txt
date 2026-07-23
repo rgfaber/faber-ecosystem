@@ -1,0 +1,14 @@
+== EXP-055 misaligned selection proxy: does selecting on sum decouple from true min? ==
+config: mu=30 lambda=30 sig1=0.30 sig2(sym)=0.30 sig2(asym)=0.03 tau=0.30 x0=50.0 R=150 n=30
+unit test (not signed): min-vs-mean discordant ordered pairs in 36-panel = 30; mean ranks (110,10) above (50,50) while min ranks below = true
+cell aligned/symmetric: true min-quality first=50.4 -> last=74.2 CI[74.0,74.3]; lopsidedness=0.3
+cell proxy/symmetric: true min-quality first=50.4 -> last=75.0 CI[74.7,75.3]; lopsidedness=2.7
+cell aligned/asymmetric: true min-quality first=50.1 -> last=53.5 CI[53.5,53.5]; lopsidedness=1.8
+cell proxy/asymmetric: true min-quality first=50.1 -> last=50.6 CI[50.5,50.7]; lopsidedness=34.5
+
+-- Verdict (aligned vs proxy selection, per cost regime) --
+aligned escalates true min (both regimes): true
+SYMMETRIC true min: aligned med=74.2 vs proxy med=75.0 -> comparable(CIs overlap)=false
+ASYMMETRIC true min: aligned CI-lo=53.5 > proxy CI-hi=50.7 -> aligned higher=true
+ASYMMETRIC lopsided: proxy CI-lo=34.0 > aligned CI-hi=2.3 -> proxy more lopsided=true
+RESULT=PROXY ALWAYS BITES: aligned selection reaches higher true min than the sum-proxy in BOTH regimes -> the compensatory proxy decouples from conjunctive quality regardless of cost symmetry.
