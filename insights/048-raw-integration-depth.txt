@@ -1,0 +1,27 @@
+== EXP-048 integration depth (047 follow-up, replay-only) ==
+champions: programmes/p3_meta_learning/exp047_lifetime_mechanism_probe/exp047_champions.eterm
+decode good-arm from a k-step [reward,action] window vs the internal state
+k=1 is the one-step reactive baseline; the k that matches state = memory depth
+
+EXP048 arm=fixed state=0.500(sd0.000)
+  raw window (last k [r,a]):          w1=0.798 w3=0.942 w5=0.968 w10=0.973
+  interaction window (+ r*a / step):  w1=0.900 w3=0.970 w5=0.986 w10=0.987
+  state - interaction_w10 (paired):   mean=-0.487 sd=0.003 positive=0/10
+EXP048 arm=cfc state=0.965(sd0.013)
+  raw window (last k [r,a]):          w1=0.908 w3=0.936 w5=0.936 w10=0.934
+  interaction window (+ r*a / step):  w1=0.947 w3=0.974 w5=0.978 w10=0.974
+  state - interaction_w10 (paired):   mean=-0.009 sd=0.010 positive=2/10
+EXP048 arm=nm_global state=0.895(sd0.050)
+  raw window (last k [r,a]):          w1=0.855 w3=0.894 w5=0.895 w10=0.894
+  interaction window (+ r*a / step):  w1=0.916 w3=0.957 w5=0.966 w10=0.964
+  state - interaction_w10 (paired):   mean=-0.068 sd=0.049 positive=0/10
+EXP048 arm=nm_pc state=0.955(sd0.022)
+  raw window (last k [r,a]):          w1=0.885 w3=0.920 w5=0.925 w10=0.925
+  interaction window (+ r*a / step):  w1=0.941 w3=0.969 w5=0.974 w10=0.969
+  state - interaction_w10 (paired):   mean=-0.014 sd=0.015 positive=1/10
+
+-- Verdict (interaction-window controlled, paired) --
+cfc: SHALLOW: a <=5-step interaction window matches the state; short reactive window, not deep integration.
+nm_global: SHALLOW: a <=5-step interaction window matches the state; short reactive window, not deep integration.
+nm_pc: SHALLOW: a <=5-step interaction window matches the state; short reactive window, not deep integration.
+fixed sentinel (state should be ~0.5): state=0.500

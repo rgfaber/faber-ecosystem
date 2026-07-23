@@ -57,7 +57,7 @@ Decode of the current good arm from internal state:
 
 | arm | state AUC | sensor AUC (endogenous) | time-control |
 |---|---|---|---|
-| fixed (sentinel) | 0.500 | 0.766 | 0.500 |
+| fixed (sentinel) | 0.500 | 0.798 | 0.500 |
 | cfc | 0.965 (sd 0.013) | 0.908 | 0.500 |
 | nm_global | 0.908 (sd 0.041) | 0.855 | 0.500 |
 | nm_pc | 0.956 (sd 0.021) | 0.885 | 0.500 |
