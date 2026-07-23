@@ -1,7 +1,15 @@
 # Programme 4 — Objectives (Selection pressure)
 
-**Status: OPEN.** Chartered, with a good first experiment that is also the third
-leg of the DPNV fork. Corpus: to be assigned.
+**Status: OPENED 2026-07-23.** Corpus: insights from 049+ (049 shelved unsigned; P4 starts fresh).
+
+> **Reframing (2026-07-23).** This charter's DPNV-deception premise is SUPERSEDED by insight
+> 028: sep-CMA-ES + co-evolved tau solves DPNV 10/10, localising the wall to OPTIMIZER +
+> REPRESENTATION, not deception. So the "third leg of the DPNV fork" (novelty-on-DPNV as a
+> deception test) is moot -- DPNV is not deceptive. P4 opens instead on its FORWARD value:
+> QUALITY-DIVERSITY as illumination (map the space of solutions, not one optimum), which is the
+> reusable infrastructure P8/P9 consume and the "Neurolab-as-a-Service map" the charter names.
+> Two live first-experiment candidates below; the deception angle survives only if a genuinely
+> DECEPTIVE task is found (DPNV was not one).
 
 ## The axis
 
