@@ -10,13 +10,17 @@ made), the PURSUER retains net progress at both brackets (NET +0.151 CI[0.100,0.
 favoured bracket, +0.189 CI[0.130,0.303] at the pursuer-favoured one; both disjoint from 0). The EVADER
 is MARGINAL: it clears the end-vs-start sustainment criterion at the evader-favoured bracket (NET +0.153
 CI[0.056,0.250]) but only touches it at the pursuer-favoured bracket (NET +0.042 CI[0.000,0.097], includes
-0), and the between-bracket evader difference is NOT resolved at n=40 (0.111, CI[-0.000,0.194]). So there
-is clear, non-cyclic, two-sided PROGRESS under coevolution, but a SUSTAINED two-sided arms race is not
-cleanly established and reciprocal driving (versus independent improvement against a frozen ruler) is
-NOT tested here.
+0), and the between-bracket evader difference is NOT resolved at n=40 (0.111, CI[-0.000,0.194]). And a
+DECOUPLED CONTROL (each side evolved against a FROZEN gen-0 opponent, same benchmark, matched n=40) shows
+coevolution's NET progress does NOT exceed the static control's on ANY side at EITHER bracket (all four
+coevo-minus-static difference CIs include 0: pursuer +0.046/+0.047, evader +0.097/-0.028). So there is
+clear, non-cyclic, two-sided PROGRESS under coevolution, but it is NOT a demonstrated arms race: a co-
+adapting opponent drove no more benchmark progress than a static frozen one, so the progress is
+consistent with each side adapting to an opponent gradient rather than reciprocal escalation.
 
-**Verdict:** confirmed (monotone progress, no cycling) + partial (evader sustainment marginal, arms-race
-coupling untested) + method (benchmark-grading fix + two adversarial CLAIM gates) · **Date:** 2026-07-23
+**Verdict:** confirmed (monotone progress, no cycling; pursuer sustains) + refuted (no coevolutionary
+coupling over a static control; not an arms race) + method (benchmark-grading fix + two adversarial CLAIM
+gates + decoupled control) · **Date:** 2026-07-23
 **Programme:** 7 (Coevolution / self-play) — the FIRST embodied rung, applying the 053-056 numbers-game
 toolkit to real nets. Report as an embodied study of coevolutionary dynamics in the tradition of Nolfi &
 Floreano 1998 and Cliff & Miller 1995 (CIAO / dominance tournaments); scoped to this game and these two
@@ -80,16 +84,28 @@ NET values to each other.
 Cross-bracket EVADER NET difference (m=14 - m=13): 0.111, CI[-0.000, 0.194] -> **NOT resolved**.
 Decisive edges: 25-38 of 45 pairs per run (the band is not swallowing signal).
 
+**Decoupled control (coevolution vs FROZEN gen-0 static opponent, same benchmark, matched n=40):**
+
+| bracket | side | coevo NET | static NET | coevo - static | coupling? |
+|---|---|---|---|---|---|
+| m=14 | pursuer | 0.151 | 0.105 | +0.046 [-0.073,0.147] | unresolved |
+| m=14 | evader | 0.153 | 0.056 | +0.097 [-0.028,0.194] | unresolved |
+| m=13 | pursuer | 0.189 | 0.142 | +0.047 [-0.027,0.174] | unresolved |
+| m=13 | evader | 0.042 | 0.069 | -0.028 [-0.097,0.056] | unresolved |
+
 What is RESOLVED: (1) NO cycling at either bracket, robust to the band; monotone directional progress.
 (2) The pursuer sustains net progress at both. (3) The evader sustains at the evader-favoured bracket and
 not at the pursuer-favoured one -- BUT (4) the between-bracket evader difference is not resolved, so this
-is a threshold crossing at the boundary, NOT a demonstrated "contingent on balance" effect.
+is a threshold crossing at the boundary, NOT a demonstrated "contingent on balance" effect. (5) The
+decoupled control shows NO coevolutionary coupling: coevolution's NET does not exceed the static-opponent
+control on ANY side at EITHER bracket (all four difference CIs include 0).
 
-What is NOT established: a SUSTAINED two-sided arms race (the evader's sustainment is marginal and
-bracket-dependent within noise); and RECIPROCAL DRIVING -- both sides improving on a frozen benchmark is
-consistent with, but does not prove, coevolutionary coupling (two independent hill-climbs give the same
-signature). Earning "arms race" needs a decoupled solo control (evolve each side vs the frozen benchmark
-only; coevolved must out-progress solo). Not run here.
+What is REFUTED / NOT established: a SUSTAINED two-sided ARMS RACE. The direct control settles what CLAIM
+gate #2 left open -- a co-adapting opponent drove NO more benchmark progress than a static frozen one, so
+the two-sided progress is consistent with each side adapting to whatever opponent gradient exists, NOT
+with reciprocal escalation. So "arms race" is not merely unproven; it is unsupported by the control at
+this n. (Caveat: the static opponent is a frozen gen-0 RANDOM population; a coupling effect smaller than
+~0.1 NET, or one needing a stronger static baseline, would be missed at n=40.)
 
 ## Method note (fixes; two DESIGN-gate and two CLAIM-gate interventions)
 
@@ -106,24 +122,31 @@ only; coevolved must out-progress solo). Not run here.
    onto the pursuer-favoured side (the argmin of a coarse step function). FIXES: scored the master-
    tournament; ran BOTH brackets; declared NET post-hoc; dropped "even at the 50/50 balance".
 4. **CLAIM gate #2** downgraded the headline from "sustained two-sided arms race, fragile, replicating
-   Nolfi-Floreano" to the present wording: the between-bracket difference is unresolved (so no "contingent
-   /fragile"), frozen-benchmark gains are progress not proven arms-race (so no "arms race" without the
-   decoupled control), triples=0 is robust to the band (so "no cycling" stands), and the N&F reference was
-   backwards (they found cycling; this finds none). Two free computations were required and done: the
+   Nolfi-Floreano" to progress-not-arms-race: the between-bracket difference is unresolved (so no
+   "contingent/fragile"), frozen-benchmark gains are progress not proven arms-race, triples=0 is robust to
+   the band (so "no cycling" stands), and the N&F reference was backwards (they found cycling; this finds
+   none). It named the decoupled control as the way to settle "arms race". Two free computations were done: the
    cross-bracket difference CI and the band sweep.
+5. **Decoupled control run** (post gate #2, this insight): coevolution vs a frozen gen-0 static opponent,
+   same benchmark, matched n=40. Coevolution's NET does not exceed the static control on any side at
+   either bracket -> "arms race" is refused, not merely unproven. This is the strongest available negative
+   at this scale; a conservative tightening, so it does not require a fresh gate.
 
 ## What this buys (and the next rungs)
 
 The 053-056 toolkit, applied to real nets, gives a trustworthy embodied reading: this game coevolves
-MONOTONICALLY (not cyclically), with the pursuer robustly improving and the evader marginal. A clean
-two-sided arms race is NOT demonstrated at these brackets. Next, to strengthen: (a) a DECOUPLED solo
-control to test reciprocal driving (earn or refuse "arms race"); (b) a third, more pursuer-favoured
-bracket (m=12) to turn two points into a trend and test a real balance-contingency; (c) larger n to move
-the evader's m=13 CI off the 0 boundary. Toward Flatland: an embodied arms race, if it needs a two-sided
-sustained gradient, likely requires added ecological structure (space, resources, many agents) -- P5/P6.
+MONOTONICALLY (not cyclically), the pursuer robustly improves, the evader is marginal, and a co-adapting
+opponent buys no more benchmark progress than a static one -- so it is two-sided PROGRESS, not a
+demonstrated arms race. Next, to strengthen: (a) a STRONGER static baseline for the control (frozen
+STRONG opponents, not gen-0 random) and larger n, to rule out a coupling effect below ~0.1 NET;
+(b) a third, more pursuer-favoured bracket (m=12) to turn two points into a trend and test a real
+balance-contingency; (c) larger n to move the evader's m=13 CI off the 0 boundary. Toward Flatland: if a
+sustained, coupled embodied arms race needs a two-sided gradient this simple game cannot supply, it
+likely requires added ecological structure (space, resources, many agents) -- P5/P6.
 
 ## Reproduce
 
 `experiments/exp057_embodied_pursuit_evasion_tests.erl` (engine pinned `9bb43e6b...`); raw feed
 `057-raw-embodied.txt`. `calibrate/0`, `representability/0`, `verify_benchmark/0`, `coevo_pilot/0`,
-`run(#{n=>40, r=>30})` runs both brackets with the master-tournament and cross-bracket difference.
+`run(#{n=>40, r=>30})` runs both brackets with the master-tournament, cross-bracket difference, and the
+decoupled coupling control (`control_run`).

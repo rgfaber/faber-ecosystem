@@ -6,23 +6,44 @@ PURSUER benchmark: start=0.304 peak=0.565 end=0.490
   rise(peak-start) med=0.212 CI[0.160,0.304] | gave-back(peak-end) med=0.058 CI[0.038,0.087] | NET-sustained(end-start) med=0.151 CI[0.100,0.204]
 EVADER  benchmark: start=0.444 peak=0.722 end=0.653
   rise(peak-start) med=0.222 CI[0.167,0.306] | gave-back(peak-end) med=0.069 CI[0.028,0.111] | NET-sustained(end-start) med=0.153 CI[0.056,0.250]
-master-tournament (cross-gen dominance, 10 saved gens/run): intransitive-triples median=0.0 CI[0.0,0.0] | later-dominates-earlier median=25.0 vs earlier-dominates-later median=1.0
+master-tournament (10 saved gens, 45 pairs/run):
+  intransitive-triples median @band 0.05/0.10/0.15 = 0.0 / 0.0 / 0.0  (0 => no cycling above that band)
+  decisive-edges median @band 0.05/0.10/0.15 = 36.0 / 32.5 / 25.5 of 45  (band not swallowing edges)
+  later-dominates-earlier median=25.0 vs earlier-dominates-later median=1.0 (@0.15) => monotone directional progress
 
 -- Verdict (POST-HOC lens: rise = peak-progress [pre-registered]; SUSTAINED = end-vs-start CI-lb > 0.03, introduced after the n=20 exploratory look; read WITH the master-tournament above) --
 pursuer: rises(peak-progress)=true  net-sustained=true
 evader:  rises(peak-progress)=true  net-sustained=true
 both-rise (pre-registered BRIEF-ARMS-RACE cell): true
-RESULT=SUSTAINED TWO-SIDED (arms race): BOTH sides end clearly above start -- a sustained two-sided gradient at this bracket; confirm monotone dominance (triples ~0) in the master-tournament above.
+RESULT=SUSTAINED TWO-SIDED PROGRESS: BOTH sides end clearly above start on their own axis (within-side; the two axes are incommensurable). Two-sided PROGRESS under coevolution, NOT a proven arms race -- reciprocal driving needs a decoupled solo control. Confirm monotone dominance (triples ~0) in the master-tournament above.
+
+-- Coupling control (coevolution vs FROZEN static opponent, same benchmark, matched n) --
+PURSUER NET: coevo median=0.151 vs static median=0.105 | coevo-minus-static=0.046 CI[-0.073,0.147] -> UNRESOLVED (CI includes 0)
+EVADER  NET: coevo median=0.153 vs static median=0.056 | coevo-minus-static=0.097 CI[-0.028,0.194] -> UNRESOLVED (CI includes 0)
+=> 'coevolutionary coupling / arms race' licensed for a side iff its coevo NET EXCEEDS its static-control NET (difference CI > 0).
 
 ########## m=13  s=1.083  [PURSUER-favoured (catch 0.667)] ##########
 PURSUER benchmark: start=0.345 peak=0.611 end=0.566
   rise(peak-start) med=0.249 CI[0.193,0.343] | gave-back(peak-end) med=0.039 CI[0.031,0.069] | NET-sustained(end-start) med=0.189 CI[0.130,0.303]
 EVADER  benchmark: start=0.278 peak=0.472 end=0.361
   rise(peak-start) med=0.153 CI[0.083,0.222] | gave-back(peak-end) med=0.097 CI[0.056,0.139] | NET-sustained(end-start) med=0.042 CI[0.000,0.097]
-master-tournament (cross-gen dominance, 10 saved gens/run): intransitive-triples median=0.0 CI[0.0,0.0] | later-dominates-earlier median=29.0 vs earlier-dominates-later median=0.0
+master-tournament (10 saved gens, 45 pairs/run):
+  intransitive-triples median @band 0.05/0.10/0.15 = 0.0 / 0.0 / 0.0  (0 => no cycling above that band)
+  decisive-edges median @band 0.05/0.10/0.15 = 38.0 / 35.0 / 30.5 of 45  (band not swallowing edges)
+  later-dominates-earlier median=29.0 vs earlier-dominates-later median=0.0 (@0.15) => monotone directional progress
 
 -- Verdict (POST-HOC lens: rise = peak-progress [pre-registered]; SUSTAINED = end-vs-start CI-lb > 0.03, introduced after the n=20 exploratory look; read WITH the master-tournament above) --
 pursuer: rises(peak-progress)=true  net-sustained=true
 evader:  rises(peak-progress)=true  net-sustained=false
 both-rise (pre-registered BRIEF-ARMS-RACE cell): true
-RESULT=BRIEF TWO-SIDED RISE then PURSUER BREAKAWAY (disengagement toward pursuer, pending the master-tournament above): both sides' peak-progress is disjoint from 0 (a brief two-sided rise, the pre-registered non-foregone positive), but only the PURSUER retains NET progress (end above start); the EVADER rises to a transient peak then collapses back to its start (gradient dies, overfitting the live opponent). No SUSTAINED two-sided arms race at this near-crossover bracket. If the master-tournament shows monotone dominance (triples ~0) this is disengagement; if it shows intransitive triples it is cycling. Replicates Nolfi-Floreano fragility with trusted rulers.
+RESULT=PURSUER SUSTAINS, EVADER MARGINAL: both sides' peak-progress is disjoint from 0 (a brief two-sided rise), but only the PURSUER retains NET progress (end above start); the EVADER rises to a transient peak then falls back to statistical indistinguishability from its start. No SUSTAINED two-sided progress at this bracket. Read WITH the master-tournament (monotone => progress not cycling) and the cross-bracket difference (is the evader's between-bracket gap actually resolved?).
+
+-- Coupling control (coevolution vs FROZEN static opponent, same benchmark, matched n) --
+PURSUER NET: coevo median=0.189 vs static median=0.142 | coevo-minus-static=0.047 CI[-0.027,0.174] -> UNRESOLVED (CI includes 0)
+EVADER  NET: coevo median=0.042 vs static median=0.069 | coevo-minus-static=-0.028 CI[-0.097,0.056] -> UNRESOLVED (CI includes 0)
+=> 'coevolutionary coupling / arms race' licensed for a side iff its coevo NET EXCEEDS its static-control NET (difference CI > 0).
+
+-- Cross-bracket (m=14 minus m=13) --
+EVADER NET difference: median=0.111 CI[0.000,0.194] -> NOT resolved (includes 0)
+PURSUER NET difference: median=-0.038 CI[-0.155,0.047] -> NOT resolved (includes 0)
+=> 'contingent on balance' licensed only if the EVADER between-bracket difference EXCLUDES 0 (CI both same sign).
