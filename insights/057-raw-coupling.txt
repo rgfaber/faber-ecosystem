@@ -1,0 +1,43 @@
+=== RUN 1 (n=60) ===
+== EXP-057 COUPLING: coevolution vs static baselines (RANDOM + STRONG), n=60 R=30 ==
+coupling licensed for a side iff coevo NET EXCEEDS the static NET (coevo-minus-static CI > 0)
+
+#### m=14  s=1.077  [EVADER-favoured (catch 0.389)] ####
+coevo NET median: pursuer=0.189  evader=0.028
+  vs STATIC-RANDOM (static NET | coevo-minus-static):
+    pursuer: static=0.074 | diff=0.115 CI[-0.002,0.193] -> UNRESOLVED (CI includes 0)
+    evader : static=0.083 | diff=-0.056 CI[-0.139,0.042] -> UNRESOLVED (CI includes 0)
+  vs STATIC-STRONG (static NET | coevo-minus-static):
+    pursuer: static=0.084 | diff=0.105 CI[0.017,0.187] -> COUPLED (coevo > static)
+    evader : static=0.097 | diff=-0.069 CI[-0.111,0.014] -> UNRESOLVED (CI includes 0)
+
+#### m=13  s=1.083  [PURSUER-favoured (catch 0.667)] ####
+coevo NET median: pursuer=0.200  evader=0.056
+  vs STATIC-RANDOM (static NET | coevo-minus-static):
+    pursuer: static=0.099 | diff=0.101 CI[0.036,0.177] -> COUPLED (coevo > static)
+    evader : static=0.083 | diff=-0.028 CI[-0.069,0.069] -> UNRESOLVED (CI includes 0)
+  vs STATIC-STRONG (static NET | coevo-minus-static):
+    pursuer: static=0.117 | diff=0.083 CI[0.008,0.167] -> COUPLED (coevo > static)
+    evader : static=0.056 | diff=0.000 CI[-0.028,0.083] -> UNRESOLVED (CI includes 0)
+
+=== RUN 2 (n=80, confirmation) ===
+== EXP-057 COUPLING: coevolution vs static baselines (RANDOM + STRONG), n=80 R=30 ==
+coupling licensed for a side iff coevo NET EXCEEDS the static NET (coevo-minus-static CI > 0)
+
+#### m=14  s=1.077  [EVADER-favoured (catch 0.389)] ####
+coevo NET median: pursuer=0.173  evader=0.069
+  vs STATIC-RANDOM (static NET | coevo-minus-static):
+    pursuer: static=0.169 | diff=0.004 CI[-0.044,0.071] -> UNRESOLVED (CI includes 0)
+    evader : static=0.083 | diff=-0.014 CI[-0.083,0.056] -> UNRESOLVED (CI includes 0)
+  vs STATIC-STRONG (static NET | coevo-minus-static):
+    pursuer: static=0.102 | diff=0.071 CI[0.021,0.118] -> COUPLED (coevo > static)
+    evader : static=0.083 | diff=-0.014 CI[-0.069,0.056] -> UNRESOLVED (CI includes 0)
+
+#### m=13  s=1.083  [PURSUER-favoured (catch 0.667)] ####
+coevo NET median: pursuer=0.179  evader=0.056
+  vs STATIC-RANDOM (static NET | coevo-minus-static):
+    pursuer: static=0.118 | diff=0.061 CI[-0.003,0.131] -> UNRESOLVED (CI includes 0)
+    evader : static=0.097 | diff=-0.042 CI[-0.083,0.028] -> UNRESOLVED (CI includes 0)
+  vs STATIC-STRONG (static NET | coevo-minus-static):
+    pursuer: static=0.097 | diff=0.081 CI[0.002,0.136] -> COUPLED (coevo > static)
+    evader : static=0.028 | diff=0.028 CI[-0.028,0.083] -> UNRESOLVED (CI includes 0)
