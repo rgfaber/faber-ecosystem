@@ -1,0 +1,19 @@
+== EXP-052 efficiency tradeoff: what novelty trades where objective wins ==
+config: maze=E(non-deceptive) grid=11x11 T=60 net=[6,10,4] mu=20 lambda=20 sigma=0.15 E=15000 n=40 checkpoints=[2000,
+                                                                                                                6000,
+                                                                                                                15000]
+EFG objective-EA: solved 40/40 (censored 0); all-runs median EFG=282.5 95%CI[189.0,541.5]; solved-only median=282.5
+EFG novelty-EA[final-pos]: solved 40/40 (censored 0); all-runs median EFG=292.0 95%CI[232.0,443.0]; solved-only median=292.0
+EFG random: solved 40/40 (censored 0); all-runs median EFG=1092.0 95%CI[498.0,1262.0]; solved-only median=1092.0
+COV objective-EA: @2000=64.0[62.0,66.0]  @6000=66.0[64.0,74.0]  @15000=81.5[71.0,94.0]
+COV novelty-EA[final-pos]: @2000=68.5[66.0,85.0]  @6000=103.0[94.5,106.5]  @15000=111.5[107.0,112.0]
+COV random: @2000=66.0[66.0,66.0]  @6000=66.0[66.0,66.0]  @15000=67.0[66.0,70.5]
+
+-- Verdict (maze E, budget 15000, coverage at E) --
+objective solves E (rate>0.9): true (1.000)
+floor gate objEFG<rndEFG (objUB=538.0 < rndLB=498.0): false
+speed: objEFG<novEFG disjoint (objUB=538.0 < novLB=232.0): false
+reversal: novEFG<objEFG disjoint (novUB=443.0 < objLB=192.0): false
+equivalence novUB<1.25*objMed (443.0 < 353.1): false
+coverage gain nov>obj and nov>rnd (novLB=107.0 > objUB=94.0, rndUB=70.5): true
+RESULT=INVALID: objective does not solve E reliably or the floor gate failed -> harness regression or refloored maze; fix before interpreting.
