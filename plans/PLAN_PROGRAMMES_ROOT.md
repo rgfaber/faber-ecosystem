@@ -47,9 +47,10 @@ Campus neuroevolution agenda from a generic one.
 **Convergence front — [Flatland](PLAN_FLATLAND.md) (OPENING 2026-07-23):** the ecological /
 ALife world where P7 (coevolution), P4 (novelty), P5 (many-agent substrate) and P6 (body
 encoding) meet. Opened by insight 057 (the bare pairwise pursuit-evasion grid is exhausted for
-arms-race dynamics). Instrument-first ladder, DESIGN-gated: rung 1 = build the `flatland_sim`
-scape + a decomposed graded benchmark + re-baseline 057 (exp058); rung 2 = the energy-economy
-coupling question (exp059); rung 3 = many-agent open population. Each rung gated + signed.
+arms-race dynamics). Instrument-first ladder, DESIGN-gated: rung 1 = the `flatland_sim` instrument
++ decomposed graded benchmark + re-baseline 057 (**exp058 SIGNED insight 058**: scape works, net
+forages AND hunts, benchmark decomposes foraging/fleeing, 057 refusal reproduces); rung 2 = the
+energy-economy coupling question (exp059); rung 3 = many-agent open population. Each rung gated + signed.
 
 The axes are chosen to be near-orthogonal so insights compose: a finding on one
 axis holds while the others vary. P6 is separate from P1 because the same

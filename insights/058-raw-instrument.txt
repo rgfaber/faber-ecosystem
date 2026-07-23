@@ -1,0 +1,41 @@
+### KILL GATES 0a/0b ###
+== EXP-058 gate 0a: the scape works (energy economy + plant regrowth) ==
+world 9x9 torus, plants=8, E0=20, Em=1, Ep=4, T=40
+greedy-forager: plants eaten mean=34.42, final-energy mean=117.67, survived 12/12
+random agent  : plants eaten mean=2.42, final-energy mean=0.67, survived 1/12
+0a PASS (greedy eats >= 2x random): true
+
+== EXP-058 gate 0b: representability (net evolves foraging AND hunting) ==
+FORAGING plants-eaten: hand-coded greedy=34.42, random=2.75, evolved NET=33.67
+HUNTING  capture-rate: hand-coded greedy=1.000, random=0.014, evolved NET=1.000
+0b PASS (net reaches >=60% hand-coded and clearly beats random, both capabilities): forage=true hunt=true
+
+== EXP-058 rung-1 instrument kill gates: 0a=true 0b=true -> INSTRUMENT VALIDATED ==
+
+### DECOMPOSED BENCHMARK (grading + separation) ###
+== EXP-058 decomposed benchmark: grading + separation (m=13) ==
+PREDATOR capture-skill probe (greedy-hunt capture-speed vs prey rungs; want spread, off ceiling):
+  flee p=0.8     pscore=0.877
+  flee p=0.6     pscore=0.831
+  flee p=0.4     pscore=0.746
+  flee p=0.2     pscore=0.723
+  flee p=0.0     pscore=0.288
+  evolved-net    pscore=0.415
+  evolved-net    pscore=0.667
+  AGG=0.649
+PREY fleeing-skill probe (optimal-flee escape-rate vs predator rungs; want spread, off floor):
+  greedy-hunt    escape=0.333
+  evolved-net    escape=0.250
+  evolved-net    escape=0.333
+  AGG=0.306
+SEPARATION (foraging vs fleeing are orthogonal capabilities):
+  pure-FORAGER: forage-skill=27.63  flee-skill=0.306
+  pure-FLEER  : forage-skill=3.50  flee-skill=0.694
+  => distinct iff the forager out-forages the fleer AND the fleer out-flees the forager
+
+### RE-BASELINE 057 (coupling control, plants OFF, n=40) ###
+
+== EXP-058 re-baseline 057: coupling control on PURE pursuit-evasion (plants OFF), m=13, n=40 R=30 ==
+  PREDATOR (capture-skill): coevo NET=0.102 static NET=0.125 | coevo-minus-static=-0.023 CI[-0.105,0.069] -> no coupling (CI includes 0)
+  PREY     (flee-skill)   : coevo NET=0.028 static NET=0.097 | coevo-minus-static=-0.069 CI[-0.139,0.056] -> no coupling (CI includes 0)
+=> 057 refusal REPRODUCES on the graded instrument iff NEITHER side's coupling is resolved (coevo NET does not exceed static NET).

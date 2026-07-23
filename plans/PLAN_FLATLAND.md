@@ -74,14 +74,13 @@ isolated one at a time (energy economy, THEN population structure). It also de-t
 the framing: the 057 refusal may be the CORRECT answer for pairwise pursuit-evasion, not a
 deficiency to be "rescued" -- so each rung asks a symmetric either-way question.
 
-- **Rung 1 — the INSTRUMENT (exp058, signed on its own).** Build `flatland_sim` (toroidal
-  world, regrowing plants, energy/death), holding geometry + sensing IDENTICAL to 057 so the
-  only addition is the energy economy. Kill gates: the scape works (0a); a network evolves
-  competent foraging AND hunting (0b representability). Build a DECOMPOSED, verified-graded
-  benchmark that reads foraging-skill, fleeing-skill and capture-skill ORTHOGONALLY (so a
-  later coupling verdict cannot be foraging drift). RE-BASELINE 057's decoupled coupling
-  control on this new graded instrument (rule out that 057's refusal was binary-capture
-  saturation). Signs ONLY that the instrument works + whether the 057 refusal is robust to it.
+- **Rung 1 — the INSTRUMENT (exp058, SIGNED insight 058, 2026-07-23).** Built `flatland_sim`
+  (toroidal world, regrowing plants, energy/death), geometry + sensing IDENTICAL to 057. All
+  four deliverables clean: scape works (0a); a `[5,6,4]` net evolves competent foraging AND
+  hunting (0b, both = greedy); the DECOMPOSED graded benchmark reads foraging/fleeing/capture
+  orthogonally (pure-forager 27.6/0.31 vs pure-fleer 3.5/0.69, distinct axes); and 057's no-
+  coupling refusal REPRODUCES on the graded instrument (pure pursuit-evasion, plants off, n=40)
+  -- not a saturation artifact. Instrument validated + 057-consistent; no dynamics claim.
 - **Rung 2 — the energy-economy coupling question (exp059).** With the validated decomposed
   instrument: does adding the energy economy CHANGE the decoupled-control coupling verdict
   (in either direction), read ONLY on the pursuit-evasion sub-metric, against a re-baselined
