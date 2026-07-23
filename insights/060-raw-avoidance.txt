@@ -1,0 +1,27 @@
+### RUN 1 (n=16) ###
+== EXP-060 interventional avoidance probe (n=16 champions/type, g=50, near d=2 far d=4) ==
+NAIVE      avoid_near=0.250 | forage_conflict near=0.375 far=0.250 (drop=-0.125) | forage_aligned=0.250
+PROXIMITY  avoid_near=0.250 | forage_conflict near=0.250 far=0.250 (drop=0.000) | forage_aligned=0.375
+PRESSURED  avoid_near=0.500 | forage_conflict near=0.000 far=0.000 (drop=0.000) | forage_aligned=0.667
+
+-- Contrasts (avoidance signatures; PRESSURED must exceed PROXIMITY, not just NAIVE) --
+  avoid_near (step away from near predator): naive=0.250 prox=0.250 pressured=0.500 | PRESSURED-minus-PROX=0.250 CI[0.250,0.500] -> RESOLVED (avoidance)
+  fc-drop (fc_far - fc_near)               : naive=0.000 prox=0.000 pressured=0.000 | PRESSURED-minus-PROX=0.000 CI[0.000,0.000] -> unresolved
+RESULT=AVOIDANCE (distance-keeping): the PRESSURED prey steps away from the predator at small d beyond the proximity-control, without a resolved plant-abandonment signature.
+
+### probe sanity (greedy-forage = 1.000 confirms probe; controls at 0.25 = random baseline) ###
+greedy-forage forage_aligned=1.000 all d; avoid random-baseline=0.25 (1 of 4 moves increases predator distance)
+
+### RUN 2 (n=16, reproduction, with raw per-champion avoid_near) ###
+== EXP-060 interventional avoidance probe (n=16 champions/type, g=50, near d=2 far d=4) ==
+NAIVE      avoid_near med=0.250 | forage_conflict near=0.250 far=0.250 | forage_aligned med=0.250 (SANITY: naive must be high; if ~chance the forage readouts are INVALID)
+    raw avoid_near (sorted): 0.000 0.000 0.000 0.000 0.000 0.250 0.250 0.250 0.250 0.250 0.250 0.250 0.250 0.250 0.500 0.500
+PROXIMITY  avoid_near med=0.250 | forage_conflict near=0.500 far=0.500 | forage_aligned med=0.250 (SANITY: naive must be high; if ~chance the forage readouts are INVALID)
+    raw avoid_near (sorted): 0.000 0.000 0.000 0.000 0.000 0.000 0.250 0.250 0.250 0.250 0.250 0.250 0.250 0.500 0.500 0.500
+PRESSURED  avoid_near med=0.500 | forage_conflict near=0.000 far=0.000 | forage_aligned med=0.750 (SANITY: naive must be high; if ~chance the forage readouts are INVALID)
+    raw avoid_near (sorted): 0.250 0.250 0.250 0.500 0.500 0.500 0.500 0.500 0.500 0.500 0.750 0.750 0.750 0.750 0.750 1.000
+
+-- Contrasts (avoidance signatures; PRESSURED must exceed PROXIMITY, not just NAIVE) --
+  avoid_near (step away from near predator): naive=0.250 prox=0.250 pressured=0.500 | PRESSURED-minus-PROX=0.250 CI[0.250,0.625] -> RESOLVED (avoidance)
+  fc-drop (fc_far - fc_near)               : naive=0.000 prox=0.000 pressured=0.000 | PRESSURED-minus-PROX=0.000 CI[0.000,0.125] -> unresolved
+RESULT=AVOIDANCE (distance-keeping): the PRESSURED prey steps away from the predator at small d beyond the proximity-control, without a resolved plant-abandonment signature.

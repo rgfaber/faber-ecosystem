@@ -89,9 +89,13 @@ deficiency to be "rescued" -- so each rung asks a symmetric either-way question.
   flee frontier is observable; predator PRESENCE lowers realized foraging (24.5->3.4-4.5, mechanism
   unidentified); COEVO-vs-static an underpowered null. Lesson: the 058 reactive-flee axis is the WRONG
   second axis; the missing instrument is an encounter-conditional AVOIDANCE metric.
-- **Rung 2b — the avoidance instrument (next).** Build an encounter-conditional avoidance metric
-  (mean predator-prey minimum distance; forage-rate with-vs-without predator per episode) to adjudicate
-  AVOIDANCE vs foraging DEGRADATION -- the prerequisite for any mechanistic claim about the 059 collapse.
+- **Rung 2b — the avoidance instrument (exp060, SIGNED insight 060).** The DESIGN gate replaced an
+  observational NEAR/FAR read (collider-biased) with an INTERVENTIONAL single-step probe (predator at
+  ASSIGNED distance). Result: the 059 collapse is AT LEAST PARTLY avoidance -- the pressured prey steps
+  away from a near predator above chance (avoid_near 0.500 vs chance 0.250; RESOLVED + REPRODUCED;
+  isolated from sensor exposure by a capture-disabled proximity-control). NARROW: single-step repulsion,
+  NOT whole-episode fleeing (reconciles 059); the forage sanity gate tripped so plant-abandonment readouts
+  were dropped; mediation unquantified. The instrument now reads foraging, reactive-fleeing, AND repulsion.
 - **Rung 3 — population structure (the ALife-plausible variable the post-mortem flagged).**
   Many-agent open population with endogenous reproduction and frequency-dependent selection
   in one shared world -- the ingredient rungs 1-2 do NOT touch, and the more likely locus of a
