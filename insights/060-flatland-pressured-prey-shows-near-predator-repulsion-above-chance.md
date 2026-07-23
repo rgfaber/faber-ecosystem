@@ -1,11 +1,15 @@
-# 060 — [Flatland rung 2b] The 059 foraging collapse is AT LEAST PARTLY avoidance: the predator-pressured prey shows single-step near-predator REPULSION above chance (reproduced)
+# 060 — [Flatland rung 2b] Predator-pressured prey shows reproduced single-step near-predator REPULSION above chance (requires the capture gradient, not sensor exposure); whether it drives the 059 foraging collapse is UNTESTED
 
-Flatland rung 2b (P7 x P4/P5/P6). Adjudicates the mechanism 059 left open: is the predator-driven
-foraging collapse AVOIDANCE (adaptive) or DEGRADATION (non-adaptive)? Answer, narrowly and honestly:
-AT LEAST PARTLY avoidance -- the pressured prey steps away from a near predator above chance, isolated
-from mere predator-sensor exposure, reproduced across two runs. But the claim is deliberately narrow (see
-the tripped sanity gate below): it is single-step static-probe REPULSION, not whole-episode fleeing, and
-the amount of the collapse it explains is not quantified.
+Flatland rung 2b (P7 x P4/P5/P6). Set out to adjudicate the mechanism 059 left open (is the predator-
+driven foraging collapse AVOIDANCE or DEGRADATION?). What is EARNED, narrowly and honestly: the pressured
+prey has learned a real anti-predator behaviour -- it steps AWAY from a near predator above chance,
+reproduced across two runs, and this requires the CAPTURE gradient (a capture-disabled proximity-control
+with the same predator-sensor exposure stays at chance). What is NOT earned: any LINK from this repulsion
+to the 059 foraging collapse. The collapse (forage 24.5->3.4) and the repulsion were measured SEPARATELY;
+they were never shown to share a mechanism or co-occur in episodes, and the in-episode foraging read is
+unmeasurable here (the forage sanity gate tripped -- below). So "the collapse is partly avoidance" is
+NOT claimed; the repulsion exists, its role in the collapse is UNTESTED. The read is also single-step
+static-probe repulsion, NOT whole-episode fleeing.
 
 ## The finding (the ONE readout that survives)
 
@@ -41,14 +45,16 @@ policy averages 0.25 over the four predator directions).
   hand-coded greedy-forager scores 1.000, so the probe geometry is correct; the EVOLVED nets are the
   limit). So `forage_conflict` / plant-abandonment cannot be read. No "distance-keeping" or "graded
   plant-abandonment" claim is made -- only avoid_near, which never routes through the broken forage readout.
-- **Mediation is not quantified.** avoid_near 0.500 is halfway between chance (0.250) and a competent
-  single-step avoider (~1.0). "At least partly avoidance" is the honest ceiling; how much of the 059
-  24.5->3.4 foraging collapse this repulsion explains is NOT measured.
+- **The repulsion is NOT linked to the collapse (untested, not "partly explained").** avoid_near 0.500 is
+  halfway between chance (0.250) and a competent single-step avoider (~1.0). The 059 collapse (24.5->3.4)
+  and this repulsion are SEPARATE measurements; whether the repulsion drives, contributes to, or is
+  unrelated to the foraging loss is NOT tested (no mediation; the in-episode forage read is invalid). The
+  collapse could still be mostly degradation with the repulsion a minor or orthogonal behaviour.
 
-**Verdict:** confirmed (near-predator repulsion above chance, reproduced, isolated from sensor exposure) +
-scoped-narrow (single-step not episode-level; forage readouts invalid; mediation unquantified) + method
-(2 gates: design REDESIGN observational->interventional, claim DO-NOT-SIGN-as-is -> reproduce + descope) ·
-**Date:** 2026-07-24
+**Verdict:** confirmed (near-predator repulsion above chance, reproduced, requires the capture gradient not
+sensor exposure) + open (link to the 059 foraging collapse UNTESTED) + scoped-narrow (single-step not
+episode-level; forage readouts invalid) + method (2 gates: design REDESIGN observational->interventional,
+claim DO-NOT-SIGN-as-is -> reproduce + descope) · **Date:** 2026-07-24
 **Programme:** 7 x P5/P6 — Flatland front, rung 2b (mechanism). Prey side only; m=13; scoped to this game.
 
 ## Method
@@ -75,13 +81,14 @@ Two independent runs (fresh randomness); raw per-champion values emitted. Engine
 
 ## What this buys (and the next rung)
 
-Rung 2b answers 059's open question: the foraging collapse is at least partly ADAPTIVE (near-predator
-repulsion), not pure degradation -- an anti-predator behaviour the 058 reactive-flee axis structurally
-could not see. The Flatland instrument now reads foraging, reactive-fleeing (058), and near-predator
-repulsion (060). The still-missing pieces: a proper avoid(d) GRADIENT and a MEDIATION estimate (how much
-of the collapse is avoidance), both blocked by EA under-convergence -- a stronger optimizer / bigger
-budget (P2/P5) would unblock them. Rung 3 (many-agent open population) remains the 057-post-mortem locus
-for a real arms race.
+Rung 2b establishes a positive: the pressured prey DID learn a real anti-predator behaviour (near-predator
+repulsion, capture-gradient-driven) that the 058 reactive-flee axis structurally could not see. But it
+does NOT close 059's mechanism question -- whether this repulsion explains the foraging collapse is still
+open. The Flatland instrument now reads foraging, reactive-fleeing (058), and near-predator repulsion
+(060). The still-missing pieces: a proper avoid(d) GRADIENT and a MEDIATION estimate linking repulsion to
+the foraging loss IN episodes, both blocked by EA under-convergence (the tripped forage gate) -- a
+stronger optimizer / bigger budget (P2/P5) would unblock them. Rung 3 (many-agent open population)
+remains the 057-post-mortem locus for a real arms race.
 
 ## Reproduce
 

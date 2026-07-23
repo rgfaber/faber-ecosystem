@@ -91,11 +91,13 @@ deficiency to be "rescued" -- so each rung asks a symmetric either-way question.
   second axis; the missing instrument is an encounter-conditional AVOIDANCE metric.
 - **Rung 2b — the avoidance instrument (exp060, SIGNED insight 060).** The DESIGN gate replaced an
   observational NEAR/FAR read (collider-biased) with an INTERVENTIONAL single-step probe (predator at
-  ASSIGNED distance). Result: the 059 collapse is AT LEAST PARTLY avoidance -- the pressured prey steps
-  away from a near predator above chance (avoid_near 0.500 vs chance 0.250; RESOLVED + REPRODUCED;
-  isolated from sensor exposure by a capture-disabled proximity-control). NARROW: single-step repulsion,
-  NOT whole-episode fleeing (reconciles 059); the forage sanity gate tripped so plant-abandonment readouts
-  were dropped; mediation unquantified. The instrument now reads foraging, reactive-fleeing, AND repulsion.
+  ASSIGNED distance). EARNED: the pressured prey steps away from a near predator above chance (avoid_near
+  0.500 vs chance 0.250; RESOLVED + REPRODUCED; requires the CAPTURE gradient -- a capture-disabled
+  proximity-control with the same sensor exposure stays at chance) -- a real anti-predator behaviour the
+  058 reactive-flee axis could not see. NOT earned: whether this repulsion DRIVES the 059 foraging collapse
+  (measured separately, no mediation; forage sanity gate tripped so the in-episode read is invalid) -- an
+  OPEN question. NARROW: single-step repulsion, NOT whole-episode fleeing (reconciles 059). The instrument
+  now reads foraging, reactive-fleeing, AND repulsion.
 - **Rung 3 — population structure (the ALife-plausible variable the post-mortem flagged).**
   Many-agent open population with endogenous reproduction and frequency-dependent selection
   in one shared world -- the ingredient rungs 1-2 do NOT touch, and the more likely locus of a
