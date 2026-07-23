@@ -1,0 +1,13 @@
+== EXP-053 stochastic 1D transitive: the Red Queen (co-fitness ~0.5 while x escalates) ==
+config: mu=30 lambda=30 sigma=0.30 tau=0.30 x0=50.0 R=150 n=30
+pilot final champion x=86.0 -> ladder [50.0 .. 171.9] (20 refs)
+
+-- Results (n=30, R=150) --
+champion x: first median=50.6 CI[50.5,50.6] -> last median=85.6 CI[85.4,86.2]
+escalation Spearman(gen,x): median=1.000 (min 1.000)
+co-fitness: mean=0.5763 (across-run range [0.032,0.981])
+co-fitness trend Spearman(gen,cofit): median=0.107 CI[-0.226,0.541]
+benchmark smoke test: monotone-in-x all runs=true; median unsaturated fraction=1.00
+arms race (lastX>firstX disjoint & Spearman(gen,x)>0.9): true
+co-fitness flat (~0.5 in [.45,.55] & trend CI spans 0): false
+RESULT=NOT A CLEAN RED QUEEN: x escalates but co-fitness is not flat ~0.5 -> broken symmetry or real asymmetry; investigate before rung 054.
