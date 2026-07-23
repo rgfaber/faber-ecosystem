@@ -1,14 +1,30 @@
-== EXP-057 THREE brackets: evader-marginality trend (m=14, 13, 12) ==
-config: net=[2,6,4] mu=15 K=3 R=30 n=40; frozen graded HoF; master-tournament per run
+== EXP-057 FOUR brackets: evader balance-contingency (m=18, 14 | 13, 12) ==
+config: net=[2,6,4] mu=15 K=3 R=30 n=60; frozen graded HoF; master-tournament per run
 
-#### m=14  s=1.077  [s=1.077 EVADER-favoured (catch 0.389)] ####
-PURSUER benchmark: start=0.304 peak=0.565 end=0.490
-  rise(peak-start) med=0.212 CI[0.160,0.304] | gave-back(peak-end) med=0.058 CI[0.038,0.087] | NET-sustained(end-start) med=0.151 CI[0.100,0.204]
-EVADER  benchmark: start=0.444 peak=0.722 end=0.653
-  rise(peak-start) med=0.222 CI[0.167,0.306] | gave-back(peak-end) med=0.069 CI[0.028,0.111] | NET-sustained(end-start) med=0.153 CI[0.056,0.250]
+#### m=18  s=1.059  [s=1.059 EVADER-favoured (catch 0.389, deep)] ####
+PURSUER benchmark: start=0.281 peak=0.540 end=0.459
+  rise(peak-start) med=0.240 CI[0.208,0.281] | gave-back(peak-end) med=0.063 CI[0.046,0.078] | NET-sustained(end-start) med=0.172 CI[0.099,0.217]
+EVADER  benchmark: start=0.528 peak=0.722 end=0.597
+  rise(peak-start) med=0.194 CI[0.167,0.250] | gave-back(peak-end) med=0.097 CI[0.056,0.139] | NET-sustained(end-start) med=0.083 CI[0.042,0.125]
 master-tournament (10 saved gens, 45 pairs/run):
   intransitive-triples median @band 0.05/0.10/0.15 = 0.0 / 0.0 / 0.0  (0 => no cycling above that band)
-  decisive-edges median @band 0.05/0.10/0.15 = 36.0 / 32.5 / 25.5 of 45  (band not swallowing edges)
+  decisive-edges median @band 0.05/0.10/0.15 = 37.0 / 31.5 / 26.5 of 45  (band not swallowing edges)
+  later-dominates-earlier median=24.0 vs earlier-dominates-later median=1.0 (@0.15) => monotone directional progress
+
+-- Verdict (POST-HOC lens: rise = peak-progress [pre-registered]; SUSTAINED = end-vs-start CI-lb > 0.03, introduced after the n=20 exploratory look; read WITH the master-tournament above) --
+pursuer: rises(peak-progress)=true  net-sustained=true
+evader:  rises(peak-progress)=true  net-sustained=true
+both-rise (pre-registered BRIEF-ARMS-RACE cell): true
+RESULT=SUSTAINED TWO-SIDED PROGRESS: BOTH sides end clearly above start on their own axis (within-side; the two axes are incommensurable). Two-sided PROGRESS under coevolution, NOT a proven arms race -- reciprocal driving needs a decoupled solo control. Confirm monotone dominance (triples ~0) in the master-tournament above.
+
+#### m=14  s=1.077  [s=1.077 EVADER-favoured (catch 0.389)] ####
+PURSUER benchmark: start=0.308 peak=0.571 end=0.510
+  rise(peak-start) med=0.234 CI[0.191,0.289] | gave-back(peak-end) med=0.049 CI[0.038,0.074] | NET-sustained(end-start) med=0.151 CI[0.104,0.221]
+EVADER  benchmark: start=0.500 peak=0.722 end=0.625
+  rise(peak-start) med=0.222 CI[0.167,0.278] | gave-back(peak-end) med=0.083 CI[0.056,0.111] | NET-sustained(end-start) med=0.097 CI[0.056,0.167]
+master-tournament (10 saved gens, 45 pairs/run):
+  intransitive-triples median @band 0.05/0.10/0.15 = 0.0 / 0.0 / 0.0  (0 => no cycling above that band)
+  decisive-edges median @band 0.05/0.10/0.15 = 36.0 / 31.0 / 25.0 of 45  (band not swallowing edges)
   later-dominates-earlier median=25.0 vs earlier-dominates-later median=1.0 (@0.15) => monotone directional progress
 
 -- Verdict (POST-HOC lens: rise = peak-progress [pre-registered]; SUSTAINED = end-vs-start CI-lb > 0.03, introduced after the n=20 exploratory look; read WITH the master-tournament above) --
@@ -18,14 +34,14 @@ both-rise (pre-registered BRIEF-ARMS-RACE cell): true
 RESULT=SUSTAINED TWO-SIDED PROGRESS: BOTH sides end clearly above start on their own axis (within-side; the two axes are incommensurable). Two-sided PROGRESS under coevolution, NOT a proven arms race -- reciprocal driving needs a decoupled solo control. Confirm monotone dominance (triples ~0) in the master-tournament above.
 
 #### m=13  s=1.083  [s=1.083 PURSUER-favoured (catch 0.667)] ####
-PURSUER benchmark: start=0.345 peak=0.611 end=0.566
-  rise(peak-start) med=0.249 CI[0.193,0.343] | gave-back(peak-end) med=0.039 CI[0.031,0.069] | NET-sustained(end-start) med=0.189 CI[0.130,0.303]
-EVADER  benchmark: start=0.278 peak=0.472 end=0.361
-  rise(peak-start) med=0.153 CI[0.083,0.222] | gave-back(peak-end) med=0.097 CI[0.056,0.139] | NET-sustained(end-start) med=0.042 CI[0.000,0.097]
+PURSUER benchmark: start=0.356 peak=0.610 end=0.554
+  rise(peak-start) med=0.218 CI[0.187,0.306] | gave-back(peak-end) med=0.056 CI[0.032,0.070] | NET-sustained(end-start) med=0.139 CI[0.091,0.223]
+EVADER  benchmark: start=0.292 peak=0.472 end=0.347
+  rise(peak-start) med=0.167 CI[0.097,0.194] | gave-back(peak-end) med=0.111 CI[0.056,0.125] | NET-sustained(end-start) med=0.056 CI[0.028,0.083]
 master-tournament (10 saved gens, 45 pairs/run):
   intransitive-triples median @band 0.05/0.10/0.15 = 0.0 / 0.0 / 0.0  (0 => no cycling above that band)
-  decisive-edges median @band 0.05/0.10/0.15 = 38.0 / 35.0 / 30.5 of 45  (band not swallowing edges)
-  later-dominates-earlier median=29.0 vs earlier-dominates-later median=0.0 (@0.15) => monotone directional progress
+  decisive-edges median @band 0.05/0.10/0.15 = 38.0 / 34.5 / 30.0 of 45  (band not swallowing edges)
+  later-dominates-earlier median=28.5 vs earlier-dominates-later median=0.0 (@0.15) => monotone directional progress
 
 -- Verdict (POST-HOC lens: rise = peak-progress [pre-registered]; SUSTAINED = end-vs-start CI-lb > 0.03, introduced after the n=20 exploratory look; read WITH the master-tournament above) --
 pursuer: rises(peak-progress)=true  net-sustained=true
@@ -33,15 +49,15 @@ evader:  rises(peak-progress)=true  net-sustained=false
 both-rise (pre-registered BRIEF-ARMS-RACE cell): true
 RESULT=PURSUER SUSTAINS, EVADER MARGINAL: both sides' peak-progress is disjoint from 0 (a brief two-sided rise), but only the PURSUER retains NET progress (end above start); the EVADER rises to a transient peak then falls back to statistical indistinguishability from its start. No SUSTAINED two-sided progress at this bracket. Read WITH the master-tournament (monotone => progress not cycling) and the cross-bracket difference (is the evader's between-bracket gap actually resolved?).
 
-#### m=12  s=1.091  [s=1.091 PURSUER-favoured+ (catch 0.667, +1 step)] ####
-PURSUER benchmark: start=0.288 peak=0.611 end=0.545
-  rise(peak-start) med=0.287 CI[0.238,0.339] | gave-back(peak-end) med=0.045 CI[0.029,0.081] | NET-sustained(end-start) med=0.238 CI[0.171,0.270]
-EVADER  benchmark: start=0.278 peak=0.472 end=0.306
-  rise(peak-start) med=0.167 CI[0.111,0.250] | gave-back(peak-end) med=0.139 CI[0.083,0.167] | NET-sustained(end-start) med=0.056 CI[-0.028,0.139]
+#### m=12  s=1.091  [s=1.091 PURSUER-favoured (catch 0.667, deep)] ####
+PURSUER benchmark: start=0.285 peak=0.615 end=0.552
+  rise(peak-start) med=0.308 CI[0.245,0.342] | gave-back(peak-end) med=0.043 CI[0.029,0.077] | NET-sustained(end-start) med=0.227 CI[0.168,0.264]
+EVADER  benchmark: start=0.292 peak=0.472 end=0.319
+  rise(peak-start) med=0.167 CI[0.125,0.222] | gave-back(peak-end) med=0.125 CI[0.083,0.167] | NET-sustained(end-start) med=0.056 CI[0.000,0.111]
 master-tournament (10 saved gens, 45 pairs/run):
   intransitive-triples median @band 0.05/0.10/0.15 = 0.0 / 0.0 / 0.0  (0 => no cycling above that band)
-  decisive-edges median @band 0.05/0.10/0.15 = 38.5 / 34.5 / 30.5 of 45  (band not swallowing edges)
-  later-dominates-earlier median=29.5 vs earlier-dominates-later median=1.0 (@0.15) => monotone directional progress
+  decisive-edges median @band 0.05/0.10/0.15 = 39.0 / 35.0 / 30.5 of 45  (band not swallowing edges)
+  later-dominates-earlier median=29.0 vs earlier-dominates-later median=0.5 (@0.15) => monotone directional progress
 
 -- Verdict (POST-HOC lens: rise = peak-progress [pre-registered]; SUSTAINED = end-vs-start CI-lb > 0.03, introduced after the n=20 exploratory look; read WITH the master-tournament above) --
 pursuer: rises(peak-progress)=true  net-sustained=true
@@ -50,9 +66,9 @@ both-rise (pre-registered BRIEF-ARMS-RACE cell): true
 RESULT=PURSUER SUSTAINS, EVADER MARGINAL: both sides' peak-progress is disjoint from 0 (a brief two-sided rise), but only the PURSUER retains NET progress (end above start); the EVADER rises to a transient peak then falls back to statistical indistinguishability from its start. No SUSTAINED two-sided progress at this bracket. Read WITH the master-tournament (monotone => progress not cycling) and the cross-bracket difference (is the evader's between-bracket gap actually resolved?).
 
 -- Cross-bracket trend (NET-sustained medians by bracket) --
-  m:           m=14  m=13  m=12
-  pursuer NET: 0.151  0.189  0.238
-  evader  NET: 0.153  0.042  0.056
-  EVADER  extreme-pair NET (m=14 minus m=12): 0.097 CI[-0.042,0.194] -> NOT resolved (includes 0)
-  PURSUER extreme-pair NET (m=14 minus m=12): -0.088 CI[-0.146,-0.015] -> RESOLVED (excludes 0)
+  m:           m=18  m=14  m=13  m=12
+  pursuer NET: 0.172  0.151  0.139  0.227
+  evader  NET: 0.083  0.097  0.056  0.056
+  EVADER  extreme-pair NET (m=18 minus m=12): 0.028 CI[-0.042,0.111] -> NOT resolved (includes 0)
+  PURSUER extreme-pair NET (m=18 minus m=12): -0.056 CI[-0.138,0.032] -> NOT resolved (includes 0)
   => balance-contingent evader sustainment needs a monotone evader decline AND a resolved extreme-pair difference.

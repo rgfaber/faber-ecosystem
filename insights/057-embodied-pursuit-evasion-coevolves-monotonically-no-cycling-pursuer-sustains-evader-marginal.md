@@ -8,9 +8,11 @@ generation edges decisive, so the band is not swallowing signal) and later-gener
 capture-speed, evader on escape-rate -- incommensurable axes, only within-side end-vs-start comparisons
 made), the PURSUER retains net progress at both brackets (NET +0.151 CI[0.100,0.204] at the evader-
 favoured bracket, +0.189 CI[0.130,0.303] at the pursuer-favoured one; both disjoint from 0). The EVADER
-is MARGINAL: it clears the end-vs-start sustainment criterion at the evader-favoured bracket (NET +0.153
-CI[0.056,0.250]) but only touches it at the pursuer-favoured bracket (NET +0.042 CI[0.000,0.097], includes
-0), and the between-bracket evader difference is NOT resolved at n=40 (0.111, CI[-0.000,0.194]). And a
+sustains only WEAKLY -- ~0.06-0.10 NET, roughly flat across FOUR brackets at n=60, much less than the
+pursuer. An apparent balance-contingency (sustain-when-favoured, marginal-when-not) seen in a smaller
+two-bracket run did NOT survive larger n and a wider bracket span: the widest cross-crossover evader
+difference (m=18 minus m=12) is +0.028, CI[-0.042,0.111], unresolved. So the evader is marginal relative
+to the pursuer, but not sharply balance-dependent. And a
 DECOUPLED CONTROL (each side evolved against a FROZEN opponent, same benchmark) shows NO coevolutionary
 coupling over a DIVERSE static opponent: against a frozen RANDOM opponent, coevolution's NET does not
 reliably exceed the control on any side at either bracket (n=40 all four CIs include 0; a stronger n=60
@@ -89,28 +91,36 @@ NET values to each other.
 Cross-bracket EVADER NET difference (m=14 - m=13): 0.111, CI[-0.000, 0.194] -> **NOT resolved**.
 Decisive edges: 25-38 of 45 pairs per run (the band is not swallowing signal).
 
-**Third bracket (m=12, s=1.091, one speed-step MORE pursuer-favoured; n=40).** Added to turn the two-
-point evader comparison into a trend. Result (`057-raw-brackets.txt`):
+**Four brackets across BOTH catch-rate plateaus, n=60** (`057-raw-brackets.txt`; supersedes a smaller
+n=40 three-bracket pass whose apparent trends were low-n noise). m=18 & m=14 on the 0.389 (evader-
+favoured) plateau, m=13 & m=12 on the 0.667 (pursuer-favoured) one; m=18 is deep evader-favoured, giving
+the widest extreme pair (m=18 vs m=12). m=18's benchmark verified graded (not saturated) before running.
 
 | bracket | pursuer NET | evader NET | triples @0.05/0.10/0.15 |
 |---|---|---|---|
-| m=14 (s=1.077, evader-fav)  | +0.151 | +0.153 [0.056,0.250] | 0 / 0 / 0 |
-| m=13 (s=1.083, pursuer-fav) | +0.189 | +0.042 [0.000,0.097] | 0 / 0 / 0 |
-| m=12 (s=1.091, pursuer-fav+)| +0.238 | +0.056 [-0.028,0.139] | 0 / 0 / 0 |
+| m=18 (s=1.059, evader-fav deep) | +0.172 | +0.083 [0.042,0.125] | 0 / 0 / 0 |
+| m=14 (s=1.077, evader-fav)      | +0.151 | +0.097 [0.056,0.167] | 0 / 0 / 0 |
+| m=13 (s=1.083, pursuer-fav)     | +0.139 | +0.056 [0.028,0.083] | 0 / 0 / 0 |
+| m=12 (s=1.091, pursuer-fav deep)| +0.227 | +0.056 [0.000,0.111] | 0 / 0 / 0 |
 
-- **No cycling at all THREE brackets** (triples=0 at every band, monotone dominance 25-30 vs 0-1).
-- **Pursuer: a monotone, RESOLVED increase in sustained progress with its speed edge** (0.151 -> 0.189 ->
-  0.238; extreme-pair m=14-minus-m=12 = -0.088, CI[-0.146,-0.015], excludes 0). The pursuer sustains more
-  the more the balance favours it. (Single run; the direction is expected and the trend clean, but a
-  reproduction would harden it.)
-- **Evader: a STEP, not a gradient** -- sustains on the evader-favoured bracket (m=14) and is marginal on
-  BOTH pursuer-favoured brackets (m=13, m=12 both CI-includes-0). m=12 did NOT extend the decline because
-  it sits on the SAME hand-coded catch-rate plateau (0.667) as m=13, so it replicated m=13 rather than
-  pushing further. The cross-crossover evader difference stays UNRESOLVED even at the widest pair
-  (m=14-minus-m=12 = 0.097, CI[-0.042,0.194]) -- a power limit at n=40, not a resolved contingency.
-- So the third bracket CONFIRMS no-cycling and the pursuer/evader asymmetry, but does NOT resolve the
-  evader balance-contingency; resolving it needs larger n or a genuinely more evader-favoured bracket
-  (a lower catch-rate plateau), not another point on the 0.667 plateau.
+- **No cycling at any of the four brackets** (triples=0 at every band, monotone dominance 24-29 vs 0-1).
+  This is now the most robust finding: no cycling across the whole crossover.
+- **The evader balance-contingency is NOT resolvable at this scale.** Evader NET is roughly FLAT and
+  weakly positive (~0.06-0.10) across all four brackets; the widest extreme pair (m=18 minus m=12) is
+  +0.028, CI[-0.042,0.111] -- includes 0. The earlier "step" (a big m=14 vs m=13 drop) was low-n noise:
+  at n=60 the m=14 evader NET is +0.097, not the +0.153 of the two-bracket run. The evader weakly
+  sustains EVERYWHERE, not sharply "sustains when favoured, dies when not".
+- **The pursuer speed-edge trend did NOT reproduce either.** Pursuer NET is 0.172/0.151/0.139/0.227 --
+  non-monotone; extreme pair m=18 minus m=12 = -0.056, CI[-0.138,0.032], unresolved. The n=40 "monotone
+  increase with speed edge" was also noise. The pursuer sustains more than the evader everywhere
+  (~0.14-0.23 vs ~0.06-0.10), with no resolved balance trend.
+- **Caveat (a real artifact):** at deep evader-favoured brackets the evader benchmark START is high
+  (~0.5 of a ~0.58 ceiling), so measurable evader NET is capped by headroom there -- part of why the
+  evader NET looks flat. A balance-contingency, if real, is smaller than this measurement can separate.
+
+Net: the four-bracket n=60 test CONFIRMS no-cycling and the pursuer > evader asymmetry, and REFUTES the
+apparent balance-contingency (both the evader "step" and the pursuer speed-edge trend were low-n noise).
+Neither side shows a resolved trend across the balance.
 
 **Decoupled control (coevolution vs FROZEN static opponents, same benchmark). Two static baselines --
 a DIVERSE frozen-random opponent and a NARROW frozen-strong opponent (evolved, seed-disjoint from the
@@ -174,14 +184,17 @@ below ~0.06 NET could still hide at these n; the strong baseline is a fixed seed
 The 053-056 toolkit, applied to real nets, gives a trustworthy embodied reading: this game coevolves
 MONOTONICALLY (not cyclically), the pursuer robustly improves, the evader is marginal, and a co-adapting
 opponent buys no more benchmark progress than a static one -- so it is two-sided PROGRESS, not a
-demonstrated arms race. The stronger-baseline + reproduction step and the third bracket (m=12)
-are done (above): coupling is refused over a diverse opponent, and the third bracket confirms no-cycling
-+ the pursuer/evader asymmetry but does NOT resolve the evader balance-contingency (m=12 replicated the
-m=13 plateau). Next, to strengthen: (a) larger n and a genuinely more evader-favoured bracket (a lower
-catch-rate plateau, e.g. m=16-20 at 0.389) to resolve the evader cross-crossover difference; (b) reproduce
-the pursuer's monotone speed-edge trend. Toward Flatland: if a sustained, coupled embodied arms race
-needs a two-sided gradient this simple game cannot supply, it likely requires added ecological structure
-(space, resources, many agents) -- P5/P6.
+demonstrated arms race. The stronger-baseline + reproduction, the third bracket, and now
+a four-bracket n=60 span across both catch-rate plateaus (m=18/14/13/12) are all done: coupling refused
+over a diverse opponent; no cycling at four brackets; and the evader balance-contingency REFUTED as
+unresolvable at this scale (both the evader "step" and the pursuer speed-edge trend were low-n noise; the
+evader weakly sustains ~flat everywhere). The robust, reproduced core is now: MONOTONE progress, NO
+cycling, pursuer sustains more than evader, both across the whole crossover, no arms race / coupling.
+Toward Flatland: a sustained, coupled embodied arms race needs a two-sided gradient this bare-grid game
+does not supply; it likely requires added ecological structure (space, resources, many agents) -- P5/P6.
+A residual measurement limit worth removing first: the evader benchmark saturates high at deep evader-
+favoured speeds (start ~0.5 of a ~0.58 ceiling), so any small balance-contingency is below the floor of
+what end-vs-start on this benchmark can separate.
 
 ## Reproduce
 
