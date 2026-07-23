@@ -1,0 +1,16 @@
+== EXP-059 forage/flee frontier: prey (forage-skill, flee-skill) by predator pressure (n=20, gens=50, m=13) ==
+P0 no-predator  forage=24.50 CI[11.88,27.69]  flee=0.292 CI[0.250,0.333]
+WEAK-static     forage=4.50 CI[3.38,8.06]  flee=0.306 CI[0.250,0.347]
+COEVO           forage=3.63 CI[2.56,5.81]  flee=0.278 CI[0.194,0.333]
+STRONG-static   forage=3.44 CI[1.88,6.25]  flee=0.292 CI[0.250,0.361]
+
+-- Frontier read --
+forage across ladder (P0->STRONG): 24.500  4.500  3.625  3.438
+flee   across ladder (P0->STRONG): 0.292  0.306  0.278  0.292
+forage monotone DOWN with pressure: true ; flee monotone UP: false
+COEVO-minus-WEAK forage-diff=-0.88 CI[-4.81,1.56] (want <0); flee-diff=-0.028 CI[-0.139,0.056] (want >0)
+RESULT=forage falls with pressure but flee does not monotonically rise -- pressure degrades foraging without buying fleeing; inspect for global degradation vs a frontier.
+
+### FLEE FLOOR/CEILING (gate would-strengthen) ###
+gen-0 random nets flee=0.254 | dedicated fleer (evolved on flee only)=0.389 | 058 dedicated fleer=0.69
+=> ecological conditions (~0.28-0.31) sit barely above the random-net floor (0.254); reactive fleeing never learned.

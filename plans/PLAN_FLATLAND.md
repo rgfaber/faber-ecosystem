@@ -81,16 +81,21 @@ deficiency to be "rescued" -- so each rung asks a symmetric either-way question.
   orthogonally (pure-forager 27.6/0.31 vs pure-fleer 3.5/0.69, distinct axes); and 057's no-
   coupling refusal REPRODUCES on the graded instrument (pure pursuit-evasion, plants off, n=40)
   -- not a saturation artifact. Instrument validated + 057-consistent; no dynamics claim.
-- **Rung 2 — the energy-economy coupling question (exp059).** With the validated decomposed
-  instrument: does adding the energy economy CHANGE the decoupled-control coupling verdict
-  (in either direction), read ONLY on the pursuit-evasion sub-metric, against a re-baselined
-  057 head-to-head? Pre-register a single balance scalar (steady-state per-episode capture
-  probability = 0.5 +/- band) and require the verdict stable across a band. Scoped to
-  "energy economy", never "ecology".
+- **Rung 2 — the forage/flee trade-off (exp059, SIGNED insight 059).** The DESIGN gate redesigned
+  the coupling-verdict question (confounded + foregone) into the forage/flee frontier question. The
+  CLAIM gate then required the honest double-negative reading: REACTIVE FLEEING is never learned
+  under ecological survival fitness (the 058 flee axis stays at ~0.29 -- barely above the gen-0
+  random-net floor 0.254, vs a dedicated fleer 0.39-0.69 -- in every condition), so no forage/reactive-
+  flee frontier is observable; predator PRESENCE lowers realized foraging (24.5->3.4-4.5, mechanism
+  unidentified); COEVO-vs-static an underpowered null. Lesson: the 058 reactive-flee axis is the WRONG
+  second axis; the missing instrument is an encounter-conditional AVOIDANCE metric.
+- **Rung 2b — the avoidance instrument (next).** Build an encounter-conditional avoidance metric
+  (mean predator-prey minimum distance; forage-rate with-vs-without predator per episode) to adjudicate
+  AVOIDANCE vs foraging DEGRADATION -- the prerequisite for any mechanistic claim about the 059 collapse.
 - **Rung 3 — population structure (the ALife-plausible variable the post-mortem flagged).**
   Many-agent open population with endogenous reproduction and frequency-dependent selection
   in one shared world -- the ingredient rungs 1-2 do NOT touch, and the more likely locus of a
-  real arms race if the energy economy alone does not change the verdict.
+  real arms race.
 - **Rung 4+ (horizon):** novelty / behavioural diversity (P4) in the unbounded space; body /
   sensor encoding as a developmental genome (P6); distribution across nodes (P5). Each gated,
   opened only after the one below is signed.
