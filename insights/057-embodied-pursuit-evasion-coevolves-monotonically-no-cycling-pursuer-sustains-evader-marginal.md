@@ -1,10 +1,10 @@
 # 057 — [P7 embodied rung] Real neural pursuit-evasion coevolves MONOTONICALLY (no cycling), the PURSUER sustains frozen-benchmark progress at both crossover brackets, the EVADER only marginally
 
-At the two speed brackets straddling the competent-play crossover, [2,6,4] faber-tweann nets coevolving
-on 9x9-torus pursuit-evasion make MONOTONE directional progress with NO cycling: a population master-
-tournament finds ZERO intransitive triples at noise bands 0.05/0.10/0.15 (with 25-38 of 45 cross-
+At three speed brackets around the competent-play crossover (m=14/13/12), [2,6,4] faber-tweann nets
+coevolving on 9x9-torus pursuit-evasion make MONOTONE directional progress with NO cycling: a population
+master-tournament finds ZERO intransitive triples at noise bands 0.05/0.10/0.15 (with 25-38 of 45 cross-
 generation edges decisive, so the band is not swallowing signal) and later-generations dominate earlier
-25-29 to 0-1, at BOTH brackets. Measured against a FROZEN, verified-graded benchmark (pursuer on
+25-30 to 0-1, at ALL THREE brackets. Measured against a FROZEN, verified-graded benchmark (pursuer on
 capture-speed, evader on escape-rate -- incommensurable axes, only within-side end-vs-start comparisons
 made), the PURSUER retains net progress at both brackets (NET +0.151 CI[0.100,0.204] at the evader-
 favoured bracket, +0.189 CI[0.130,0.303] at the pursuer-favoured one; both disjoint from 0). The EVADER
@@ -89,6 +89,29 @@ NET values to each other.
 Cross-bracket EVADER NET difference (m=14 - m=13): 0.111, CI[-0.000, 0.194] -> **NOT resolved**.
 Decisive edges: 25-38 of 45 pairs per run (the band is not swallowing signal).
 
+**Third bracket (m=12, s=1.091, one speed-step MORE pursuer-favoured; n=40).** Added to turn the two-
+point evader comparison into a trend. Result (`057-raw-brackets.txt`):
+
+| bracket | pursuer NET | evader NET | triples @0.05/0.10/0.15 |
+|---|---|---|---|
+| m=14 (s=1.077, evader-fav)  | +0.151 | +0.153 [0.056,0.250] | 0 / 0 / 0 |
+| m=13 (s=1.083, pursuer-fav) | +0.189 | +0.042 [0.000,0.097] | 0 / 0 / 0 |
+| m=12 (s=1.091, pursuer-fav+)| +0.238 | +0.056 [-0.028,0.139] | 0 / 0 / 0 |
+
+- **No cycling at all THREE brackets** (triples=0 at every band, monotone dominance 25-30 vs 0-1).
+- **Pursuer: a monotone, RESOLVED increase in sustained progress with its speed edge** (0.151 -> 0.189 ->
+  0.238; extreme-pair m=14-minus-m=12 = -0.088, CI[-0.146,-0.015], excludes 0). The pursuer sustains more
+  the more the balance favours it. (Single run; the direction is expected and the trend clean, but a
+  reproduction would harden it.)
+- **Evader: a STEP, not a gradient** -- sustains on the evader-favoured bracket (m=14) and is marginal on
+  BOTH pursuer-favoured brackets (m=13, m=12 both CI-includes-0). m=12 did NOT extend the decline because
+  it sits on the SAME hand-coded catch-rate plateau (0.667) as m=13, so it replicated m=13 rather than
+  pushing further. The cross-crossover evader difference stays UNRESOLVED even at the widest pair
+  (m=14-minus-m=12 = 0.097, CI[-0.042,0.194]) -- a power limit at n=40, not a resolved contingency.
+- So the third bracket CONFIRMS no-cycling and the pursuer/evader asymmetry, but does NOT resolve the
+  evader balance-contingency; resolving it needs larger n or a genuinely more evader-favoured bracket
+  (a lower catch-rate plateau), not another point on the 0.667 plateau.
+
 **Decoupled control (coevolution vs FROZEN static opponents, same benchmark). Two static baselines --
 a DIVERSE frozen-random opponent and a NARROW frozen-strong opponent (evolved, seed-disjoint from the
 benchmark) -- at n=40, then n=60 and a n=80 reproduction:**
@@ -151,12 +174,14 @@ below ~0.06 NET could still hide at these n; the strong baseline is a fixed seed
 The 053-056 toolkit, applied to real nets, gives a trustworthy embodied reading: this game coevolves
 MONOTONICALLY (not cyclically), the pursuer robustly improves, the evader is marginal, and a co-adapting
 opponent buys no more benchmark progress than a static one -- so it is two-sided PROGRESS, not a
-demonstrated arms race. The stronger-baseline + reproduction step is done (above): it confirms no
-coupling over a diverse fixed opponent and explains the only positive signal as diversity. Next, to
-strengthen: (a) a third, more pursuer-favoured bracket (m=12) to turn two points into a trend and test a
-real balance-contingency; (b) larger n to move the evader's m=13 sustainment CI off the 0 boundary.
-Toward Flatland: if a sustained, coupled embodied arms race needs a two-sided gradient this simple game
-cannot supply, it likely requires added ecological structure (space, resources, many agents) -- P5/P6.
+demonstrated arms race. The stronger-baseline + reproduction step and the third bracket (m=12)
+are done (above): coupling is refused over a diverse opponent, and the third bracket confirms no-cycling
++ the pursuer/evader asymmetry but does NOT resolve the evader balance-contingency (m=12 replicated the
+m=13 plateau). Next, to strengthen: (a) larger n and a genuinely more evader-favoured bracket (a lower
+catch-rate plateau, e.g. m=16-20 at 0.389) to resolve the evader cross-crossover difference; (b) reproduce
+the pursuer's monotone speed-edge trend. Toward Flatland: if a sustained, coupled embodied arms race
+needs a two-sided gradient this simple game cannot supply, it likely requires added ecological structure
+(space, resources, many agents) -- P5/P6.
 
 ## Reproduce
 
