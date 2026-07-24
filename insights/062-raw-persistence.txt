@@ -1,0 +1,21 @@
+== EXP-062 rung-3b PRECONDITION part A: PERSISTENCE (fixed prudent theta-predator) ==
+world 40x40, H=4000, GMIN=20 predator-generations, 6 seeds; prudent = hunt only if local prey >= theta within percept 5
+cell = persistence fraction (coexist AND >=20 pred generations) | median generations
+
+-- GRID 1: default {reproPred=34 Epred=14 satiate=4 percept=5}, theta x density --
+                theta:       1       2       3       5       8
+  plants= 100:         0.00/ 0.6 0.00/ 0.6 0.00/ 0.8 0.00/ 0.9 0.00/ 0.7
+  plants= 150:         0.00/ 0.8 0.00/ 0.9 0.00/ 0.9 0.00/ 0.9 0.00/ 0.8
+  plants= 220:         0.00/ 1.0 0.00/ 0.9 0.00/ 1.0 0.00/ 1.0 0.00/ 0.8
+
+-- GRID 2: predator energetics sweep {reproPred x Epred} at theta=3, plants=150 --
+               Epred:       8      14      22
+  reproPred= 34:       0.00/ 0.7 0.00/ 0.9 0.00/ 1.4
+  reproPred= 55:       0.00/ 0.0 0.00/ 0.1 0.00/ 0.5
+  reproPred= 80:       0.00/ 0.0 0.00/ 0.0 0.00/ 0.1
+
+-- 061 STRONG-STABILISER corner (theta=1 greedy, satiate=12, percept=2 = big refuge) --
+  persistence=0.00 | median pred-generations=0.7 (survived: 0/6)
+
+MAX persistence fraction = 0.00 (theta/density 0.00, energetics 0.00, 061 strong corner 0.00); fixed-greedy 061 = ~1 gen
+RESULT=NO PERSISTENT REGIME in the searched region (signed negative). A SQUEEZE: the non-starving extreme (theta=1, greedy) collapses by OVER-CONSUMPTION in ~1 predator generation, and any added restraint (theta>1 = decline-to-hunt) only accelerates extinction via STARVATION -- no COSTLESS restraint lever exists in this family, and that coupling is itself the finding. No regime coexists >= GMIN predator generations across theta x density, a predator-energetics sweep, AND the 061 strong-stabiliser corner (satiate=12/percept=2). So rung 3b (evolved restraint) is BLOCKED in this region: coexistence dies within ~1 predator generation everywhere searched, so no selection can act. World size, perception, prey reproduction, and plant energy were held FIXED -- whether a persistent regime exists ELSEWHERE in this substrate (larger world / stronger refugia / higher prey productivity) is UNTESTED; a substrate change is a HYPOTHESIS for the failure, not a demonstrated necessity. SCOPE: a negative about the searched region + the decline-to-hunt restraint family + these energetics, NOT that open ALife cannot persist/evolve in general.

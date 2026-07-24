@@ -106,11 +106,19 @@ deficiency to be "rescued" -- so each rung asks a symmetric either-way question.
   corner LV theory prefers (satiate=12, percept=2). Greedy-hunt cannot self-limit predation. SCOPE: a
   negative about fixed-greedy behaviours in THIS game, not open populations in general, not evolved
   behaviours. This REFRAMES 3b.
-- **Rung 3b — can EVOLUTION discover a self-limiting ecology? (next).** 3a's negative reshapes the
-  question from "does the open population arms-race" to "can EVOLVED avatar behaviours (mutation switched
-  back on) discover self-limiting/prudent predation and sustain a coexisting ecology where a hand-coded
-  OPTIMAL predator drives collapse?" -- with a learnability positive control and a within-lineage
-  adaptation read (the earlier gate requirements). A genuinely open, non-foregone question.
+- **Rung 3b precondition (exp062, SIGNED insight 062).** The DESIGN gate ruled the evolved-restraint
+  experiment DEAD ON ARRIVAL (061 collapses in ~1 predator generation, so selection cannot act) and split
+  off this precondition: does any regime PERSIST for many predator GENERATIONS? NO -- a SQUEEZE: the only
+  restraint available (decline-to-hunt) means eat nothing, so greedy collapses by over-consumption and any
+  restraint accelerates extinction by starvation; no costless restraint lever exists. 0.00 persistence
+  across theta x density, a predator-energetics sweep, AND the 061 strong-stabiliser corner; max ~1.4 vs
+  GMIN=20 generations. No eco-evolutionary timescale -> rung 3b (evolved restraint) BLOCKED in this region.
+- **Where the front stands.** 057-062 converge: this simple neuro-ALife substrate does not spontaneously
+  produce persistent/escalating/co-sustaining dynamics -- not for lack of one ingredient, but because the
+  pairwise/open dynamics collapse or refuse to couple at every angle tested. Further progress needs a
+  MATERIALLY DIFFERENT substrate (larger spatially-structured world enabling refugia + persistence; or a
+  restraint mechanism that is not decline-to-hunt), NOT another rung on this world. That is the honest
+  next design problem for the front.
 - **Rung 4+ (horizon):** novelty / behavioural diversity (P4) in the unbounded space; body /
   sensor encoding as a developmental genome (P6); distribution across nodes (P5). Each gated,
   opened only after the one below is signed.
