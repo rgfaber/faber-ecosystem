@@ -36,11 +36,11 @@ Campus neuroevolution agenda from a generic one.
 |---|-----------|-----------------------------------------------|--------|
 | [P1](CHARTER_P1_CAPABILITIES.md) | Capabilities | **Representation**: what the phenotype can express | CLOSED @024 |
 | [P2](CHARTER_P2_SEARCH_STRATEGIES.md) | Search Strategies | **Operators**: variation + selection (the optimizer) | **PARKED @2026-07-24** |
-| [P3](CHARTER_P3_META_LEARNING.md) | Meta-learning | **Meta-adaptation**: learn to learn, evolved plasticity | NEXT |
-| [P4](CHARTER_P4_OBJECTIVES.md) | Objectives | **Selection pressure**: what fitness rewards (QD, novelty) | OPEN |
-| [P5](CHARTER_P5_SCALE_SUBSTRATE.md) | Scale / Substrate | **Distribution of the search**: fleet, mesh, federated evolution | OPEN |
-| [P6](CHARTER_P6_ENCODING_DEVELOPMENT.md) | Encoding / Development | **Genotype→phenotype map**: direct vs indirect | OPEN |
-| [P7](CHARTER_P7_COEVOLUTION.md) | Coevolution / Self-play | **Interaction**: fitness from contest; open-endedness | OPEN (horizon) |
+| [P3](CHARTER_P3_META_LEARNING.md) | Meta-learning | **Meta-adaptation**: learn to learn, evolved plasticity | WORKED @031-048 (lifetime line closed; capstone unrun) |
+| [P4](CHARTER_P4_OBJECTIVES.md) | Objectives | **Selection pressure**: what fitness rewards (QD, novelty) | WORKED @050-052 |
+| [P5](CHARTER_P5_SCALE_SUBSTRATE.md) | Scale / Substrate | **Distribution of the search**: fleet, mesh, federated evolution | OPEN (contributed to Flatland 058-062) |
+| [P6](CHARTER_P6_ENCODING_DEVELOPMENT.md) | Encoding / Development | **Genotype→phenotype map**: direct vs indirect | OPEN (contributed to Flatland 058-062) |
+| [P7](CHARTER_P7_COEVOLUTION.md) | Coevolution / Self-play | **Interaction**: fitness from contest; open-endedness | CLOSED @062 (053-057 + Flatland 058-062) |
 | [P8](CHARTER_P8_LLM_AUGMENTED.md) | LLM-augmented Evolution | **Augmentation**: LLM in the loop; the Spartan bridge | HORIZON (coupling) |
 | [P9](CHARTER_P9_DARS.md) | DARS / Physical AI | **Embodiment at scale**: distributed robots, swarms, sim-to-real | HORIZON (coupling) |
 
@@ -78,10 +78,11 @@ this line says so rather than manufacturing momentum. See
 [`CHARTER_P2_SEARCH_STRATEGIES.md`](CHARTER_P2_SEARCH_STRATEGIES.md) for exactly what is on disk,
 unsigned, and resumable.
 
-- **CLOSED** — arc complete, corpus written (P1).
+- **CLOSED** — arc complete, corpus written (P1 @024, P7 @062).
 - **ACTIVE** — the current execution front (none at present).
 - **PARKED** — was active, stopped deliberately with its state recorded; resumable (P2).
-- **NEXT** — chartered, first experiment defined, starts when a front is chosen (P3).
+- **WORKED** — substantial signed corpus, its main line answered, but not formally closed: a named
+  next step remains unrun (P3, P4).
 - **OPEN** — chartered, has a good first experiment and the tested harness, not started (P4, P5, P6, P7).
 - **HORIZON** — chartered, but depends on a prerequisite that does not yet exist (P8 and P9, the two couplings). Named so the dependency is explicit.
 

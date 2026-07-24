@@ -1,6 +1,19 @@
 # Programme 7 — Coevolution / Self-play (Interaction)
 
-**Status: OPEN (horizon).** Chartered. Corpus: to be assigned.
+**Status: CLOSED @062 (2026-07-24).** Corpus: insights **053-057** (the coevolution toolkit on
+numbers games and the first embodied rung) and **058-062** (the Flatland/ALife front, run as
+P7 x P5/P6 convergence; see [`PLAN_FLATLAND.md`](PLAN_FLATLAND.md)).
+
+> **The arc, in one line:** across six embodied rungs this simple neuro-ALife substrate refused to
+> produce persistent or escalating coevolutionary dynamics, from six independent angles. 057: no
+> coupling on the bare grid (a co-adapting opponent buys no more progress than a diverse static one).
+> 059: reactive fleeing is never learned under ecological survival fitness. 060: a real near-predator
+> repulsion exists, but whether it drives the 059 collapse is untested. 061: fixed-greedy open
+> populations have no coexistence regime, they boom-bust to mutual extinction. 062: no eco-
+> evolutionary timescale, because the only restraint available (decline-to-hunt) is
+> self-starvation, so selection cannot act. The honest next step is a MATERIALLY DIFFERENT substrate
+> (spatial structure with real refugia, or a restraint lever that is not decline-to-hunt), not
+> another rung on this world.
 
 ## The axis
 

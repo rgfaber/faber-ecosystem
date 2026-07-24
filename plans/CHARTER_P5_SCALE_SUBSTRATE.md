@@ -1,7 +1,9 @@
 # Programme 5 — Scale / Substrate (Distribution of the search)
 
-**Status: OPEN.** Chartered; Faber's structural differentiator. Corpus: to be
-assigned.
+**Status: OPEN.** Chartered; Faber's structural differentiator. **No insights of its own.**
+CONTRIBUTED to the Flatland front (058-062, run as P7 x P5/P6 convergence): the many-agent open
+population of 061/062 is P5's substrate question in miniature, and its collapse result is recorded
+there. The distributed/federated evolution question this charter actually owns is still unrun.
 
 ## The axis
 

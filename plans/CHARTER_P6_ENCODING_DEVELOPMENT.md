@@ -1,6 +1,9 @@
 # Programme 6 — Encoding / Development (Genotype→phenotype map)
 
-**Status: OPEN.** Chartered. Corpus: to be assigned.
+**Status: OPEN.** Chartered. **No insights of its own.** CONTRIBUTED to the Flatland front
+(058-062, run as P7 x P5/P6 convergence), but the avatar body/sensor encoding lever was chartered
+there and never varied, so the genotype->phenotype question this charter owns remains genuinely
+untested.
 
 ## The axis
 

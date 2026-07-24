@@ -1,12 +1,28 @@
 # Programme 3 — Meta-learning (Meta-adaptation)
 
-**Status: ACTIVE.** Insights 031-034 done; the plastic-neuron path
-(`network_evaluator:evaluate_with_plasticity/3`, faber-tweann 9ea366e) is committed
-and validated. **Emerging thesis:** evolved plasticity (memory-by-learning) is a more
-robust memory mechanism than a CfC state (memory-by-storage) -- it scales more
-gracefully with the memory horizon (032/033) and survives sensor noise where CfC
-fails (034). Next phase (mechanism probe, richer rules, harder tasks) planned in
-[`PLAN_P3_ROADMAP.md`](PLAN_P3_ROADMAP.md). Corpus: 031-034, continuing.
+**Status: WORKED @031-048.** Corpus: insights **031-048**. The plastic-neuron path
+(`network_evaluator:evaluate_with_plasticity/3`, faber-tweann 9ea366e) is committed and validated.
+Roadmap: [`PLAN_P3_ROADMAP.md`](PLAN_P3_ROADMAP.md).
+
+> **Where the arc landed.** The memory line delivered the positive thesis: evolved plasticity
+> (memory-by-learning) scales more gracefully with the memory horizon than a CfC state
+> (memory-by-storage) and survives sensor noise where CfC fails (032/033/034). The LIFETIME line then
+> refused to extend it: the thesis does NOT transfer (043), reversal frequency does not separate
+> (044), and feedback noise nulls too (045) -- three stressors, all null, line CLOSED. 047 then
+> REFUTED 045's own causal story by direct measurement (the substrates converge not because
+> integration averages differences away, but because each independently learns equally accurate
+> evidence-based tracking), and 048 showed that tracking is a SHALLOW ~3-5 trial reactive window over
+> the interaction evidence, uniform across all three substrates, with the initial "deep integration"
+> reading caught as a decoder-class artifact at the CLAIM gate.
+>
+> **The unrun capstone (the reason this is WORKED, not CLOSED).** All of 031-048 is memory or
+> adaptation WITHIN a task. The ultimate P3 test is learning ACROSS a task DISTRIBUTION: does an
+> evolved plasticity rule adapt to tasks it never saw during evolution (the Baldwin/Chalmers
+> programme)? The roadmap gated this behind "once the rule-family and mechanism questions settle",
+> and 035-048 have now settled them, so **the precondition is met and the capstone is the natural
+> re-entry point for this programme.** It needs a task distribution, not one T-maze. Note the base
+> rate honestly: P3's last three rungs were nulls, so the capstone may null too, and it is worth
+> running only under the same DESIGN/CLAIM gate discipline as the rest of the corpus.
 
 ## The axis
 

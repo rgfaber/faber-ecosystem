@@ -1,6 +1,9 @@
 # Programme 4 — Objectives (Selection pressure)
 
-**Status: OPENED 2026-07-23.** Corpus: insights from 049+ (049 shelved unsigned; P4 starts fresh).
+**Status: WORKED @050-052.** Corpus: insights **050-052** (049 shelved unsigned; P4 started fresh
+at 050). Novelty search buys large behavioural COVERAGE at NO detectable speed cost even where
+objective search already wins (052); the predicted efficiency "tax" did not appear. Not formally
+closed: novelty under DECEPTION at scale, and novelty x the other axes, remain unrun.
 
 > **Reframing (2026-07-23).** This charter's DPNV-deception premise is SUPERSEDED by insight
 > 028: sep-CMA-ES + co-evolved tau solves DPNV 10/10, localising the wall to OPTIMIZER +
