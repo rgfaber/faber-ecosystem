@@ -1,8 +1,38 @@
 # Programme 2 — Search Strategies (Operators)
 
-**Status: ACTIVE — the current execution front.** Execution plan and experiment
-ledger: [`PLAN_SEARCH_STRATEGIES.md`](PLAN_SEARCH_STRATEGIES.md). Corpus: insights
-025+.
+**Status: PARKED (2026-07-24).** Execution plan and experiment ledger:
+[`PLAN_SEARCH_STRATEGIES.md`](PLAN_SEARCH_STRATEGIES.md). Corpus: insights 025+.
+
+> **Parked after the Flatland excursion (exp063/064/065): three rungs attempted, ZERO signed.**
+> The charter's stated payoff ("revisit P1's confounded results with an optimizer that can reach
+> solves ... several findings are really inconclusive with THIS OPTIMIZER") was aimed at the
+> Flatland front and did not land. What the excursion did produce is on disk and is real:
+>
+> - **exp063** (unsigned, runner + feed retained): at a 2000-evaluation budget on Flatland foraging,
+>   exp058's hand-rolled EA, `mu_lambda_es` and `sep_cma_es` are indistinguishable (medians 28.94 /
+>   29.00 / 29.00). The drafted insight was REFUSED at the CLAIM gate: 2000 evals is ~31 per dimension
+>   on a 64-dim problem, where sep-CMA's covariance has barely moved, so the null is near-definitional
+>   rather than evidence. A prior n=8 read of the same comparison did not replicate (sign flipped).
+> - **exp064** (held, NOT killed): the pre-registered optimizer-strength + does-it-overturn-059
+>   experiment. DESIGN gate returned REDESIGN with 14 attacks; the premise audit it prescribed was run
+>   at the one budget where a null is uninformative, so the experiment was retired prematurely. Its
+>   2k-to-20k budget sweep remains the design that could actually separate the arms. Eight concrete
+>   fixes are recorded in its file.
+> - **exp065** (run, NOT signed): the greedy-ceiling / mixture rung. Its CLAIM gate found real errors
+>   in the drafted insight (a selected range quoted as the range, an on-policy map called exhaustive
+>   with no denominator recorded, a boundary threshold below chance, an arm whose floor is guaranteed
+>   by elitism, and thresholds called "pre-registered" that lived only in a runner comment). Two arms
+>   (degraded-seed control, planner bound) are specified and unbuilt.
+>
+> **The one durable result: insight 058 was AMENDED** (2026-07-24). Its foraging representability
+> figure 33.7 is a best-of-run from a single execution; the typical run is 32.33 (93.9% of greedy) at
+> 058's own configuration, n=20. The kill gate STANDS and is strengthened, because exp065 constructed
+> the greedy policy exactly in weight space (243/243 states, no search). This also resizes the gap the
+> whole excursion was arguing about: **~6% at the faithful configuration, not ~15%**.
+>
+> **Do not resume P2 on Flatland without first re-pre-registering thresholds in a dated document.**
+> The recurring failure across all three rungs was claims outrunning the record, not compute.
+> Nothing here bears on 061/062, which are ecological and which no optimizer result touches.
 
 ## The axis
 

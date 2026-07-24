@@ -35,7 +35,7 @@ Campus neuroevolution agenda from a generic one.
 | # | Programme | Axis (what it varies, holding the rest fixed) | Status |
 |---|-----------|-----------------------------------------------|--------|
 | [P1](CHARTER_P1_CAPABILITIES.md) | Capabilities | **Representation**: what the phenotype can express | CLOSED @024 |
-| [P2](CHARTER_P2_SEARCH_STRATEGIES.md) | Search Strategies | **Operators**: variation + selection (the optimizer) | **ACTIVE** |
+| [P2](CHARTER_P2_SEARCH_STRATEGIES.md) | Search Strategies | **Operators**: variation + selection (the optimizer) | **PARKED @2026-07-24** |
 | [P3](CHARTER_P3_META_LEARNING.md) | Meta-learning | **Meta-adaptation**: learn to learn, evolved plasticity | NEXT |
 | [P4](CHARTER_P4_OBJECTIVES.md) | Objectives | **Selection pressure**: what fitness rewards (QD, novelty) | OPEN |
 | [P5](CHARTER_P5_SCALE_SUBSTRATE.md) | Scale / Substrate | **Distribution of the search**: fleet, mesh, federated evolution | OPEN |
@@ -66,14 +66,22 @@ world); they compose (federated evolution of swarm controllers).
 ## Map versus execution (the discipline)
 
 The charters are the **public map**; execution stays disciplined to **one active
-front at a time**. Right now that front is P2. Every other charter carries an
+front at a time**. Every other charter carries an
 honest status: a dormant charter states plainly that it is not started and names
 a concrete first experiment, so the agenda invites contributors without ever
 pretending to momentum it does not have.
 
+**Right now NO front is active.** P2 was parked on 2026-07-24 after its Flatland excursion
+(exp063/064/065) produced three attempted rungs and zero signed insights; the Flatland front itself
+closed at 062 on ecological grounds. Promoting P3 is a deliberate decision that has not been taken, and
+this line says so rather than manufacturing momentum. See
+[`CHARTER_P2_SEARCH_STRATEGIES.md`](CHARTER_P2_SEARCH_STRATEGIES.md) for exactly what is on disk,
+unsigned, and resumable.
+
 - **CLOSED** — arc complete, corpus written (P1).
-- **ACTIVE** — the current execution front (P2).
-- **NEXT** — chartered, first experiment defined, starts when the active front closes (P3).
+- **ACTIVE** — the current execution front (none at present).
+- **PARKED** — was active, stopped deliberately with its state recorded; resumable (P2).
+- **NEXT** — chartered, first experiment defined, starts when a front is chosen (P3).
 - **OPEN** — chartered, has a good first experiment and the tested harness, not started (P4, P5, P6, P7).
 - **HORIZON** — chartered, but depends on a prerequisite that does not yet exist (P8 and P9, the two couplings). Named so the dependency is explicit.
 

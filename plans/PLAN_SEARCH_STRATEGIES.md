@@ -1,5 +1,11 @@
 # Programme 2 — Search Strategies (Optimizers)
 
+**PARKED 2026-07-24.** See [`CHARTER_P2_SEARCH_STRATEGIES.md`](CHARTER_P2_SEARCH_STRATEGIES.md) for the
+parking record: the Flatland excursion (exp063/064/065) attempted three rungs and signed none; exp064
+is held with eight named fixes and exp065 with two unbuilt arms; the one durable outcome was the
+2026-07-24 amendment to insight 058 (its foraging figure is a best-of-run; the gap is ~6% at the
+faithful configuration, not ~15%).
+
 The second faber research programme. Where Programme 1 (Capabilities,
 `PLAN_EXPERIMENT_PROGRAMME.md`) asked *which network capability helps which
 problem*, holding the SEARCH fixed (a truncation-selection GA + memetic tuner),
