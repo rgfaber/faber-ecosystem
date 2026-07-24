@@ -1,0 +1,21 @@
+== EXP-061 open-population dynamics: coexistence over knob grids (weak + STRONG stabilisers) ==
+world 40x40, H=1500, 6 measurement seeds (calibration seeds 1-3 disjoint)
+
+-- GRID A: default stabilisers satiate=3 percept=6 (plant-density x initial-predators) --
+               NPred:     8    15    25    40
+  plants=  80:         0.00  0.00  0.00  0.00
+  plants= 150:         0.00  0.00  0.00  0.00
+  plants= 250:         0.00  0.00  0.00  0.00
+
+-- GRID B: STRONG stabilisers satiate=12 percept=2 (the LV coexistence corner) --
+               NPred:     8    15    25    40
+  plants=  80:         0.00  0.00  0.00  0.00
+  plants= 150:         0.00  0.00  0.00  0.00
+  plants= 250:         0.00  0.00  0.00  0.00
+
+time-to-first-extinction across all 144 runs: median=39 (BURN-in=300; collapse precedes burn-in => cycle-detection never exercised, coexistence criterion reduces to 'survived burn-in')
+MAX coexistence fraction over BOTH grids = 0.00 (default corner 0.00, strong corner 0.00)
+RESULT=NO COEXISTENCE anywhere -- FIXED-GREEDY predator-prey behaviours collapse (boom-bust to mutual extinction) across the density x predator grid at DEFAULT stabilisers AND at the STRONG-stabiliser corner (satiate=12, percept=2 = large refuge) LV theory prefers. So the open-population/reproduction ingredient does NOT by itself yield a stable predator-prey ecology with these fixed behaviours. Whether EVOLVED behaviours self-limit predation and coexist on this same world is the open rung-3b question -- 3a does NOT foreclose it. SCOPE: a negative about fixed-greedy behaviours in THIS game, NOT that open populations cannot coexist in general, NOR that evolved behaviours cannot coexist here.
+
+### hand-tuning history (8 configs before the grids, all collapse) ###
+Explored: predators strong->weak, prey weak->strong, satiate {off,3,5,8}, pred-skip {off,3,4,5,6}, percept {global,6}, world 20x20 & 40x40, initial ratios. Every config boom-busted to mutual extinction. Then GRID A (default satiate=3/percept=6) and GRID B (STRONG satiate=12/percept=2) both = 0.00 across density x predators. Time-to-extinction median=39 << burn-in=300.

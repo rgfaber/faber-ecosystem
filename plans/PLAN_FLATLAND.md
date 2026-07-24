@@ -98,10 +98,19 @@ deficiency to be "rescued" -- so each rung asks a symmetric either-way question.
   (measured separately, no mediation; forage sanity gate tripped so the in-episode read is invalid) -- an
   OPEN question. NARROW: single-step repulsion, NOT whole-episode fleeing (reconciles 059). The instrument
   now reads foraging, reactive-fleeing, AND repulsion.
-- **Rung 3 — population structure (the ALife-plausible variable the post-mortem flagged).**
-  Many-agent open population with endogenous reproduction and frequency-dependent selection
-  in one shared world -- the ingredient rungs 1-2 do NOT touch, and the more likely locus of a
-  real arms race.
+- **Rung 3a — the open-population dynamics instrument (exp061, SIGNED insight 061).** The DESIGN
+  gate split rung 3: the arms-race question is foregone (optimizer under-convergence) + demography-
+  confounded, so 3a builds the coexistence/dynamics instrument first. Result (FIXED-greedy behaviours):
+  NO coexistence regime -- the open population boom-busts to mutual extinction (median 39 steps << the
+  300-step burn-in) across the density x predator grid at DEFAULT stabilisers AND at the STRONG-stabiliser
+  corner LV theory prefers (satiate=12, percept=2). Greedy-hunt cannot self-limit predation. SCOPE: a
+  negative about fixed-greedy behaviours in THIS game, not open populations in general, not evolved
+  behaviours. This REFRAMES 3b.
+- **Rung 3b — can EVOLUTION discover a self-limiting ecology? (next).** 3a's negative reshapes the
+  question from "does the open population arms-race" to "can EVOLVED avatar behaviours (mutation switched
+  back on) discover self-limiting/prudent predation and sustain a coexisting ecology where a hand-coded
+  OPTIMAL predator drives collapse?" -- with a learnability positive control and a within-lineage
+  adaptation read (the earlier gate requirements). A genuinely open, non-foregone question.
 - **Rung 4+ (horizon):** novelty / behavioural diversity (P4) in the unbounded space; body /
   sensor encoding as a developmental genome (P6); distribution across nodes (P5). Each gated,
   opened only after the one below is signed.
